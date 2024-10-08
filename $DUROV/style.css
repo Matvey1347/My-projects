@@ -350,8 +350,8 @@
 .loop-images .image {
   position: absolute;
   z-index: 1;
-  bottom: -100%;
-  animation: moveUp 6s linear infinite;
+  bottom: 0;
+  animation: moveUp 5s linear infinite;
 }
 
 .loop-images .right .image {
@@ -365,7 +365,7 @@
 
 @keyframes moveUp {
   0% {
-    bottom: -100%;
+    bottom: -10%;
   }
 
   100% {
