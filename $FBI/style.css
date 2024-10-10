@@ -272,6 +272,10 @@
 }
 
 @media (max-width: 720px) {
+
+  .header {
+    margin-top: 0;
+  }
   .header__text {
     font-size: 12px;
     max-width: 202px;
