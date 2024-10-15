@@ -462,11 +462,11 @@
   transform: translateY(0%);
 }
 
-.anim {
-  animation: anim 3s ease-in-out infinite;
+.first__title {
+  animation: first__title 1.5s ease-in-out infinite;
 }
 
-@keyframes anim {
+@keyframes first__title {
 
   0%,
   100% {
@@ -474,7 +474,7 @@
   }
 
   50% {
-    transform: scale(1.5);
+    transform: scale(1.1);
   }
 }
 
