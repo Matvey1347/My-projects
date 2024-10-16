@@ -171,6 +171,18 @@
   z-index: 10;
 }
 
+.second__text_first {
+  margin-bottom: 10px;
+}
+
+.second__number {
+  color: #FFF;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 .third__content {
   display: flex;
   justify-content: space-between;
@@ -230,7 +242,19 @@
   }
 }
 
+.show-1500 {
+  display: none !important;
+}
+
 @media (max-width: 1500px) {
+  .show-1500 {
+    display: flex !important;
+  }
+
+  .hide-1500 {
+    display: none !important;
+  }
+
   .third__title {
     font-size: 60px;
   }
@@ -284,6 +308,10 @@
 
   .second__text {
     font-size: 24px;
+  }
+
+  .second__number {
+    font-size: 18px;
   }
 }
 
