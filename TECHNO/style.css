@@ -288,6 +288,8 @@
   }
 }
 
+
+
 @media (max-width: 450px) {
   .madik__image {
     width: 400px;
@@ -347,7 +349,15 @@
 
 
 
+@media (max-width: 500px) {
+  .madik_images._animate {
+    bottom: 8%;
+  }
 
+  .content {
+    margin: 20px;
+  }
+}
 
 
 
@@ -400,19 +410,19 @@
   transform: translateY(0%);
 }
 
-.anim {
-  animation: anim 3s ease-in-out infinite;
+.madik__image {
+  animation: madik__image 3s ease-in-out infinite;
 }
 
-@keyframes anim {
+@keyframes madik__image {
 
   0%,
   100% {
-    transform: scale(1);
+    transform: translate(-50%, 5%);
   }
 
   50% {
-    transform: scale(1.5);
+    transform: translate(-50%, 0%);
   }
 }
 

@@ -58,15 +58,17 @@
   </div>
 
   <script>
-    const madik__image = document.querySelector('.madik__image');
-    const images = document.querySelector('.madik_images');
-
-    document.addEventListener("DOMContentLoaded", () => {
-      setTimeout(() => {
-        madik__image.classList.add('_animate');
-        images.classList.add('_animate');
-      }, 200)
-    })
+    if(window.innerWidth > 767) {
+      const madik__image = document.querySelector('.madik__image');
+      const images = document.querySelector('.madik_images');
+  
+      document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+          madik__image.classList.add('_animate');
+          images.classList.add('_animate');
+        }, 200)
+      })
+    }
   </script>
 
 
