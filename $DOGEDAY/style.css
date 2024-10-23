@@ -364,19 +364,23 @@
   transform: scale(1);
 }
 
-.anim {
-  animation: anim 3s ease-in-out infinite;
+.cloud {
+  animation: cloud 3s ease-in-out infinite;
 }
 
-@keyframes anim {
+.cloud__right {
+  animation: cloud 5s ease-in-out infinite;
+}
+
+@keyframes cloud {
 
   0%,
   100% {
-    transform: scale(1);
+    transform: translateY(-50%) translateX(0%);
   }
 
   50% {
-    transform: scale(1.5);
+    transform: translateY(-45%) translateX(3%);
   }
 }
 
