@@ -93,3 +93,13 @@ function dragMoveListener(event) {
   target.setAttribute('data-x', x);
   target.setAttribute('data-y', y);
 }
+
+const dataImageWrap = document.querySelector('.data-image-wrap');
+
+dataImageWrap.addEventListener('touchstart', function () {
+  document.body.style.overflow = 'hidden';
+});
+
+dataImageWrap.addEventListener('touchend', function () {
+  document.body.style.overflow = ''; 
+});
