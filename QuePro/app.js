@@ -24,6 +24,7 @@ document.getElementById('makeQuePro').addEventListener('click', function () {
   const uploadedImg = document.getElementById('uploadedImage');
   if (uploadedImg.src.includes('/image/def__image.png')) {
     document.getElementById('photoInput').click();
+    return;
   }
 
   // Show the face image and set its size to 40% of the uploaded image
