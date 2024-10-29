@@ -166,6 +166,12 @@ section {
   margin: 0 auto;
 }
 
+.second__text span {
+  font-weight: 100;
+  /* -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #010200; */
+}
+
 .pers-4 {
   position: absolute;
   left: 10%;
