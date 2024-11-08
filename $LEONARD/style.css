@@ -1,0 +1,337 @@
+@font-face {
+  font-family: '0xProto';
+  src: url(./fonts/0xProto-Regular.otf);
+}
+
+* {
+  font-family: '0xProto' !important;
+}
+
+._scale_hover {
+  display: block;
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
+
+._scale_hover:hover {
+  transform: scale(1.1);
+}
+
+.networks {
+  display: flex;
+  align-items: center;
+}
+
+.networks a {
+  display: block;
+}
+
+.networks a:not(:last-child) {
+  margin-right: 42px;
+}
+
+._container {
+  max-width: 1600px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+  background: #232323;
+}
+
+.bg__wrap {
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+[data-copy] {
+  cursor: pointer;
+}
+
+.copied_modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  background: #fff;
+  font-family: "Knewave", system-ui;
+  padding: 10px 30px;
+  white-space: nowrap;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease 0s;
+}
+
+.copied_modal._show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.first {
+  min-height: 1080px;
+  position: relative;
+}
+
+
+.first__top {
+  position: relative;
+  top: 87px;
+  left: 30%;
+}
+
+.first__top_number {
+  position: absolute;
+  top: 8px;
+  left: 14px;
+  color: #FFF;
+  font-family: '0xProto';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.second {
+  position: relative;
+  margin-top: 143px;
+  left: 15%;
+}
+
+.second__text {
+  color: #FFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  position: absolute;
+  bottom: 47px;
+  left: 14px;
+  max-width: 417px;
+}
+
+.third__image {
+  position: relative;
+  left: 10%;
+  margin-top: 87px;
+}
+
+.first__bottom {
+  width: max-content;
+  left: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.networks {
+  position: relative;
+}
+
+
+.networks__items {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 43px;
+  left: 34px;
+}
+
+.buy-btn {
+  position: relative;
+  z-index: 10;
+  margin-top: -20px;
+  margin-left: -40px;
+}
+
+.cat__image {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  z-index: 0;
+  animation: moveCat 3s linear infinite;
+}
+
+@keyframes moveCat {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(-50vw, 0);
+  }
+
+  50% {
+    transform: translate(-50vw, 10vw);
+  }
+
+  75% {
+    transform: translate(0, -30vw);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.first>:not(.cat__image) {
+  z-index: 100;
+}
+
+@media (max-width: 1250px) {
+  .cat__image {
+    width: 400px;
+    object-fit: contain;
+    top: 30%;
+  }
+
+  .first__bottom {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 820px) {
+  .first__top {
+    transform: scale(0.8) translateX(-20%);
+  }
+
+  .second {
+    transform: scale(0.8) translateX(-20%);
+    margin-top: 100px;
+  }
+
+  .third__image {
+    margin-top: 50px;
+    max-width: 400px;
+    object-fit: contain;
+  }
+
+  .first__bottom {
+    padding-bottom: 50px;
+  }
+
+  .first {
+    min-height: auto;
+  }
+}
+
+.show-560 {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  .show-560 {
+    display: flex;
+  }
+
+  .hide-560 {
+    display: none;
+  }
+
+  .first__top {
+    left: 10%;
+    top: 30px;
+  }
+
+  .second {
+    margin-top: 40px;
+  }
+
+  .second__text {
+    max-width: 220px;
+    font-size: 19px;
+    bottom: 67px;
+  }
+
+
+  .first__bottom {
+    left: 15%;
+  }
+
+  .cat__image {
+    width: 292px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[data-anim-on-scroll] {
+  transition: all 0.4s ease 0s;
+  opacity: 0;
+}
+
+[data-anim-on-scroll]._animate {
+  opacity: 1;
+}
+
+._right_anim_tr {
+  transform: translateX(200%);
+}
+
+._left_anim_tr {
+  transform: translateX(-200%);
+}
+
+._right_anim_tr._animate,
+._left_anim_tr._animate {
+  transform: translateX(0%);
+}
+
+
+._bottom_anim_tr {
+  transform: translateY(200%);
+}
+
+._top_anim_tr {
+  transform: translateY(-200%);
+}
+
+._top_anim_tr._animate,
+._bottom_anim_tr._animate {
+  transform: translateY(0%);
+}
+
+.anim {
+  animation: anim 3s ease-in-out infinite;
+}
+
+@keyframes anim {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+}

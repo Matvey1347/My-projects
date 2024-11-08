@@ -1,0 +1,433 @@
+._scale_hover {
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
+
+._scale_hover:hover {
+  transform: scale(1.1);
+}
+
+.networks {
+  display: flex;
+  align-items: center;
+}
+
+.networks a {
+  display: block;
+}
+
+.networks a:not(:last-child) {
+  margin-right: 24px;
+}
+
+._container {
+  max-width: 1600px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.bg__wrap {
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+[data-copy] {
+  cursor: pointer;
+}
+
+.copied_modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  background: #fff;
+  font-family: "Knewave", system-ui;
+  padding: 10px 30px;
+  white-space: nowrap;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease 0s;
+}
+
+.copied_modal._show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.first {
+  height: 100vh;
+  min-height: 1080px;
+  display: flex;
+  width: 100%;
+}
+
+._container {
+  width: 100%;
+}
+
+.networks {
+  margin: 180px 0 100px;
+}
+
+.first__title {
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 50px;
+  max-width: 850px;
+}
+
+.buy-btn {
+  display: block;
+  width: max-content;
+}
+
+@font-face {
+  font-family: 'Cyberspace Raceway';
+  src: url(./fonts/CyberspaceRacewayBack-9arj.ttf);
+}
+
+* {
+  font-family: 'Cyberspace Raceway' !important;
+}
+
+.first__number {
+  color: #FFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 35px;
+}
+
+.first__text {
+  opacity: 0.4;
+  color: #FFF;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 85px;
+  max-width: 676px;
+}
+
+@media (max-width: 1050px) {
+  .first__title {
+    max-width: 600px;
+  }
+
+  .first__text {
+    font-size: 16px;
+    max-width: 500px;
+  }
+
+  .first__number {
+    font-size: 17px;
+  }
+
+  .networks {
+    margin: 50px 0 40px;
+  }
+
+  .first {
+    min-height: 680px;
+  }
+}
+
+.show-640 {
+  display: none !important;
+}
+
+@media (max-width: 640px) {
+  .show-640 {
+    display: flex !important;
+  }
+
+  .hide-640 {
+    display: none !important;
+  }
+
+  .networks {
+    margin: 50px 0;
+    justify-content: center;
+  }
+
+  .first__number {
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .networks img {
+    height: 32px;
+  }
+
+  .first__text {
+    font-size: 10px;
+    text-align: center;
+    opacity: 1;
+  }
+
+  .buy-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 400px auto 0;
+  }
+
+  .first {
+    min-height: 880px;
+  }
+}
+
+@media (max-width: 340px) {
+  .networks a:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[data-anim-on-scroll] {
+  transition: all 0.4s ease 0s;
+  opacity: 0;
+}
+
+[data-anim-on-scroll]._animate {
+  opacity: 1;
+}
+
+._right_anim_tr {
+  transform: translateX(200%);
+}
+
+._left_anim_tr {
+  transform: translateX(-200%);
+  transition: all 0.4s ease 0s;
+}
+
+._right_anim_tr._animate,
+._left_anim_tr._animate {
+  transform: translateX(0%);
+}
+
+
+._bottom_anim_tr {
+  transform: translateY(200%);
+}
+
+._top_anim_tr {
+  transform: translateY(-200%);
+}
+
+._top_anim_tr._animate,
+._bottom_anim_tr._animate {
+  transform: translateY(0%);
+}
+
+._scale_anim {
+  transform: scale(0);
+}
+
+._scale_anim._animate {
+  transform: scale(1);
+}
+
+.first__title {
+  animation: first__title 3s ease-in-out infinite;
+}
+
+.wrapper {
+  transition: all 0.4s ease 0s;
+}
+
+._loader {
+  transition: all 0.4s ease 0s;
+}
+
+@keyframes first__title {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(5%);
+  }
+}
+
+
+
+.loop-images .image {
+  position: absolute;
+  z-index: 1;
+  bottom: -100%;
+  animation: moveUp 6s linear infinite;
+}
+
+.loop-images .right .image {
+  right: 0;
+}
+
+.loop-images .right .image-4 {
+  right: -15%;
+  left: auto;
+}
+
+@keyframes moveUp {
+  0% {
+    bottom: -100%;
+  }
+
+  100% {
+    bottom: 100%;
+  }
+}
+
+.loop-images .image-2 {
+  animation-delay: 2s;
+  animation: moveUp 7s linear infinite;
+}
+
+.loop-images .image-3 {
+  animation-delay: 3s;
+  animation: moveUp 9s linear infinite;
+}
+
+.loop-images .image-4 {
+  animation-delay: 6s;
+  animation: moveUp 12s linear infinite;
+}
+
+.loop-images .right .image-1 {
+  animation-delay: 0s;
+  animation: moveUp 7s linear infinite;
+}
+
+.loop-images .right .image-2 {
+  animation-delay: 4s;
+  animation: moveUp 9s linear infinite;
+}
+
+.loop-images .right .image-3 {
+  animation-delay: 7s;
+  animation: moveUp 12s linear infinite;
+}
+
+.loop-images .right .image-4 {
+  animation-delay: 10s;
+  animation: moveUp 8s linear infinite;
+}
+
+._loader {
+  min-height: 300px;
+  height: 100vh;
+  background-color: #000;
+}
+
+._loader_hide {
+
+  opacity: 0;
+}
+
+.loader__left {
+  color: #FFF;
+  font-family: "Cyberspace Raceway";
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  transition: opacity 2s ease 0s;
+}
+
+.loader__text {
+  display: flex;
+  justify-content: space-between;
+  max-width: 500px;
+  width: 100%;
+}
+
+.loader__text-right,
+.loader__text-left {
+  color: #FFF;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: opacity 2s ease 0s;
+}
+
+
+@media (max-width: 670px) {
+  .loader__left br {
+    display: none;
+  }
+
+  .loader__text-right,
+  .loader__text-left,
+  .loader__left {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 350px) {
+
+  .loader__text-right,
+  .loader__text-left,
+  .loader__left {
+    font-size: 13px;
+  }
+
+  .first__number {
+    font-size: 8px;
+  }
+}
+
+._hide {
+  transition: all 0.4s ease 0s;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  height: 0%;
+  min-height: 0%;
+}

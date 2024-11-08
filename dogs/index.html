@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dogs</title>
+  <link rel="stylesheet" href="./null.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="./image/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+  <div data-loader class="loader">
+    <img src="./image/loader.svg" alt="" class="loader__image">
+    <div class="loader__line">
+      <img src="./image/loader__line.png" alt="">
+      <div class="loader__line--active" style="width: 0%;"></div>
+    </div>
+  </div>
+  <div class="wrapper _hide">
+    <div class="first__image image__wrap">
+      <img src="./image/first__image_bg.png" alt="" class="image__wrap_bg hide-767">
+      <img src="./image/first__image_bg-mobile.png" alt="" class="image__wrap_bg show-767">
+      <div class="networks first__networks">
+        <a href="tg" class="_scale_hover">
+          <img src="./image/tg.png" alt="">
+        </a>
+        <a href="dex" class="_scale_hover">
+          <img src="./image/dex.png" alt="">
+        </a>
+        <a href="orel" class="_scale_hover">
+          <img src="./image/orel.png" alt="">
+        </a>
+        <a href="x" class="_scale_hover">
+          <img src="./image/x.png" alt="">
+        </a>
+      </div>
+
+      <div class="first__content">
+        <img src="./image/first__logo.png" alt="" class="first__logo">
+        <p class="first__text">
+          Adopt Your $DOGZ – Virtual Pets Like You Remember
+        </p>
+      </div>
+    </div>
+    <div class="second__images">
+      <img src="./image/second__image_1.png" alt="" class="second__image second__image_1" data-duration="2">
+      <img src="./image/second__image_2.svg" alt="" class="second__image second__image_2" data-duration="3">
+      <img src="./image/second__image_3.svg" alt="" data-duration="2.5" class="second__image second__image_3">
+      <img src="./image/second__image_4.svg" alt="" data-duration="3.5" class="second__image second__image_4">
+      <img src="./image/second__image_5.svg" alt="" data-duration="2.3" class="second__image second__image_5">
+    </div>
+    <div class="third__image image__wrap">
+      <img src="./image/third__image_bg.png" alt="" class="image__wrap_bg">
+      <div class="third__conent">
+        <a href="Buy" class="_scale_hover btn-buy">
+          <img src="./image/btn-buy.svg" alt="">
+        </a>
+        <p class="third__text">
+          Your pet is waiting...<br> Will you take care of it?
+        </p>
+      </div>
+      <div class="third__number" data-copy>0X000000000000000000000</div>
+    </div>
+    <img src="./image/four__image.svg" alt="" class="four__image hide-767">
+    <img src="./image/four__image_mobile.svg" alt="" class="four__image show-767">
+    <div class="six__image image__wrap _right_anim_tr" data-anim-on-scroll>
+      <img src="./image/six__image_bg.png" alt="" class="image__wrap_bg">
+      <video class="video" src="./image/video.mp4" loop="" autoplay="" muted="" playsinline=""></video>
+    </div>
+    <div class="five__image image__wrap">
+      <img src="./image/five__image_bg.png" alt="" class="image__wrap_bg hide-767">
+      <img src="./image/five__image_bg-mobile.png" alt="" class="image__wrap_bg show-767">
+      <p class="five__text">
+        Inspired by the virtual pets of the 90s, $DOGZ brings back the charm and joy of digital companions with new
+        features
+        that fit today’s connected world
+      </p>
+      <div class="third__number hide-767" data-copy>0X000000000000000000000</div>
+      <div class="third__number show-767" data-copy>0X000000000<br>000000000000</div>
+      <div class="networks five__networks">
+        <a href="tg" class="_scale_hover">
+          <img src="./image/tg.png" alt="">
+        </a>
+        <a href="dex" class="_scale_hover">
+          <img src="./image/dex.png" alt="">
+        </a>
+        <a href="orel" class="_scale_hover">
+          <img src="./image/orel.png" alt="">
+        </a>
+        <a href="x" class="_scale_hover">
+          <img src="./image/x.png" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+  <img id="movingGif" src="./image/cursor.gif" style="position: absolute; top: 0; left: 0; width: 100px;">
+  <div class="copied_modal">
+    copied to clipboard
+  </div>
+
+
+  <!-- <div class="loop-images">
+    <div class="left">
+      <img src="./image/image-1.png" class="image image-1">
+      <img src="./image/image-2.png" class="image image-2">
+      <img src="./image/image-3.png" class="image image-3">
+      <img src="./image/image-4.png" class="image image-4">
+    </div>
+    <div class="right">
+      <img src="./image/image-1.png" class="image image-1">
+      <img src="./image/image-2.png" class="image image-2">
+      <img src="./image/image-3.png" class="image image-3">
+      <img src="./image/image-4.png" class="image image-4">
+    </div>
+  </div> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+  <script src="./copy.js"></script>
+  <script src="./animation.js"></script>
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const loader = document.querySelector('[data-loader]');
+      const loaderLineActive = loader.querySelector('.loader__line--active');
+      const wrapper = document.querySelector('.wrapper');
+
+      let width = 0;
+      const interval = setInterval(() => {
+        if (width >= 100) {
+          clearInterval(interval);
+          loader.classList.add('_hide');
+          wrapper.classList.remove('_hide');
+        } else {
+          width++;
+          loaderLineActive.style.width = width + '%';
+        }
+      }, 20);
+    });
+
+    document.addEventListener('mousemove', function (event) {
+      const gif = document.getElementById('movingGif');
+      const gifWidth = gif.offsetWidth;
+      const gifHeight = gif.offsetHeight;
+
+      gif.style.left = (event.pageX - gifWidth) + 'px';
+      gif.style.top = (event.pageY - gifHeight) + 'px';
+    });
+
+  </script>
+</body>
+
+</html>

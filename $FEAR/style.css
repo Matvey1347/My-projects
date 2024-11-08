@@ -1,0 +1,272 @@
+._scale_hover {
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
+
+._scale_hover:hover {
+  transform: scale(1.1);
+}
+
+.networks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 41px;
+}
+
+.networks a {
+  display: block;
+}
+
+.networks a:not(:last-child) {
+  margin-right: 41px;
+}
+
+._container {
+  max-width: 1600px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.bg__wrap {
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+[data-copy] {
+  cursor: pointer;
+}
+
+.copied_modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  background: #fff;
+  font-family: "Knewave", system-ui;
+  padding: 10px 30px;
+  white-space: nowrap;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease 0s;
+}
+
+.copied_modal._show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.first {
+  min-height: 1080px;
+}
+
+.btn-copy {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn-copy:hover {
+  transform: translateX(-50%) scale(1.1);
+}
+
+@media (max-height: 1200px) {
+  .btn-copy {
+    max-width: 300px;
+  }
+
+  .btn-copy img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 900px) {
+  .first {
+    min-height: 680px;
+  }
+
+  .networks {
+    padding-top: 10px;
+  }
+
+  .btn-copy {
+    max-width: 200px;
+    bottom: 18px;
+  }
+
+  .btn-copy img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.show-767 {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .show-767 {
+    display: flex !important;
+  }
+
+  .hide-767 {
+    display: none !important;
+  }
+
+  .main__bg {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .btn-copy {
+    position: absolute;
+    bottom: 20px;
+  }
+
+  .networks {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .first {
+    min-height: 0;
+  }
+
+  .main__bg {
+    min-height: 940px;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .networks img {
+    width: 53px;
+    height: 53px;
+    object-fit: contain;
+  }
+
+  .networks a:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+
+@media (max-width: 450px) {
+  .main__bg {
+    min-height: 740px;
+  }
+
+  .btn-copy {
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 360px) {
+  .main__bg {
+    min-height: 640px;
+  }
+
+  .btn-copy {
+    max-width: 130px;
+    bottom: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[data-anim-on-scroll] {
+  transition: all 0.4s ease 0s;
+  opacity: 0;
+}
+
+[data-anim-on-scroll]._animate {
+  opacity: 1;
+}
+
+._right_anim_tr {
+  transform: translateX(200%);
+}
+
+._left_anim_tr {
+  transform: translateX(-200%);
+}
+
+._right_anim_tr._animate,
+._left_anim_tr._animate {
+  transform: translateX(0%);
+}
+
+
+._bottom_anim_tr {
+  transform: translateY(200%);
+}
+
+._top_anim_tr {
+  transform: translateY(-200%);
+}
+
+._top_anim_tr._animate,
+._bottom_anim_tr._animate {
+  transform: translateY(0%);
+}
+
+.anim {
+  animation: anim 3s ease-in-out infinite;
+}
+
+@keyframes anim {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+}

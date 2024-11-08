@@ -1,0 +1,464 @@
+._scale_hover {
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
+
+._scale_hover:hover {
+  transform: scale(1.1);
+}
+
+.networks {
+  display: flex;
+  align-items: center;
+}
+
+.networks a {
+  display: block;
+}
+
+.networks a:not(:last-child) {
+  margin-right: 10px;
+}
+
+._container {
+  max-width: 1600px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.bg__wrap {
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+[data-copy] {
+  cursor: pointer;
+}
+
+.copied_modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  background: #fff;
+  font-family: "Knewave", system-ui;
+  padding: 10px 30px;
+  white-space: nowrap;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease 0s;
+}
+
+.copied_modal._show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.first {
+  min-height: 1080px;
+  height: 100vh;
+}
+
+.first__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  height: 100%;
+}
+
+.first .networks {
+  position: relative;
+  z-index: 10;
+}
+
+.first__head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.first__title {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.cloud {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cloud__left {
+  left: calc(((100vw - 1600px) / -2) - 40px);
+}
+
+.cloud__right {
+  right: calc(((100vw - 1600px) / -2) - 40px);
+}
+
+.first__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.first__number {
+  padding-bottom: 27px;
+  color: #FFF;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+* {
+  font-family: "DynaPuff", system-ui !important;
+}
+
+.btn-buy {
+  display: block;
+  width: max-content;
+  padding-bottom: 27px;
+}
+
+.first__bottom {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.first__text {
+  color: #FFF;
+  text-align: center;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  max-width: 617px;
+  padding-bottom: 120px;
+}
+
+@media (max-width: 1550px) {
+  .cloud {
+    width: 400px;
+    left: -40px;
+  }
+
+  .cloud__right {
+    left: auto;
+    right: -40px;
+  }
+
+  .first__title_image {
+    max-width: 800px;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 1400px) {
+  .first {
+    min-height: 880px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .first__text {
+    font-size: 20px;
+    padding-bottom: 60px;
+  }
+
+  .first__number {
+    font-size: 16px;
+    padding-bottom: 17px;
+  }
+
+  .first__title_image {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 800px) {
+  .cloud {
+    width: 300px;
+  }
+
+  .first {
+    min-height: 680px;
+  }
+
+  .first__text {
+    font-size: 18px;
+    max-width: 500px;
+  }
+}
+
+.show-767 {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .show-767 {
+    display: flex !important;
+  }
+
+  .hide-767 {
+    display: none !important;
+  }
+}
+
+@media (max-width: 630px) {
+  .first__title_image {
+    max-width: 400px;
+  }
+
+  .cloud {
+    width: 600px;
+  }
+
+  .cloud__left {
+    display: none;
+  }
+
+  .cloud__right {
+    right: -400px;
+    top: -50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper>.bg {
+    width: 150vw;
+    left: -50vw;
+  }
+}
+
+@media (max-width: 490px) {
+  .first__text {
+    font-size: 16px;
+  }
+
+  .first__title {
+    padding: 0 30px;
+  }
+
+  .first .networks img {
+    height: 40px;
+    object-fit: contain;
+  }
+
+  .wrapper>.bg {
+    width: 180vw;
+    left: -80vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .first__title {
+    padding: 0;
+  }
+
+  .btn-buy img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 360px) {
+  .wrapper>.bg {
+    width: 220vw;
+    left: -120vw;
+  }
+
+  .first__text {
+    font-size: 14px;
+    padding-bottom: 40px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[data-anim-on-scroll] {
+  transition: all 0.4s ease 0s;
+  opacity: 0;
+}
+
+[data-anim-on-scroll]._animate {
+  opacity: 1;
+}
+
+._right_anim_tr {
+  transform: translateX(200%);
+}
+
+._left_anim_tr {
+  transform: translateX(-200%);
+}
+
+._right_anim_tr._animate,
+._left_anim_tr._animate {
+  transform: translateX(0%);
+}
+
+
+._bottom_anim_tr {
+  transform: translateY(40%);
+}
+
+._top_anim_tr {
+  transform: translateY(-40%);
+}
+
+._top_anim_tr._animate,
+._bottom_anim_tr._animate {
+  transform: translateY(0%);
+}
+
+._scale_anim {
+  transform: scale(0);
+}
+
+._scale_anim._animate {
+  transform: scale(1);
+}
+
+.cloud {
+  animation: cloud 3s ease-in-out infinite;
+}
+
+.cloud__right {
+  animation: cloud 5s ease-in-out infinite;
+}
+
+@keyframes cloud {
+
+  0%,
+  100% {
+    transform: translateY(-50%) translateX(0%);
+  }
+
+  50% {
+    transform: translateY(-45%) translateX(3%);
+  }
+}
+
+
+
+.loop-images .image {
+  position: absolute;
+  z-index: 1;
+  bottom: -100%;
+  animation: moveUp 6s linear infinite;
+}
+
+.loop-images .right .image {
+  right: 0;
+}
+
+.loop-images .right .image-4 {
+  right: -15%;
+  left: auto;
+}
+
+@keyframes moveUp {
+  0% {
+    bottom: -100%;
+  }
+
+  100% {
+    bottom: 100%;
+  }
+}
+
+.loop-images .image-2 {
+  animation-delay: 2s;
+  animation: moveUp 7s linear infinite;
+}
+
+.loop-images .image-3 {
+  animation-delay: 3s;
+  animation: moveUp 9s linear infinite;
+}
+
+.loop-images .image-4 {
+  animation-delay: 6s;
+  animation: moveUp 12s linear infinite;
+}
+
+.loop-images .right .image-1 {
+  animation-delay: 0s;
+  animation: moveUp 7s linear infinite;
+}
+
+.loop-images .right .image-2 {
+  animation-delay: 4s;
+  animation: moveUp 9s linear infinite;
+}
+
+.loop-images .right .image-3 {
+  animation-delay: 7s;
+  animation: moveUp 12s linear infinite;
+}
+
+.loop-images .right .image-4 {
+  animation-delay: 10s;
+  animation: moveUp 8s linear infinite;
+}
+
+.cloud {
+  transition: all 0.4s ease 0s;
+}
+
+.cloud._hide {
+  opacity: 0;
+}
+
+.cloud__left._hide {
+  left: -200%;
+}
+
+.cloud__right._hide {
+  right: -200%;
+}

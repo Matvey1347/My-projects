@@ -1,0 +1,29 @@
+<svg width="111" height="111" viewBox="0 0 111 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_i_1_69)">
+<rect x="20.7415" y="20.5831" width="69.6892" height="69.6892" rx="9.81538" fill="#FF320E"/>
+<rect x="20.7415" y="20.5831" width="69.6892" height="69.6892" rx="9.81538" stroke="#EDEDED" stroke-width="4.80615"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M72.9938 37.5177C73.549 37.2977 74.1566 37.2218 74.7534 37.298C75.3503 37.3741 75.9145 37.5995 76.3875 37.9506C76.8604 38.3018 77.2248 38.7659 77.4426 39.2946C77.6604 39.8233 77.7237 40.3973 77.626 40.9569L72.531 70.0549C72.0368 72.8617 68.766 74.4713 66.0321 73.0732C63.7452 71.9035 60.3486 70.1014 57.2934 68.2211C55.7658 67.2798 51.0865 64.2658 51.6616 62.121C52.1558 60.2872 60.0184 53.3961 64.5112 49.299C66.2747 47.6894 65.4705 46.7609 63.388 48.2415C58.2167 51.9176 49.9139 57.5079 47.1687 59.0816C44.747 60.4691 43.4845 60.706 41.9749 60.4691C39.2208 60.0376 36.6666 59.3692 34.5819 58.5549C31.7648 57.455 31.9019 53.8085 34.5796 52.7467L72.9938 37.5177Z" fill="#EDEDED"/>
+</g>
+<g style="mix-blend-mode:plus-lighter" filter="url(#filter1_f_1_69)">
+<rect x="20.7415" y="20.5831" width="69.6892" height="69.6892" rx="9.81538" fill="#FF320E"/>
+<rect x="20.7415" y="20.5831" width="69.6892" height="69.6892" rx="9.81538" stroke="#EDEDED" stroke-width="4.80615"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M72.9938 37.5177C73.549 37.2977 74.1566 37.2218 74.7534 37.298C75.3503 37.3741 75.9145 37.5995 76.3875 37.9506C76.8604 38.3018 77.2248 38.7659 77.4426 39.2946C77.6604 39.8233 77.7237 40.3973 77.626 40.9569L72.531 70.0549C72.0368 72.8617 68.766 74.4713 66.0321 73.0732C63.7452 71.9035 60.3486 70.1014 57.2934 68.2211C55.7658 67.2798 51.0865 64.2658 51.6616 62.121C52.1558 60.2872 60.0184 53.3961 64.5112 49.299C66.2747 47.6894 65.4705 46.7609 63.388 48.2415C58.2167 51.9176 49.9139 57.5079 47.1687 59.0816C44.747 60.4691 43.4845 60.706 41.9749 60.4691C39.2208 60.0376 36.6666 59.3692 34.5819 58.5549C31.7648 57.455 31.9019 53.8085 34.5796 52.7467L72.9938 37.5177Z" fill="#EDEDED"/>
+</g>
+<defs>
+<filter id="filter0_i_1_69" x="18.3384" y="18.18" width="74.4954" height="74.4954" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="2.20192"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.545833 0 0 0 0 0.545833 0 0 0 0 0.545833 0 0 0 1 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_1_69"/>
+</filter>
+<filter id="filter1_f_1_69" x="0.916071" y="0.757684" width="109.34" height="109.34" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="8.71115" result="effect1_foregroundBlur_1_69"/>
+</filter>
+</defs>
+</svg>
