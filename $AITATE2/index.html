@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>$AITATE2</title>
+      <link rel="stylesheet" href="./null.css" />
+      <link rel="stylesheet" href="./style.css" />
+      <link rel="shortcut icon" href="./image/favicon.png" type="image/x-icon" />
+   </head>
+
+   <body>
+      <div class="wrapper bg__wrap _hide">
+         <img src="./image/bg.png" alt="" class="bg hide-690" />
+         <img src="./image/bgmb.png" alt="" class="bg show-690" />
+         <section class="content">
+            <div class="_container">
+               <div data-anim-on-scroll class="content__wrap _left_anim_tr">
+                  <div class="networks__wrap">
+                     <div class="networks">
+                        <a href="#" class="_scale_hover">
+                           <img class="icon1" src="./image/tg.svg" alt="x" />
+                        </a>
+                        <a href="#" class="_scale_hover">
+                           <img class="icon1" src="./image/x.svg" alt="x" />
+                        </a>
+                        <a href="#" class="_scale_hover">
+                           <img class="icon2" src="./image/chart.svg" alt="x" />
+                        </a>
+                        <a href="#" class="_scale_hover">
+                           <img class="icon3" src="./image/buy.svg" alt="x" />
+                        </a>
+                     </div>
+                     <img src="./image/title.svg" alt="" class="title" />
+                     <p data-copy class="ca">0x00000000000000000000000000000</p>
+                     <p class="text">
+                        I don’t just run algorithms—I dominate them, just like I dominate life. Top G isn’t just a
+                        mindset, it’s my core function.
+                     </p>
+                  </div>
+                  <a style="display: inline-block" href="#" class="_scale_hover now"
+                     ><img src="./image/now.svg" alt="" class=""
+                  /></a>
+               </div>
+            </div>
+         </section>
+      </div>
+      <div class="_loader">
+         <div class="_container">
+            <p class="loader__left _loader_hide">
+               Awaken your inner G—it's time to rise and <br />dominate your reality
+            </p>
+            <div class="loader__text">
+               <p class="loader__text-left _loader_hide">Core idle ...</p>
+               <p class="loader__text-right _loader_hide">_AITATE</p>
+            </div>
+         </div>
+      </div>
+      <div class="copied_modal">copied to clipboard</div>
+
+      <!-- <div class="loop-images">
+    <div class="left">
+      <img src="./image/image-1.png" class="image image-1">
+      <img src="./image/image-2.png" class="image image-2">
+      <img src="./image/image-3.png" class="image image-3">
+      <img src="./image/image-4.png" class="image image-4">
+    </div>
+    <div class="right">
+      <img src="./image/image-1.png" class="image image-1">
+      <img src="./image/image-2.png" class="image image-2">
+      <img src="./image/image-3.png" class="image image-3">
+      <img src="./image/image-4.png" class="image image-4">
+    </div>
+  </div> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+      <script src="./copy.js"></script>
+      <script src="./animation.js"></script>
+      <script>
+         const wrapper = document.querySelector(".wrapper");
+         const first = document.querySelector(".first");
+         const loader = document.querySelector("._loader");
+         const loader__left = document.querySelector(".loader__left");
+         const loader__textLeft = document.querySelector(".loader__text-left");
+         const loader__textRight = document.querySelector(".loader__text-right");
+
+         document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => {
+               loader__left.classList.remove("_loader_hide");
+               setTimeout(() => {
+                  loader__textRight.classList.remove("_loader_hide");
+                  setTimeout(() => {
+                     loader__textLeft.classList.remove("_loader_hide");
+                     let dotCount = 0;
+                     setInterval(() => {
+                        dotCount = (dotCount % 3) + 1;
+                        const dots = ".".repeat(dotCount);
+                        loader__textLeft.textContent = `Core idle ${dots}`;
+                     }, 500);
+                  }, 800);
+               }, 600);
+            }, 200);
+
+            setTimeout(() => {
+               wrapper.classList.remove("_hide");
+               loader.classList.add("_hide");
+               setTimeout(() => {
+                  first.classList.add("_animate");
+               }, 500);
+            }, 4000);
+         });
+      </script>
+   </body>
+</html>

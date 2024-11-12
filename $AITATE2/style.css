@@ -1,0 +1,431 @@
+@font-face {
+	font-family: 'Conv_Cyberspace Raceway Back';
+	src: url('fonts/Cyberspace Raceway Back.eot');
+	src: local('☺'), url('fonts/Cyberspace Raceway Back.woff') format('woff'), url('fonts/Cyberspace Raceway Back.ttf') format('truetype'), url('fonts/Cyberspace Raceway Back.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+   height: 100%;
+}
+
+
+
+* {
+   font-family: 'Conv_Cyberspace Raceway Back' !important;
+   color: #FFF;
+}
+
+._scale_hover {
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
+
+._scale_hover:hover {
+  transform: scale(1.1);
+}
+
+.networks {
+  display: flex;
+  align-items: center;
+}
+
+.networks a {
+  display: block;
+}
+
+.networks a:not(:last-child) {
+  margin-right: 24px;
+}
+
+._container {
+  max-width: 1600px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.bg__wrap {
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+[data-copy] {
+  cursor: pointer;
+}
+
+.copied_modal {
+  position: fixed;
+  top: 50%;
+  color: #000;
+  left: 50%;
+  z-index: 100;
+  background: #fff;
+  font-family: "Knewave", system-ui;
+  padding: 10px 30px;
+  white-space: nowrap;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease 0s;
+}
+
+.content {
+padding-top: 200px;
+padding-bottom: 200px;
+}
+
+.copied_modal._show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ca {
+margin-bottom: 35px;
+font-size: 20px;
+}
+
+.text {
+font-size: 19px;
+opacity: 0.4;
+max-width: 680px;
+margin-bottom: 80px;
+line-height: 1.5;
+}
+
+.networks {
+margin-bottom: 100px;
+}
+
+.title {
+margin-bottom: 50px;
+}
+
+.content {
+      min-height: 100vh;
+      min-height: 1080px;
+      width: 100%;
+}
+
+@media (max-width: 1050px) {
+   .content {
+      min-height: 650px;
+   }
+   .title {
+      max-width: 600px;
+   }
+}
+
+.show-690 {
+   display: none;
+}
+
+@media (max-width: 690px) {
+   .show-690 {
+      display: flex;
+   }
+   .hide-690 {
+      display: none;
+   }
+   .content__wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 100%;
+   }
+   .text {
+      text-align: center;
+      opacity: 1;
+   }
+   .title {
+      max-width: 600px;
+      width: 100%;
+      object-fit: contain;
+   }
+   .ca {
+      font-size: 3.125vw;
+   }
+   .text {
+      font-size: 3.125vw;
+   }
+   .icon1 {
+      max-width: 8.125vw;
+   }
+   .icon2 {
+      max-width: 22vw;
+   }
+   .icon3 {
+      max-width: 14vw;
+   }
+   .networks__wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1 1 auto;
+   }
+   .content {
+      padding-bottom: 100px;
+      padding-top: 45px;
+   }
+   .now {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin: 400px auto 0;
+     
+ 
+   }
+   ._container {
+      padding: 0 10px;
+   }
+   .networks {
+      margin-bottom: 40px;
+   }
+}
+
+@media (max-width: 400px) {
+   .text {
+      max-width: 280px;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[data-anim-on-scroll] {
+  transition: all 0.4s ease 0s;
+  opacity: 0;
+}
+
+[data-anim-on-scroll]._animate {
+  opacity: 1;
+}
+
+._right_anim_tr {
+  transform: translateX(200%);
+}
+
+._left_anim_tr {
+  transform: translateX(-200%);
+}
+
+._right_anim_tr._animate,
+._left_anim_tr._animate {
+  transform: translateX(0%);
+}
+
+
+._bottom_anim_tr {
+  transform: translateY(200%);
+}
+
+._top_anim_tr {
+  transform: translateY(-200%);
+}
+
+._top_anim_tr._animate,
+._bottom_anim_tr._animate {
+  transform: translateY(0%);
+}
+
+._scale_anim {
+  transform: scale(0);
+}
+
+._scale_anim._animate {
+  transform: scale(1);
+}
+
+.title {
+  animation: title 3s ease-in-out infinite;
+}
+
+@keyframes title {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10%);
+  }
+}
+
+._loader {
+   min-height: 300px;
+   height: 100vh;
+   background-color: #000;
+ }
+ 
+ ._loader_hide {
+ 
+   opacity: 0;
+ }
+ 
+ .loader__left {
+   color: #FFF;
+   font-family: "Cyberspace Raceway";
+   font-size: 19px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   padding-top: 50px;
+   padding-bottom: 100px;
+   transition: opacity 2s ease 0s;
+ }
+ 
+ .loader__text {
+   display: flex;
+   justify-content: space-between;
+   max-width: 500px;
+   width: 100%;
+ }
+ 
+ .loader__text-right,
+ .loader__text-left {
+   color: #FFF;
+   font-size: 19px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   transition: opacity 2s ease 0s;
+ }
+ 
+ 
+ @media (max-width: 670px) {
+   .loader__left br {
+     display: none;
+   }
+ 
+   .loader__text-right,
+   .loader__text-left,
+   .loader__left {
+     font-size: 16px;
+   }
+ }
+ 
+ @media (max-width: 350px) {
+ 
+   .loader__text-right,
+   .loader__text-left,
+   .loader__left {
+     font-size: 13px;
+   }
+ 
+   .first__number {
+     font-size: 8px;
+   }
+ }
+
+
+._hide {
+   transition: all 0.4s ease 0s;
+   opacity: 0;
+   overflow: hidden;
+   visibility: hidden;
+   height: 0%;
+   min-height: 0%;
+ }
+
+
+.loop-images .image {
+  position: absolute;
+  z-index: 1;
+  bottom: -100%;
+  animation: moveUp 6s linear infinite;
+}
+
+.loop-images .right .image {
+  right: 0;
+}
+
+.loop-images .right .image-4 {
+  right: -15%;
+  left: auto;
+}
+
+@keyframes moveUp {
+  0% {
+    bottom: -100%;
+  }
+
+  100% {
+    bottom: 100%;
+  }
+}
+
+.loop-images .image-2 {
+  animation-delay: 2s;
+  animation: moveUp 7s linear infinite;
+}
+
+.loop-images .image-3 {
+  animation-delay: 3s;
+  animation: moveUp 9s linear infinite;
+}
+
+.loop-images .image-4 {
+  animation-delay: 6s;
+  animation: moveUp 12s linear infinite;
+}
+
+.loop-images .right .image-1 {
+  animation-delay: 0s;
+  animation: moveUp 7s linear infinite;
+}
+
+.loop-images .right .image-2 {
+  animation-delay: 4s;
+  animation: moveUp 9s linear infinite;
+}
+
+.loop-images .right .image-3 {
+  animation-delay: 7s;
+  animation: moveUp 12s linear infinite;
+}
+
+.loop-images .right .image-4 {
+  animation-delay: 10s;
+  animation: moveUp 8s linear infinite;
+}
