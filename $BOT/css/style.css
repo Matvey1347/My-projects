@@ -374,3 +374,63 @@
    font-family: "Nerko One", sans-serif;
    font-size: 2rem;
  }
+
+ [data-anim-on-scroll] {
+   transition: all 0.4s ease 0s;
+   opacity: 0;
+ }
+ 
+ [data-anim-on-scroll]._animate {
+   opacity: 1;
+ }
+ 
+ ._right_anim_tr {
+   transform: translateX(200%);
+ }
+ 
+ ._left_anim_tr {
+   transform: translateX(-200%);
+ }
+ 
+ ._right_anim_tr._animate,
+ ._left_anim_tr._animate {
+   transform: translateX(0%);
+ }
+ 
+ 
+ ._bottom_anim_tr {
+   transform: translateY(200%);
+ }
+ 
+ ._top_anim_tr {
+   transform: translateY(-200%);
+ }
+ 
+ ._top_anim_tr._animate,
+ ._bottom_anim_tr._animate {
+   transform: translateY(0%);
+ }
+ 
+ ._scale_anim {
+   transform: scale(0);
+ }
+ 
+ ._scale_anim._animate {
+   transform: scale(1);
+ }
+ 
+ .anim {
+   animation: anim 3s ease-in-out infinite;
+ }
+ 
+ @keyframes anim {
+ 
+   0%,
+   100% {
+     transform: scale(1);
+   }
+ 
+   50% {
+     transform: scale(1.5);
+   }
+ }
