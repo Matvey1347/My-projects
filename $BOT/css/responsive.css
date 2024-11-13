@@ -96,9 +96,9 @@
      font-size: 1rem;
    }
  
-   #header {
+   /*#header {
      display: none;
-   }
+   }*/
  
    #hero-box {
      flex-direction: column-reverse;
@@ -157,4 +157,25 @@
      text-align: center;
    }
  }
+
+/*-- 560px --*/
+
+.show-560 {
+   display: none;
+}
  
+ @media screen and (max-width: 560px) {
+   .show-560 { 
+      display: block;
+   }
+   .hide-560 {
+      display: none;
+   }
+   .nav-icon {
+      width: 30px;
+   }
+
+   .buy {
+      font-size: 10px;
+   }
+ }

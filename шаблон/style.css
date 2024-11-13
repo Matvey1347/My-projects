@@ -226,3 +226,7 @@
   animation-delay: 10s;
   animation: moveUp 8s linear infinite;
 }
+
+.wrapper {
+   background: #000;
+}
