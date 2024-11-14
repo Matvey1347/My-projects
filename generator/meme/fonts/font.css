@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'COMICSANSBOLD';
+  src: url(./COMICSANSBOLD.TTF);
+}
+
+.ff-comicsans {
+  font-family: 'COMICSANSBOLD';
+}
+
+.ff-NerkoOne {
+  font-family: "Nerko One", cursive;
+}
+
+.ff-ComicNeue {
+  font-family: "Comic Neue", cursive;
+}
+
+.ff-Coiny {
+  font-family: "Coiny", system-ui;
+}
+
+.ff-Roboto {
+  font-family: "Roboto", sans-serif;
+}

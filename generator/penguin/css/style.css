@@ -1,0 +1,396 @@
+@import url(../fonts/font.css);
+@import url(./null.css);
+@import url(./global.css);
+
+:root {
+  --transition: all 0.4s ease 0s;
+}
+
+._container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.page-wrap {
+  min-height: 100%;
+}
+
+.generator__section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.generator__items {
+  width: calc(100% - 600px);
+  margin-right: 20px;
+}
+
+.page-wrap__top-bg {
+  height: auto;
+  padding-top: 90px;
+}
+
+[data-item] {
+  width: 130px !important;
+  height: 130px !important;
+  border-radius: 10px;
+  border: 2px solid #088FBF;
+  cursor: pointer;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+[data-item]._active {
+  border: 4px solid #088FBF;
+  background: #fff;
+}
+
+[data-item] img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+[data-generator-photo] {
+  min-width: 500px;
+  max-width: 500px;
+  min-height: 500px;
+  max-height: 500px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 100000;
+}
+
+.wrap__big-ice {
+  padding: 0 0 120px;
+}
+
+.wrap__big-ice_image {
+  height: auto;
+  top: auto;
+  bottom: 0;
+}
+
+.swiper__items-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 71px;
+}
+
+.swiper-button-disabled {
+  opacity: 0.5;
+}
+
+.swiper__items-prev {
+  margin-right: 30px;
+}
+
+.swiper__items-left {
+  margin-left: 30px;
+}
+
+.swiper__items-next {
+  margin-left: 30px;
+}
+
+.swiper__items_btn {
+  display: flex;
+}
+
+.generator__item_title {
+  color: #FFF;
+  font-family: "PumpkinGames";
+  font-size: 37px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 13px;
+}
+
+.generator__btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+[data-generate-random-btn] {
+  margin-bottom: 30px;
+}
+
+.generator__btns button {
+  position: relative;
+  padding: 17px 27px 30px 27px;
+}
+
+.generator__btns button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.generator__btns button span {
+  color: #088FBF;
+  text-align: center;
+  font-family: "PumpkinGames";
+  z-index: 2;
+  position: relative;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.generator__btns button img {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.page__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 62px 0 14px;
+}
+
+.back-btn {
+  font-size: 20px;
+  color: #fff;
+}
+
+.buy-btn {
+  color: #fff;
+  margin-left: 62px;
+  font-size: 40px;
+}
+
+.head-icon {
+  margin-right: 38px;
+}
+
+.page__right {
+  display: flex;
+  align-items: center;
+}
+
+.page__title {
+  font-size: 63px;
+  color: #fff;
+  margin-bottom: 91px;
+}
+
+@media (max-width: 1150px) {
+  [data-generator-photo] {
+    min-width: 400px;
+    max-width: 400px;
+    min-height: 400px;
+    max-height: 400px;
+    margin: 0 auto;
+  }
+
+  .generator__btns button {
+    padding: 17px 25px 30px 24px;
+  }
+
+  .generator__items {
+    width: calc(100% - 500px);
+  }
+}
+
+@media (max-width: 900px) {
+  .generator__section {
+    flex-direction: column-reverse;
+  }
+
+  .generator__items {
+    width: 100%;
+    margin-top: 40px;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  [data-generator-photo] {
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 300px;
+    max-height: 300px;
+  }
+
+  .generator__btns button span {
+    font-size: 18px;
+  }
+
+  .swiper__items-prev {
+    margin-right: 20px;
+  }
+
+  .swiper__items-next {
+    margin-left: 20px;
+  }
+
+  .swiper__items_btn {
+    min-width: 40px;
+  }
+
+  .swiper__items_btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  [data-item] {
+    width: 100px !important;
+    height: 100px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .wrap__big-ice {
+    padding: 0 0 70px 0;
+  }
+
+  [data-generator-photo] {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 250px;
+    max-height: 250px;
+  }
+
+  [data-generate-random-btn] {
+    margin-bottom: 0;
+  }
+
+  .generator__btns {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .generator__btns button:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.swiper {
+  margin: 0;
+  width: 100%;
+}
+
+.swiper-button-lock {
+  display: flex !important;
+}
+
+@media (max-width: 800px) {
+  .page__head {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .page__right {
+    margin: 10px 0 30px;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .buy-btn {
+    width: 100%;
+    text-align: right;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 630px) {
+  .page__right {
+    flex-wrap: wrap;
+    max-width: 300px;
+    margin: 0 auto 30px;
+  }
+
+  .head-icon {
+    margin-right: 0;
+  }
+
+  .buy-btn {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .page__title {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+[data-generator-photo] {
+  overflow: hidden;
+}
+
+[data-item=""] {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+[data-item=""] img {
+  width: 50px;
+  height: 50px;
+}
+
+[data-choose-preview="penguin-image"] {
+  bottom: 0%;
+  z-index: 10;
+  width: 100%;
+  height: auto;
+  left: 0;
+}
+
+[data-choose-preview="hat"] {
+  bottom: 0;
+  left: 0;
+  top: auto;
+  height: auto;
+  object-fit: contain;
+  width: 100%;
+}
+
+[data-choose-preview="face"] {
+  bottom: 0;
+  left: 0;
+  top: auto;
+  height: auto;
+  object-fit: contain;
+  width: 100%;
+}
+
+[data-choose-preview="front-accessory"] {
+  bottom: 0;
+  left: 0;
+  top: auto;
+  height: auto;
+  object-fit: contain;
+  width: 100%;
+}
+
+[data-choose-preview="back-accessory"] {
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  top: auto;
+}
+
+[data-choose-preview="outfit"] {
+  bottom: 0;
+  left: 0;
+  top: auto;
+  height: auto;
+  object-fit: contain;
+  width: 100%;
+}
+
+.none {
+  display: none !important;
+}
