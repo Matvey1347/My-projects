@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>$SOLY</title>
+      <link rel="stylesheet" href="./null.css" />
+      <link rel="stylesheet" href="./style.css" />
+      <link rel="shortcut icon" href="./image/favicon.png" type="image/x-icon" />
+   </head>
+
+   <body>
+      <div class="wrapper bg__wrap">
+         <img src="./image/bg.png" alt="" class="bg hide-768" />
+         <img src="./image/bgmb.png" alt="" class="bg show-768" />
+         <section class="first bg__wrap animate">
+            <img src="./image/notebook.png" alt="" class="notebook bg hide-768" />
+            <img src="./image/notebookmb.png" alt="" class="notebookmb bg show-768" />
+            <div class="first-content _container">
+               <img src="./image/title.png" alt="" class="title sketch-4" />
+               <div class="content">
+                  <div class="left__column">
+                     <p class="text">Solana Mascot</p>
+                     <p class="text">The cutest and the most themed mascot on this blockchain, meet Soly !</p>
+                     <div class="networks sketch-3">
+                        <a href="#" class="_scale_hover">
+                           <img src="./image/tg.svg" alt="" class="twitter" />
+                        </a>
+                        <a href="#" class="_scale_hover">
+                           <img src="./image/x.svg" alt="" class="twitter" />
+                        </a>
+                        <a href="#" class="_scale_hover">
+                           <img src="./image/screen.svg" alt="" class="twitter" />
+                        </a>
+                        <a href="#" class="_scale_hover">
+                           <img src="./image/tools.svg" alt="" class="twitter" />
+                        </a>
+                     </div>
+                     <div class="right__column show-768">
+                        <img src="./image/left.png" alt="" class="left" />
+                        <img src="./image/right.png" alt="" class="right sketch-5" />
+                     </div>
+                     <a href="#" class="_scale_hover sketch-1 buy"><img src="./image/buy.svg" alt="" /></a>
+                     <p data-copy class="ca sketch-2">0X0000000000000000000000000</p>
+                  </div>
+                  <div class="right__column hide-768">
+                     <img src="./image/left.png" alt="" class="left" />
+                     <img src="./image/right.png" alt="" class="right sketch-5" />
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <sesction class="second bg__wrap">
+            <img src="./image/bg.png" alt="" class="bg" />
+            <div class="second__content _container">
+               <img src="./image/notebook.png" alt="" class="notebook bg hide-768" />
+               <img src="./image/notebookmb.png" alt="" class="notebookmb bg show-768" />
+               <img src="./image/second.png" alt="" class="second-img hide-768" />
+               <img src="./image/secondmb.png" alt="" class="secondmb-img show-768" />
+            </div>
+         </sesction>
+      </div>
+      <div class="copied_modal">copied to clipboard</div>
+
+      <!-- <div class="loop-images">
+    <div class="left">
+      <img src="./image/image-1.png" class="image image-1">
+      <img src="./image/image-2.png" class="image image-2">
+      <img src="./image/image-3.png" class="image image-3">
+      <img src="./image/image-4.png" class="image image-4">
+    </div>
+    <div class="right">
+      <img src="./image/image-1.png" class="image image-1">
+      <img src="./image/image-2.png" class="image image-2">
+      <img src="./image/image-3.png" class="image image-3">
+      <img src="./image/image-4.png" class="image image-4">
+    </div>
+  </div> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+      <script src="./copy.js"></script>
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+            const firstSection = document.querySelector(".first");
+            const secondSection = document.querySelector(".second");
+            let isAnimating = false;
+            let isSecondVisible = false;
+
+            window.addEventListener("scroll", function () {
+               // Прокрутка вниз
+               if (window.scrollY > 100 && !isAnimating && !isSecondVisible) {
+                  isAnimating = true;
+                  isSecondVisible = true;
+
+                  firstSection.classList.add("_scrolled");
+
+                  setTimeout(() => {
+                     secondSection.classList.add("_visible");
+                     firstSection.style.position = "absolute";
+                     isAnimating = false;
+                  }, 800);
+               }
+
+               // Прокрутка вверх
+               if (window.scrollY < 50 && !isAnimating && isSecondVisible) {
+                  isAnimating = true;
+                  isSecondVisible = false;
+
+                  secondSection.classList.remove("_visible");
+                  firstSection.classList.remove("_scrolled");
+                  firstSection.style.position = "fixed";
+
+                  setTimeout(() => {
+                     isAnimating = false;
+                  }, 800);
+               }
+            });
+         });
+      </script>
+   </body>
+</html>
