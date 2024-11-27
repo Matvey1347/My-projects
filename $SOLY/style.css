@@ -436,6 +436,10 @@ line-height: normal;
       margin-top: 50px;
       margin-bottom: 10px;
    }
+   .first-content {
+      padding: 0 20px;
+      margin-top: 85px;
+   }
 }
 
 @media (max-width: 360px) {
@@ -534,8 +538,83 @@ line-height: normal;
 }
 
 
+.first {
+   position: fixed; /* Фиксируем первую секцию */
+   width: 100%;
+   max-width: 1400px;
+   top: 85px;
+   left: 50%;
+   transform: translateX(-50%);
+   transition: all 0.8s ease-out;
+   z-index: 2;
+   opacity: 1;
+   height: calc(100vh - 85px); /* Задаем высоту равную высоте экрана минус отступ сверху */
+}
 
+.first-content {
+   height: 100%;
+   overflow-y: auto; /* Добавляем скролл для контента */
+   padding: 0 20px;
+   -webkit-overflow-scrolling: touch; /* Для плавного скролла на iOS */
+}
 
+/* Стилизация скроллбара (опционально) */
+.first-content::-webkit-scrollbar {
+   width: 0; /* Скрываем стандартный скроллбар */
+}
+
+@media (max-width: 768px) {
+   .first {
+      top: 20px;
+      height: calc(100vh - 20px);
+   }
+   
+   .first-content {
+      padding: 0 15px;
+   }
+}
+
+.first {
+   position: fixed;
+   width: 100%;
+   max-width: 1400px;
+   top: 85px;
+   left: 50%;
+   transform: translateX(-50%);
+   transition: all 0.8s ease-out;
+   z-index: 2;
+   opacity: 1;
+   height: calc(100vh - 85px);
+}
+
+.first._scrolled {
+   transform: translateX(-150%) rotate(-10deg);
+   opacity: 0;
+}
+
+.second {
+   position: fixed; /* Фиксируем вторую секцию */
+   top: 85px; /* Такой же отступ как у первой секции */
+   width: 100%;
+   max-width: 1400px !important;
+   opacity: 0;
+   transform: translateX(100%);
+   transition: all 0.8s ease-out;
+   left: 50%;
+   height: calc(100vh - 85px); /* Такая же высота как у первой */
+}
+
+.second._visible {
+   transform: translateX(-50%);
+   opacity: 1;
+}
+
+@media (max-width: 768px) {
+   .first, .second {
+      top: 20px;
+      height: calc(100vh - 20px);
+   }
+}
 
 
 
@@ -672,4 +751,38 @@ line-height: normal;
 .loop-images .right .image-4 {
   animation-delay: 10s;
   animation: moveUp 8s linear infinite;
+}
+
+.first {
+   position: relative; /* Меняем на relative чтобы контент можно было скроллить */
+   width: 100%;
+   max-width: 1400px;
+   left: 50%;
+   transform: translateX(-50%);
+   transition: all 0.8s ease-out;
+   z-index: 2;
+   opacity: 1;
+}
+
+.first._scrolled {
+   position: fixed; /* При анимации фиксируем */
+   top: 85px;
+   transform: translateX(-150%) rotate(-10deg);
+   opacity: 0;
+}
+
+.second {
+   margin-top: 100vh;
+   position: relative;
+   max-width: 1400px !important;
+   width: 100%;
+   opacity: 0;
+   transform: translateX(100%);
+   transition: all 0.8s ease-out;
+   left: 50%;
+}
+
+.second._visible {
+   transform: translateX(-50%);
+   opacity: 1;
 }

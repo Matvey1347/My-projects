@@ -1,0 +1,414 @@
+@font-face {
+	font-family: 'Conv_SFPRODISPLAYREGULAR';
+	src: url('fonts/SFPRODISPLAYREGULAR.eot');
+	src: local('☺'), url('fonts/SFPRODISPLAYREGULAR.woff') format('woff'), url('fonts/SFPRODISPLAYREGULAR.ttf') format('truetype'), url('fonts/SFPRODISPLAYREGULAR.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+   font-family: 'Conv_SFPRODISPLAYREGULAR' !important;
+   color: #FFF;
+}
+
+._scale_hover {
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
+
+._scale_hover:hover {
+  transform: scale(1.1);
+}
+
+.networks {
+  display: flex;
+  align-items: center;
+}
+
+.networks a {
+  display: block;
+}
+
+.networks a:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+._container {
+  max-width: 1600px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.bg__wrap {
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+[data-copy] {
+  cursor: pointer;
+}
+
+.copied_modal {
+  position: fixed;
+  top: 50%;
+  color: #000;
+  left: 50%;
+  z-index: 100;
+  background: #fff;
+  font-family: "Knewave", system-ui;
+  padding: 10px 30px;
+  white-space: nowrap;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease 0s;
+}
+
+.copied_modal._show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.video {
+   max-width: 1160px;
+   width: 100%;
+   height: 652px;
+   border-radius: 43px;
+   object-fit: cover;
+   margin: 0 auto;
+   display: block;
+   margin-bottom: 40px;
+}
+
+.buy {
+   display: inline-block;
+}
+
+.content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   position: relative;
+}
+
+.second {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.ca {
+   color: #F8A7C8;
+font-family: "SF Pro Display";
+font-size: 26.108px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin-top: 15px;
+position: relative;
+}
+
+.ca::after {
+   content: '';
+   display: block; /* Отображение как блочный элемент */
+   width: 25px; /* Ширина изображения */
+   height: 25px; /* Высота изображения */
+   background-image: url('./image/copy.svg'); /* Путь к изображению */
+   background-size: cover; /* Масштабирование изображения */
+   position: absolute; /* Позиционирование относительно родителя */
+   top: 0; /* Позиция под текстом */
+   right: -10%; /* Выравнивание по левому краю */
+}
+
+.girl {
+   cursor: pointer;
+}
+
+.networks-abs {
+   flex-direction: column;
+   position: absolute;
+   top: 55%;
+   transform: translateY(-50%);
+   left: 5%;
+}
+
+@media (max-width:1800px) {
+   .girl {
+      max-width: 500px;
+   }
+}
+
+.show-1570 {
+   display: none;
+}
+
+@media (max-width:1570px) {
+   .content {
+      padding-top: 30px;
+   }
+   .show-1570 {
+      display: flex;
+   }
+   .hide-1570 {
+      display: none;
+   }
+   .networks a:not(:last-child) {
+      margin-right: 24px;
+      margin-bottom: 0;
+    }
+}
+
+@media (max-width:1510px) {
+   .girl {
+      max-width: 400px;
+   }
+}
+
+@media (max-width:1385px) {
+   .title {
+      width: 80vw;
+   }
+}
+
+@media (max-width:1220px) {
+   .video {
+      width: 80vw;
+   }
+   .girl {
+      max-width: 300px;
+   }
+}
+
+.show-910 {
+   display: none;
+}
+
+@media (max-width:910px) {
+   .show-910 {
+      display: flex;
+   }
+   .hide-910 {
+      display: none;
+   }  
+   .ca {
+      border-radius: 52.377px;
+border: 1.048px solid #FFF;
+background: rgba(255, 255, 255, 0.40);
+backdrop-filter: blur(11.444314956665039px);
+padding: 10px 43px 10px 20px;
+   }
+   .ca::after {
+      top: 35%;
+      right: 5%;
+      width: 20px;
+      height: 20px;
+   }
+   .networks img {
+      width: 70px;
+   }
+   .video {
+      height: 87vw;
+      width: 90vw;
+   }
+   .title-2 {
+      width: 500px;
+   }
+   .girl-3 {
+      margin: 0 auto;
+      display: inline-block;
+   }
+   .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+   }
+}
+
+@media (max-width:530px) {
+.title-2 {
+   width: 310px;
+}
+}
+
+@media (max-width:500px) {
+   .buy-img {
+      width: 150px;
+    }
+    .ca {
+      font-size: 18px;
+    }
+}
+
+@media (max-width:400px) {
+   .networks img {
+      width: 60px;
+   }
+   .networks a:not(:last-child) {
+      margin-right: 16px;
+      margin-bottom: 0;
+    }
+    .title {
+      width: 310px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[data-anim-on-scroll] {
+  transition: all 0.4s ease 0s;
+  opacity: 0;
+}
+
+[data-anim-on-scroll]._animate {
+  opacity: 1;
+}
+
+._right_anim_tr {
+  transform: translateX(200%);
+}
+
+._left_anim_tr {
+  transform: translateX(-200%);
+}
+
+._right_anim_tr._animate,
+._left_anim_tr._animate {
+  transform: translateX(0%);
+}
+
+
+._bottom_anim_tr {
+  transform: translateY(200%);
+}
+
+._top_anim_tr {
+  transform: translateY(-200%);
+}
+
+._top_anim_tr._animate,
+._bottom_anim_tr._animate {
+  transform: translateY(0%);
+}
+
+._scale_anim {
+  transform: scale(0);
+}
+
+._scale_anim._animate {
+  transform: scale(1);
+}
+
+.anim {
+  animation: anim 3s ease-in-out infinite;
+}
+
+@keyframes anim {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+
+
+.loop-images .image {
+  position: absolute;
+  z-index: 1;
+  bottom: -100%;
+  animation: moveUp 6s linear infinite;
+}
+
+.loop-images .right .image {
+  right: 0;
+}
+
+.loop-images .right .image-4 {
+  right: -15%;
+  left: auto;
+}
+
+@keyframes moveUp {
+  0% {
+    bottom: -100%;
+  }
+
+  100% {
+    bottom: 100%;
+  }
+}
+
+.loop-images .image-2 {
+  animation-delay: 2s;
+  animation: moveUp 7s linear infinite;
+}
+
+.loop-images .image-3 {
+  animation-delay: 3s;
+  animation: moveUp 9s linear infinite;
+}
+
+.loop-images .image-4 {
+  animation-delay: 6s;
+  animation: moveUp 12s linear infinite;
+}
+
+.loop-images .right .image-1 {
+  animation-delay: 0s;
+  animation: moveUp 7s linear infinite;
+}
+
+.loop-images .right .image-2 {
+  animation-delay: 4s;
+  animation: moveUp 9s linear infinite;
+}
+
+.loop-images .right .image-3 {
+  animation-delay: 7s;
+  animation: moveUp 12s linear infinite;
+}
+
+.loop-images .right .image-4 {
+  animation-delay: 10s;
+  animation: moveUp 8s linear infinite;
+}

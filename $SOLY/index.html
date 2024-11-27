@@ -83,13 +83,18 @@
       <script>
          document.addEventListener("DOMContentLoaded", function () {
             const firstSection = document.querySelector(".first");
+            const firstContent = document.querySelector(".first-content");
             const secondSection = document.querySelector(".second");
             let isAnimating = false;
             let isSecondVisible = false;
 
-            window.addEventListener("scroll", function () {
-               // Прокрутка вниз
-               if (window.scrollY > 100 && !isAnimating && !isSecondVisible) {
+            firstContent.addEventListener("scroll", function () {
+               // Проверяем, достиг ли скролл контента конца
+               if (
+                  firstContent.scrollHeight - firstContent.scrollTop <= firstContent.clientHeight + 50 &&
+                  !isAnimating &&
+                  !isSecondVisible
+               ) {
                   isAnimating = true;
                   isSecondVisible = true;
 
@@ -101,8 +106,10 @@
                      isAnimating = false;
                   }, 800);
                }
+            });
 
-               // Прокрутка вверх
+            window.addEventListener("scroll", function () {
+               // Возврат к первой секции при скролле вверх
                if (window.scrollY < 50 && !isAnimating && isSecondVisible) {
                   isAnimating = true;
                   isSecondVisible = false;

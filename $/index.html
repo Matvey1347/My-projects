@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>$ONLYMILF</title>
+      <link rel="stylesheet" href="./null.css" />
+      <link rel="stylesheet" href="./style.css" />
+      <link rel="shortcut icon" href="./image/favicon.png" type="image/x-icon" />
+   </head>
+
+   <body>
+      <div class="wrapper bg__wrap">
+         <div class="content _container">
+            <img src="./image/bg.png" alt="" class="bg hide-768" />
+            <img src="./image/bgmb.png" alt="" class="bg show-768" />
+            <img src="./image/title.png" alt="" class="title" />
+            <h2 class="subtitle">Juicy mommies for real degens</h2>
+            <p class="text">Enter your email to get the whitelist</p>
+            <form class="wrap" onsubmit="return false;">
+               <input
+                  id="email"
+                  placeholder="Enter your email"
+                  type="email"
+                  class="form"
+                  required
+                  onkeydown="submitForm(event)"
+               />
+            </form>
+            <p class="ca hide-1170" data-copy>CA:Fn1nCj9HVKa2H8BWcY9NScyGCAQWy8LkgsW5rv2dpump</p>
+            <p class="ca show-1170" data-copy>CA:Fn1nCj9HVKa2H8BWcY9NSc<br />yGCAQWy8LkgsW5rv2dpump</p>
+         </div>
+      </div>
+      <div class="copied_modal">copied to clipboard</div>
+
+      <!-- <div class="loop-images">
+    <div class="left">
+      <img src="./image/image-1.png" class="image image-1">
+      <img src="./image/image-2.png" class="image image-2">
+      <img src="./image/image-3.png" class="image image-3">
+      <img src="./image/image-4.png" class="image image-4">
+    </div>
+    <div class="right">
+      <img src="./image/image-1.png" class="image image-1">
+      <img src="./image/image-2.png" class="image image-2">
+      <img src="./image/image-3.png" class="image image-3">
+      <img src="./image/image-4.png" class="image image-4">
+    </div>
+  </div> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+      <script src="./copy.js"></script>
+      <script>
+         async function submitForm(event) {
+            // Проверяем, была ли нажата клавиша Enter
+            if (event.key === "Enter") {
+               event.preventDefault(); // Отменяем стандартное поведение формы
+
+               const email = document.getElementById("email").value; // Получаем значение email
+
+               // Отправка данных с помощью fetch
+               try {
+                  const response = await fetch("submit.php", {
+                     method: "POST",
+                     headers: {
+                        "Content-Type": "application/x-www-form-urlencoded",
+                     },
+                     body: new URLSearchParams({ email: email }),
+                  });
+
+                  const result = await response.text(); // Получаем ответ от сервера
+                  console.log(result);
+               } catch (error) {
+                  console.error("Ошибка:", error);
+               }
+            }
+         }
+      </script>
+   </body>
+</html>
