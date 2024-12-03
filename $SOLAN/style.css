@@ -1,0 +1,453 @@
+@font-face {
+	font-family: 'Conv_chinese rocks rg';
+	src: url('fonts/chinese rocks rg.eot');
+	src: local('☺'), url('fonts/chinese rocks rg.woff') format('woff'), url('fonts/chinese rocks rg.ttf') format('truetype'), url('fonts/chinese rocks rg.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+   font-family: 'Conv_chinese rocks rg' !important;
+   color: #FFF;
+}
+
+._scale_hover {
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
+
+._scale_hover:hover {
+  transform: scale(1.1);
+}
+
+.networks {
+  display: flex;
+  align-items: center;
+}
+
+.networks a {
+  display: block;
+}
+
+.networks a:not(:last-child) {
+  margin-right: 60px;
+}
+
+._container {
+  max-width: 1600px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.bg__wrap {
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+[data-copy] {
+  cursor: pointer;
+}
+
+.copied_modal {
+  position: fixed;
+  top: 50%;
+  color: #000;
+  left: 50%;
+  z-index: 100;
+  background: #fff;
+  font-family: "Knewave", system-ui;
+  padding: 10px 30px;
+  white-space: nowrap;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease 0s;
+}
+
+.copied_modal._show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.content {
+   padding-top: 60px;
+   padding-bottom: 80px;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+
+}
+
+.header {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   max-width: 1400px;
+}
+
+.networks {
+   margin-bottom: 30px;   
+}
+
+
+.text {
+   color: #5899D4;
+font-family: "Chinese Rocks";
+font-size: 23.58px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+max-width: 600px;
+margin-bottom: 35px;
+}
+
+.ca {
+   color: #5899D4;
+text-align: center;
+font-family: "Chinese Rocks";
+font-size: 29.942px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+border-radius: 51.883px;
+border: 2.252px solid #5899D4;
+background: rgba(255, 255, 255, 0.10);
+box-shadow: 0px 0px 13.587px 0px rgba(88, 153, 212, 0.10);
+backdrop-filter: blur(12.75px);
+display: inline-block;
+padding: 12px 29px;
+}
+
+.buy {
+   display: inline-block;
+}
+
+.footer__text {
+   color: #5899D4;
+text-align: center;
+font-family: "Chinese Rocks";
+font-size: 42.949px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+max-width: 1290px;
+margin-bottom: 45px;
+}
+
+.wrap {
+   display: flex;
+   align-self: flex-start;
+   margin-left: 40px;
+}
+
+.buy {
+   margin-top:-10px;
+   margin-bottom: 100px;
+}
+
+.footer {
+   padding-top: 677px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.title {
+   position: relative;
+   margin-bottom: 10px;
+}
+
+.content-image {
+   position: relative;
+   z-index: 2;
+   margin-top: -145px;
+}
+
+@media (max-width:1380px) {
+   .title {
+      max-width: 1100px;
+   }
+   .content-image {
+      max-width: 500px;
+   }
+   .text {
+      max-width: 500px;
+   }
+}
+
+@media (max-width:1050px) {
+   .title {
+      max-width: 800px;
+   }
+   .content-image {
+      max-width: 400px;
+   }
+   .text {
+      max-width: 400px;
+   }
+
+   .footer__text {
+      font-size: 30px;
+      max-width: 800px;
+   }
+}
+
+.show-768 {
+   display: none;
+}
+
+@media (max-width:768px) {
+   .hide-768 {
+      display: none;
+   }
+   .show-768 {
+      display: flex;
+   }
+      
+   .wrap {
+      flex-direction: column;
+
+   }
+   .content-image {
+      max-width: 500px;
+   }
+   .text {
+      max-width: 500px;
+   }
+   .title {
+      max-width: 500px;
+   }
+   .footer {
+      margin-top: auto;
+      padding-top: 0;
+   }
+   .content {
+      height: 2100px;
+      padding-top: 27px;
+      padding-bottom: 37px;
+   }
+   .header {
+      margin-bottom: -100px;
+   }
+   .content-image {
+      margin-top: 0;
+          }
+}
+
+@media (max-width:560px) {
+   .networks a:not(:last-child) {
+      margin-right: 40px;
+    }
+    .title {
+      max-width: 360px;
+    }
+    .text {
+      font-size: 13px;
+      max-width: 360px;
+    }
+    .content-image {
+max-width: 360px;
+margin-top: 0;
+    }
+    .buy img {
+      max-width: 170px;
+    }
+    .footer__text {
+      font-size: 18.171px;
+      margin-bottom: 15px;
+    }
+    .ca {
+      padding: 5px 16px;
+      font-size: 16.952px;
+    }
+    .content {
+      height: 1250px !important;
+      min-height: none;
+    }
+}
+
+@media (max-width:410px) {
+
+    .title {
+      max-width: 300px;
+    }
+    .text {
+      font-size: 13px;
+      max-width: 300px;
+    }
+    .content-image {
+max-width: 300px;
+margin-top: 0;
+    }
+    .buy img {
+      max-width: 170px;
+    }
+    .footer__text {
+      font-size: 18.171px;
+    }
+    .ca {
+      padding: 5px 16px;
+      font-size: 16.952px;
+    }
+    .networks img {
+      width: 36px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[data-anim-on-scroll] {
+  transition: all 0.4s ease 0s;
+  opacity: 0;
+}
+
+[data-anim-on-scroll]._animate {
+  opacity: 1;
+}
+
+._right_anim_tr {
+  transform: translateX(200%);
+}
+
+._left_anim_tr {
+  transform: translateX(-200%);
+}
+
+._right_anim_tr._animate,
+._left_anim_tr._animate {
+  transform: translateX(0%);
+}
+
+
+._bottom_anim_tr {
+  transform: translateY(200%);
+}
+
+._top_anim_tr {
+  transform: translateY(-200%);
+}
+
+._top_anim_tr._animate,
+._bottom_anim_tr._animate {
+  transform: translateY(0%);
+}
+
+._scale_anim {
+  transform: scale(0);
+}
+
+._scale_anim._animate {
+  transform: scale(1);
+}
+
+.anim {
+  animation: anim 3s ease-in-out infinite;
+}
+
+@keyframes anim {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+
+
+.loop-images .image {
+  position: absolute;
+  z-index: 1;
+  bottom: -100%;
+  animation: moveUp 6s linear infinite;
+}
+
+.loop-images .right .image {
+  right: 0;
+}
+
+.loop-images .right .image-4 {
+  right: -15%;
+  left: auto;
+}
+
+@keyframes moveUp {
+  0% {
+    bottom: -100%;
+  }
+
+  100% {
+    bottom: 100%;
+  }
+}
+
+.loop-images .image-2 {
+  animation-delay: 2s;
+  animation: moveUp 7s linear infinite;
+}
+
+.loop-images .image-3 {
+  animation-delay: 3s;
+  animation: moveUp 9s linear infinite;
+}
+
+.loop-images .image-4 {
+  animation-delay: 6s;
+  animation: moveUp 12s linear infinite;
+}
+
+.loop-images .right .image-1 {
+  animation-delay: 0s;
+  animation: moveUp 7s linear infinite;
+}
+
+.loop-images .right .image-2 {
+  animation-delay: 4s;
+  animation: moveUp 9s linear infinite;
+}
+
+.loop-images .right .image-3 {
+  animation-delay: 7s;
+  animation: moveUp 12s linear infinite;
+}
+
+.loop-images .right .image-4 {
+  animation-delay: 10s;
+  animation: moveUp 8s linear infinite;
+}
