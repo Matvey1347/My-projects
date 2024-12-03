@@ -1,0 +1,414 @@
+@font-face {
+	font-family: 'Conv_rfkrabuler_regular';
+	src: url('fonts/rfkrabuler_regular.eot');
+	src: local('☺'), url('fonts/rfkrabuler_regular.woff') format('woff'), url('fonts/rfkrabuler_regular.ttf') format('truetype'), url('fonts/rfkrabuler_regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+   font-family: 'Conv_rfkrabuler_regular' !important;
+   color: #FFF;
+}
+
+._scale_hover {
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
+
+._scale_hover:hover {
+  transform: scale(1.1);
+}
+
+.networks {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.networks a {
+  display: block;
+}
+
+
+.networks a:not(:last-child) {
+  margin-right: -24px;
+}
+
+._container {
+  max-width: 1600px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.bg__wrap {
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+[data-copy] {
+  cursor: pointer;
+}
+
+.copied_modal {
+  position: fixed;
+  top: 50%;
+  color: #000;
+  left: 50%;
+  z-index: 100;
+  background: #fff;
+  font-family: "Knewave", system-ui;
+  padding: 10px 30px;
+  white-space: nowrap;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease 0s;
+}
+
+.copied_modal._show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.buy {
+   display: inline-block;
+
+}
+
+.buy img {
+   position: relative;
+   z-index: 5;
+}
+
+.ca {
+   color: #000;
+text-align: center;
+font-family: "RF Krabuler";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: uppercase;
+}
+
+.content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-top: 67px;
+   padding-bottom: 60px;
+}
+
+.title {
+   margin-bottom: 10px;
+   position: relative;
+   z-index: 5;
+}
+
+.main {
+   position: relative;
+   z-index: 0;
+}
+
+.left__column {
+position: relative;
+height: 100%;
+top: 0;
+left: 0;
+}
+
+.right__column {
+   position: relative;
+height: 100%;
+top: 0;
+right: 0;
+}
+
+.image {
+   position: absolute;
+   z-index: -1;
+   background-size: cover;
+   animation: fall 5s infinite;
+}
+
+@keyframes fall {
+   0% {
+       transform: translateY(-100%) rotate(0deg);
+   }
+   50% {
+       transform: translateY(250%) rotate(360deg);
+   }
+   100% {
+       transform: translateY(-100%) rotate(720deg);
+   }
+}
+
+.image-1 { left: 0; animation-delay: 0s; }
+.image-2 { left: 30px; animation-delay: 0.1s; }
+.image-3 { left: 60px; animation-delay: 0.2s; }
+.image-4 { left: 90px; animation-delay: 0.3s; }
+.image-5 { left: 120px; animation-delay: 0.4s; }
+.image-6 { left: 150px; animation-delay: 0.5s; }
+.image-7 { left: 180px; animation-delay: 0.6s; }
+.image-8 { left: 210px; animation-delay: 0.7s; }
+.image-9 { left: 240px; animation-delay: 0.8s; }
+
+.image-11 { right: 0; animation-delay: 0s; }
+.image-12 { right: 30px; animation-delay: 0.1s; }
+.image-13 { right: 60px; animation-delay: 0.2s; }
+.image-14 { right: 90px; animation-delay: 0.3s; }
+.image-15 { right: 120px; animation-delay: 0.4s; }
+.image-16 { right: 150px; animation-delay: 0.5s; }
+.image-17 { right: 180px; animation-delay: 0.6s; }
+.image-18 { right: 210px; animation-delay: 0.7s; }
+.image-19 { right: 240px; animation-delay: 0.8s; }
+
+
+
+.main {
+   animation: smooth-move 5s infinite alternate ease-in-out; /* Задаем анимацию */
+}
+
+@keyframes smooth-move {
+   0% {
+       transform: rotate(0deg); /* Начальное положение */
+   }
+   50% {
+       transform: rotate(45deg); /* Поворот на 45 градусов */
+   }
+   100% {
+       transform: rotate(-45deg); /* Поворот на -45 градусов */
+   }
+}
+
+.show-500 {
+   display: none;
+}
+
+@media (max-width:500px) {
+   .show-500 {
+      display: flex;
+   }
+   .hide-500 {
+      display: none;
+   }
+   .main {
+      width: 300px;
+   }
+   .title {
+      width: 200px;
+   }
+   .buy img {
+      width: 166px;
+   }
+   .ca {
+      font-size: 14px;
+   }
+   .networks img {
+      width: 100px;
+   }
+   .networks {
+      margin-top: -15px;
+      margin-bottom: 10px;
+   }
+   .content {
+      padding-bottom: 290px;
+   }
+
+.top {
+   position: absolute;
+   z-index: -1;
+   background-size: cover; /* Убедитесь, что это значение установлено */
+   width: 100%; /* Добавлено для растягивания на всю ширину */
+   height: auto; /* Можно установить высоту в auto или задать конкретное значение */
+}
+.bottom {
+   position: absolute;
+   bottom: 0;
+   z-index: -1;
+   background-size: cover; /* Убедитесь, что это значение установлено */
+   width: 100%; /* Добавлено для растягивания на всю ширину */
+   height: auto; /* Можно установить высоту в auto или задать конкретное значение */
+}
+}
+
+@media (max-width:450px) {
+   .content {
+      padding-bottom: 260px;
+   }
+}
+
+@media (max-width:360px) {
+   .content {
+      padding-bottom: 220px;
+   }
+}
+
+@media (max-width:321px) {
+   .content {
+      padding-bottom: 200px;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[data-anim-on-scroll] {
+  transition: all 0.4s ease 0s;
+  opacity: 0;
+}
+
+[data-anim-on-scroll]._animate {
+  opacity: 1;
+}
+
+._right_anim_tr {
+  transform: translateX(200%);
+}
+
+._left_anim_tr {
+  transform: translateX(-200%);
+}
+
+._right_anim_tr._animate,
+._left_anim_tr._animate {
+  transform: translateX(0%);
+}
+
+
+._bottom_anim_tr {
+  transform: translateY(200%);
+}
+
+._top_anim_tr {
+  transform: translateY(-200%);
+}
+
+._top_anim_tr._animate,
+._bottom_anim_tr._animate {
+  transform: translateY(0%);
+}
+
+._scale_anim {
+  transform: scale(0);
+}
+
+._scale_anim._animate {
+  transform: scale(1);
+}
+
+.anim {
+  animation: anim 3s ease-in-out infinite;
+}
+
+@keyframes anim {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+
+
+.loop-images .image {
+  position: absolute;
+  z-index: 1;
+  bottom: -100%;
+  animation: moveUp 6s linear infinite;
+}
+
+.loop-images .right .image {
+  right: 0;
+}
+
+.loop-images .right .image-4 {
+  right: -15%;
+  left: auto;
+}
+
+@keyframes moveUp {
+  0% {
+    bottom: -100%;
+  }
+
+  100% {
+    bottom: 100%;
+  }
+}
+
+.loop-images .image-2 {
+  animation-delay: 2s;
+  animation: moveUp 7s linear infinite;
+}
+
+.loop-images .image-3 {
+  animation-delay: 3s;
+  animation: moveUp 9s linear infinite;
+}
+
+.loop-images .image-4 {
+  animation-delay: 6s;
+  animation: moveUp 12s linear infinite;
+}
+
+.loop-images .right .image-1 {
+  animation-delay: 0s;
+  animation: moveUp 7s linear infinite;
+}
+
+.loop-images .right .image-2 {
+  animation-delay: 4s;
+  animation: moveUp 9s linear infinite;
+}
+
+.loop-images .right .image-3 {
+  animation-delay: 7s;
+  animation: moveUp 12s linear infinite;
+}
+
+.loop-images .right .image-4 {
+  animation-delay: 10s;
+  animation: moveUp 8s linear infinite;
+}
