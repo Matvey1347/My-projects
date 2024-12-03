@@ -376,7 +376,7 @@ margin-top: 0;
 .snows {
    height: 110%;
    top: -10%;
-  animation: snows 5s ease-in-out infinite;
+  animation: snows 25s ease-in-out infinite;
 }
 
 @keyframes snows {
@@ -384,13 +384,13 @@ margin-top: 0;
   0%
    {
       opacity: 1;
-    transform: translateY(0%);
+    transform: translateY(-140%);
   }
 
 
   100% {
 opacity: 0;
-transform: translateY(10%);
+transform: translateY(0%);
   }
 }
 
