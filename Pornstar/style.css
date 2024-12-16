@@ -218,7 +218,7 @@ text-align: center;
     }
 }
 
-@media (min-width:1920px) {
+@media (min-width:1921px) {
    .wrapper {
       min-height: 100vh;
    }
