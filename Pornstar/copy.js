@@ -5,15 +5,8 @@ copies.forEach((copy) => {
    // copy.addEventListener('click', () => {
    const clipboard = new ClipboardJS(copy, {
       text: function () {
-         // Получаем текст содержимого элемента
-         let text = copy.textContent.trim();
-
-         if (!text) {
-            text = copy.getAttribute("data-copy");
-         }
-
-         // Удаляем все <br> теги
-         text = text.replace(/<br\s*\/?>/gi, "");
+         // Получаем текст из атрибута data-copy
+         let text = copy.getAttribute("data-copy") || ""; // Если атрибут отсутствует, возвращаем пустую строку
 
          return text;
       },

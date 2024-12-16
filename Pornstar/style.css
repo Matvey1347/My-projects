@@ -3,6 +3,8 @@
    color: #FFF;
 }
 
+
+
 ._scale_hover {
   transition: all 0.4s ease 0s;
   cursor: pointer;
@@ -116,6 +118,7 @@ line-height: normal;
 letter-spacing: -1.6px;
 max-width: 380px;
 padding: 13px 35px;
+text-align: center;
 }
 
 .second {
@@ -215,7 +218,14 @@ padding: 13px 35px;
     }
 }
 
-
+@media (min-width:1920px) {
+   .wrapper {
+      min-height: 100vh;
+   }
+   .second {
+      margin-top: 40vh;
+   }
+}
 
 
 
