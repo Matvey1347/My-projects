@@ -1,0 +1,413 @@
+@font-face {
+   font-family: 'Benzin';
+   src: url('fonts/Benzin-Regular.ttf') format('truetype');
+   font-weight: normal;
+}
+
+@font-face {
+   font-family: 'Benzin';
+   src: url('fonts/Benzin-ExtraBold.ttf') format('truetype');
+   font-weight: bold;
+}
+
+* {
+   font-family: 'Benzin' !important;
+   color: #FFF;
+}
+
+._scale_hover {
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
+
+._scale_hover:hover {
+  transform: scale(1.1);
+}
+
+.networks {
+  display: flex;
+  align-items: center;
+  margin-bottom: auto;
+}
+
+.networks a {
+  display: block;
+}
+
+.networks a:not(:last-child) {
+  margin-right: 32px;
+}
+
+._container {
+  max-width: 1880px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.bg__wrap {
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+[data-copy] {
+  cursor: pointer;
+}
+
+.copied_modal {
+  position: fixed;
+  top: 50%;
+  color: #000;
+  left: 50%;
+  z-index: 100;
+  background: #fff;
+  font-family: "Knewave", system-ui;
+  padding: 10px 30px;
+  white-space: nowrap;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease 0s;
+}
+
+.copied_modal._show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-top: 50px;
+   min-height: 120vh;
+}
+
+.buy {
+   border-radius: 26.383px;
+/*border: 0.879px solid #FFF;*/
+background: rgba(0, 0, 0, 0.01);
+backdrop-filter: blur(17.588651657104492px);
+color: #FFF;
+text-align: center;
+font-size: 64.359px;
+font-style: normal;
+font-weight: 900;
+line-height: 120%; /* 77.231px */
+padding: 18px 32px;
+margin-bottom: 10px;
+
+}
+
+.ca {
+   color: #FFF;
+text-align: center;
+font-size: 19.506px;
+font-style: normal;
+font-weight: 400;
+border-radius: 16.742px;
+/*border: 0.01px solid #FFF;*/
+background: rgba(0, 0, 0, 0.01);
+backdrop-filter: blur(11.161093711853027px);
+line-height: 120%; /* 23.407px */
+padding: 13px 32px;
+}
+
+.text {
+   color: #FFF;
+font-family: Benzin-ExtraBold;
+font-size: 24.792px;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+text-transform: uppercase;
+}
+
+.text span {
+   border-radius: 8.298px;
+background: #B1011F;
+backdrop-filter: blur(5.531914234161377px);
+padding: 7px 18px;
+}
+
+.footer {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   padding-bottom: 30px;
+   margin-top: -30px;
+}
+
+@media (max-width:1650px) {
+   .footer {
+
+      margin-top: 20px;
+   }
+}
+
+@media (max-width:1250px) {
+   .footer {
+
+flex-direction: column;
+align-items: center;
+gap: 30px;
+   }
+}
+
+.show-768 {
+   display: none;
+}
+
+@media (max-width: 768px) {
+   .hide-768 {
+      display: none;
+   }
+   .show-768 {
+      display: block;
+   }
+   .content {
+      padding-bottom: 25px;
+   }
+   .main {
+width: 80vw;
+margin-top: 350px;
+   }
+
+   .text {
+      font-size: 20px;
+      align-items: center;
+   }
+   .text span {
+      padding: 4px 7px;
+   }
+   .networks img {
+      width: 60px;
+   }
+   .networks {
+      margin-top: 10px;
+      margin-bottom: 15px;
+   }
+   .ca {
+      margin-bottom: 12px;
+      border: 0.01px solid #FFF;
+   }
+   .buy {
+      border: 0.879px solid #FFF;
+      margin-top: 10px;
+   }
+}
+
+@media (max-width: 520px) {
+   .text {
+      font-size: 14px;
+   }
+   .ca {
+      font-size: 16px;
+      padding: 7px 20px;
+   }
+   .networks img {
+      width: 50px;
+   }
+   .buy {
+      font-size: 32px;
+      padding: 14px 21px;
+      border-radius: 12.979px;
+border: 0.433px solid #FFF;
+background: rgba(0, 0, 0, 0.01);
+backdrop-filter: blur(8.652482032775879px);
+   }
+   .main {
+
+      margin-top: 235px;
+         }
+}
+
+@media (max-width:380px) {
+   .text {
+      font-size: 11px;
+   }
+   .ca {
+      font-size: 14px;
+      padding: 7px 20px;
+   }
+   .networks img {
+      width: 43px;
+   }
+   .main {
+
+      margin-top: 145px;
+         }
+         .content {
+            padding-top: 40px;
+            min-height: 100vh;
+            padding-bottom: 20px;
+         }
+         .right {
+            margin-bottom: 30px;
+         }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.buy-wrap {
+   display: inline-block;
+}
+
+[data-anim-on-scroll] {
+  transition: all 0.4s ease 0s;
+  opacity: 0;
+}
+
+[data-anim-on-scroll]._animate {
+  opacity: 1;
+}
+
+._right_anim_tr {
+  transform: translateX(200%);
+}
+
+._left_anim_tr {
+  transform: translateX(-200%);
+}
+
+._right_anim_tr._animate,
+._left_anim_tr._animate {
+  transform: translateX(0%);
+}
+
+
+._bottom_anim_tr {
+  transform: translateY(150%);
+}
+
+._top_anim_tr {
+  transform: translateY(-100%);
+}
+
+._top_anim_tr._animate,
+._bottom_anim_tr._animate {
+  transform: translateY(0%);
+}
+
+._scale_anim {
+  transform: scale(0);
+}
+
+._scale_anim._animate {
+  transform: scale(1);
+}
+
+.anim {
+  animation: anim 3s ease-in-out infinite;
+}
+
+@keyframes anim {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+
+
+.loop-images .image {
+  position: absolute;
+  z-index: 1;
+  bottom: -100%;
+  animation: moveUp 6s linear infinite;
+}
+
+.loop-images .right .image {
+  right: 0;
+}
+
+.loop-images .right .image-4 {
+  right: -15%;
+  left: auto;
+}
+
+@keyframes moveUp {
+  0% {
+    bottom: -100%;
+  }
+
+  100% {
+    bottom: 100%;
+  }
+}
+
+.loop-images .image-2 {
+  animation-delay: 2s;
+  animation: moveUp 7s linear infinite;
+}
+
+.loop-images .image-3 {
+  animation-delay: 3s;
+  animation: moveUp 9s linear infinite;
+}
+
+.loop-images .image-4 {
+  animation-delay: 6s;
+  animation: moveUp 12s linear infinite;
+}
+
+.loop-images .right .image-1 {
+  animation-delay: 0s;
+  animation: moveUp 7s linear infinite;
+}
+
+.loop-images .right .image-2 {
+  animation-delay: 4s;
+  animation: moveUp 9s linear infinite;
+}
+
+.loop-images .right .image-3 {
+  animation-delay: 7s;
+  animation: moveUp 12s linear infinite;
+}
+
+.loop-images .right .image-4 {
+  animation-delay: 10s;
+  animation: moveUp 8s linear infinite;
+}
