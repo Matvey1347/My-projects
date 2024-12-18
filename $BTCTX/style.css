@@ -1,0 +1,466 @@
+* {
+   font-family: "Bangers", serif !important;
+   color: #FFF;
+}
+
+._scale_hover {
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
+
+._scale_hover:hover {
+  transform: scale(1.1);
+}
+
+.networks {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 2%;
+  right: 12%;
+}
+
+.networks a {
+  display: block;
+}
+
+.networks a:not(:last-child) {
+  margin-right: 24px;
+}
+
+._container {
+  max-width: 1600px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  min-height: 1080px;
+}
+
+.bg__wrap {
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+[data-copy] {
+  cursor: pointer;
+}
+
+.copied_modal {
+  position: fixed;
+  top: 50%;
+  color: #000;
+  left: 50%;
+  z-index: 100;
+  background: #fff;
+  font-family: "Knewave", system-ui;
+  padding: 10px 30px;
+  white-space: nowrap;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease 0s;
+}
+
+.copied_modal._show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.buy_wrap {
+   display: inline-block;
+   position: absolute;
+   bottom: 1%;
+   right: 7%;
+}
+
+.text {
+   color: #FCFBF7;
+   max-width: 611px;
+font-size: 28.071px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-bottom: 35px;
+}
+
+.ca {
+   color: #FCFBF7;
+font-family: Bangers;
+font-size: 39.268px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+background-color: #262262;
+padding: 5px 20px;
+border-radius: 15px;
+display: inline-block;
+margin-bottom: 63px;
+text-align: center;
+}
+
+.content {
+   padding-left: 8.177vw;
+   display: flex;
+   flex-direction: column;
+   max-width: 100%;
+   align-items: start;
+}
+
+.transaction {
+   position: relative;
+   display: inline-block;
+}
+
+.proof_wrap {
+   position: absolute;
+   top: -30%;
+   right: -4%;
+}
+
+.link_wrap {
+   position: absolute;
+   left: 0;
+   bottom: -20%;
+}
+
+.title {
+   margin-left: -20px;
+}
+
+@media (max-width:1200px) {
+   .title {
+      margin-left: 0;
+   }
+   .networks {
+      right: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 304px;
+   }
+   .content {
+      padding-left: 0;
+      padding-top: 100px;
+      align-items: center;
+   }
+   .text {
+      background-color: #262262;
+padding: 5px 20px;
+border-radius: 15px;
+   }
+   .buy_wrap {
+      position: relative;
+      right: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 20px;
+   }
+}
+
+.show-768 {
+   display: none;
+}
+
+@media (max-width:768px) {
+   .show-768 {
+      display: inline-block;
+   }
+
+   .hide-768 {
+      display: none;
+   }
+   .text.show-768 {
+      display: flex;
+      justify-content: center;
+      background-color: #fff;
+      max-width: 50vw;
+padding: 0;
+border-radius: 0;
+color: #262262;
+width: 100%;
+margin: 0 auto;
+text-align: center;
+margin-top: 20px;
+   }
+   .title {
+      width: 90vw;
+      margin-left: 140px;
+      margin-top: -90px;
+   }
+   .wrapper {
+      min-height: 1980px;
+   }
+   .ca {
+      margin-top: -20px;
+   }
+   .transaction.show-768 {
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+   .buy_wrap {
+      margin-top: 367px;
+
+   }
+   .buy {
+      width: 350px;
+   }
+   .link_wrap {
+      left: 50%;
+      transform: translateX(-50%);
+   }
+}
+
+@media (max-width:640px) {
+   .proof {
+      width: 150px;
+   }
+   .proof_wrap {
+      position: absolute;
+      top: -20%;
+      right: 0%;
+  }
+  .main {
+   width: 90vw;
+  }
+  .link {
+   width: 100px;
+  }
+  .link_wrap {
+   bottom: -8%;
+}
+.buy_wrap {
+   margin-top: 348px;
+}
+.text.show-768 {
+   max-width: 80vw;
+}
+.buy {
+   width: 300px;
+}
+.wrapper {
+   min-height: 1714px;
+}
+}
+
+@media (max-width:500px) {
+   .networks img {
+      width: 40px;
+   }
+   .ca {
+      font-size: 22px;
+      margin-top: 0;
+   }
+   .text {
+      font-size: 19px;
+   }
+   .content {
+      align-items: center;
+   }
+   .proof {
+      width: 120px;
+   }
+   .wrapper {
+      min-height: 1322px;
+   }
+   .title {
+      margin-left: 90px;
+   }
+   .buy {
+      width: 215px;
+   }
+   .buy_wrap {
+      margin-top: 282px;
+  }
+  .link_wrap {
+   bottom: -17%;
+}
+}
+
+@media (max-width:380px) {
+   .wrapper {
+      min-height: 955px;
+  }
+  .ca {
+   max-width: 190px;
+   padding: 2px 10px;
+  }
+  .proof {
+   width: 100px;
+  }
+  .link {
+   width: 90px;
+  }
+  .buy {
+   width: 150px;
+  }
+  .buy_wrap {
+   margin-top: 142px;
+}
+.text.show-768 {
+   margin-top: 5px;
+}
+.title {
+   margin-left: 55px;
+}
+.networks {
+   left: 45%;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[data-anim-on-scroll] {
+  transition: all 0.4s ease 0s;
+  opacity: 0;
+}
+
+[data-anim-on-scroll]._animate {
+  opacity: 1;
+}
+
+._right_anim_tr {
+  transform: translateX(200%);
+}
+
+._left_anim_tr {
+  transform: translateX(-200%);
+}
+
+._right_anim_tr._animate,
+._left_anim_tr._animate {
+  transform: translateX(0%);
+}
+
+
+._bottom_anim_tr {
+  transform: translateY(200%);
+}
+
+._top_anim_tr {
+  transform: translateY(-200%);
+}
+
+._top_anim_tr._animate,
+._bottom_anim_tr._animate {
+  transform: translateY(0%);
+}
+
+._scale_anim {
+  transform: scale(0);
+}
+
+._scale_anim._animate {
+  transform: scale(1);
+}
+
+.anim {
+  animation: anim 3s ease-in-out infinite;
+}
+
+@keyframes anim {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+
+
+.loop-images .image {
+  position: absolute;
+  z-index: 1;
+  bottom: -100%;
+  animation: moveUp 6s linear infinite;
+}
+
+.loop-images .right .image {
+  right: 0;
+}
+
+.loop-images .right .image-4 {
+  right: -15%;
+  left: auto;
+}
+
+@keyframes moveUp {
+  0% {
+    bottom: -100%;
+  }
+
+  100% {
+    bottom: 100%;
+  }
+}
+
+.loop-images .image-2 {
+  animation-delay: 2s;
+  animation: moveUp 7s linear infinite;
+}
+
+.loop-images .image-3 {
+  animation-delay: 3s;
+  animation: moveUp 9s linear infinite;
+}
+
+.loop-images .image-4 {
+  animation-delay: 6s;
+  animation: moveUp 12s linear infinite;
+}
+
+.loop-images .right .image-1 {
+  animation-delay: 0s;
+  animation: moveUp 7s linear infinite;
+}
+
+.loop-images .right .image-2 {
+  animation-delay: 4s;
+  animation: moveUp 9s linear infinite;
+}
+
+.loop-images .right .image-3 {
+  animation-delay: 7s;
+  animation: moveUp 12s linear infinite;
+}
+
+.loop-images .right .image-4 {
+  animation-delay: 10s;
+  animation: moveUp 8s linear infinite;
+}
