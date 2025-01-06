@@ -164,6 +164,8 @@ line-height: 133%; /* 26.6px */
 text-transform: capitalize;
 max-width: 366px;
 margin-right: auto;
+position: relative;
+z-index: 100;
 }
 
 .buy-wrap {
@@ -243,6 +245,11 @@ margin-bottom: 10px;
 max-width: 590px;
 }
 
+.book-wrap {
+   position: relative;
+   z-index: 15;
+}
+
 .footer__title span {
    background: linear-gradient(90deg, #D06DFF -22.53%, #71139D 100%);
 background-clip: text;
@@ -290,7 +297,7 @@ padding-top: 66px;
 
 .hub-wrap, .text {
    position: relative;
-   z-index: 5;
+   z-index: 20;
 }
 
 @media (max-width:1220px) {
@@ -441,12 +448,14 @@ padding-bottom: 70px;
    position: absolute;
    left: 0;
    top: 0;
+   z-index: 6;
 }
 
 .right {
    position: absolute;
    top: 0;
    right: 0;
+   z-index: 6;
 }
 
 .left2 {
@@ -465,12 +474,12 @@ padding-bottom: 70px;
 
 .paralax {
    transition: transform 0.3s ease;
-   animation: move 2s infinite alternate; /* Добавлено для анимации */
+   animation: move 5s infinite alternate;
 }
 
-.paralax:hover {
-   animation: move 0.5s infinite alternate; /* Ускоренная анимация при наведении */
-}
+/*.paralax:hover {
+   animation: move 5s infinite alternate;
+}*/
 
 /* Определение анимации */
 @keyframes move {
@@ -478,7 +487,7 @@ padding-bottom: 70px;
       transform: translateY(0); /* Исходное положение */
    }
    100% {
-      transform: translateY(-15px); /* Движение вверх на 5px */
+      transform: translateY(-40px); /* Движение вверх на 5px */
    }
 }
 
