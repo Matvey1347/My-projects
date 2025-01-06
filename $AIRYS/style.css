@@ -437,6 +437,51 @@ padding-bottom: 70px;
     }
 }
 
+.left {
+   position: absolute;
+   left: 0;
+   top: 0;
+}
+
+.right {
+   position: absolute;
+   top: 0;
+   right: 0;
+}
+
+.left2 {
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   z-index: 6;
+}
+
+.right2 {
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   z-index: 6;
+}
+
+.paralax {
+   transition: transform 0.3s ease;
+   animation: move 2s infinite alternate; /* Добавлено для анимации */
+}
+
+.paralax:hover {
+   animation: move 0.5s infinite alternate; /* Ускоренная анимация при наведении */
+}
+
+/* Определение анимации */
+@keyframes move {
+   0% {
+      transform: translateY(0); /* Исходное положение */
+   }
+   100% {
+      transform: translateY(-15px); /* Движение вверх на 5px */
+   }
+}
+
 
 
 
