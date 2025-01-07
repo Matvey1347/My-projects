@@ -1,0 +1,441 @@
+* {
+   font-family: "Bebas Neue", serif !important;
+   color: #FFF;
+}
+
+html {
+   scroll-behavior: smooth;
+ }
+
+._scale_hover {
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
+
+._scale_hover:hover {
+  transform: scale(1.1);
+}
+
+.networks {
+   padding: 10px 45px;
+   border-radius: 56px;
+border: 2px solid #FFF;
+  display: flex;
+  align-items: center;
+  max-width: 342px;
+  position: relative;
+  z-index: 5;
+}
+
+.networks a {
+  display: block;
+}
+
+.networks a:not(:last-child) {
+  margin-right: 44px;
+}
+
+._container {
+  max-width: 1600px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.bg__wrap {
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+[data-copy] {
+  cursor: pointer;
+}
+
+.copied_modal {
+  position: fixed;
+  top: 50%;
+  color: #000;
+  left: 50%;
+  z-index: 100;
+  background: #fff;
+  font-family: "Knewave", system-ui;
+  padding: 10px 30px;
+  white-space: nowrap;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease 0s;
+}
+
+.copied_modal._show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-top: 50px;
+   padding-bottom: 50px;
+}
+
+.title {
+   color: #FFF;
+text-align: center;
+font-family: "Bebas Neue";
+font-size: 425.807px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+max-height: 400px;
+display: block;
+}
+
+.text {
+   color: #FFF;
+font-family: "Bebas Neue";
+font-size: 296.609px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-align: center;
+}
+
+.green {
+   color: #67C936;
+}
+
+.circle {
+   color: #FFF;
+font-family: "Bebas Neue";
+font-size: 156.875px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+border-radius: 204.709px;
+border: 3.548px solid #FFF;
+padding: 10px 95px;
+text-align: center;
+}
+
+.second {
+   display: flex;
+   align-items: center;
+}
+
+.green.visible {
+   opacity: 1;
+  transform: translateY(0);
+}
+
+.ca {
+   color: #FFF;
+font-family: "Bebas Neue";
+font-size: 37.166px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 10px 36px;
+border-radius: 59.466px;
+border: 1.544px solid #FFF;
+display: inline-block;
+}
+
+.bottom {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: -900px;
+}
+
+.trump {
+   margin-top: -850px;
+   margin-left: 150px;
+}
+
+.buy {
+   margin-top: -300px;
+   margin-bottom: 20px;
+   display: block;
+}
+
+
+
+.show-500 {
+display: none;
+}
+
+@media (max-width:500px) {
+   .hide-500 {
+   display: none;
+   }
+   .show-500 {
+   display: inline-block;
+   }
+   .networks img {
+      width: 24px;
+   }
+   .networks a:not(:last-child) {
+      margin-right: 36px;
+    }
+    .networks {
+      padding: 4px 30px;
+    }
+    .title {
+      color: #FFF;
+text-align: center;
+font-family: "Bebas Neue";
+font-size: 90.625px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+   display: block;
+    }
+    .second2 {
+      color: #FFF;
+font-family: "Bebas Neue";
+font-size: 158.011px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+    }
+    .green {
+      color: #67C936;
+font-family: "Bebas Neue";
+font-size: 232.016px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+    }
+    .second {
+      flex-direction: column;
+      margin-top: -50px;
+    }
+    .circle {
+      color: #FFF;
+font-family: "Bebas Neue";
+font-size: 66.007px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 4px 40px;
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+    .green {
+      margin-top: -90px;
+    }
+    .circle {
+      margin-top: -50px;
+    }
+    .buy img {
+      width: 177px;
+    }
+    .ca {
+      font-size: 20px;
+      padding: 5px 20px;
+    }
+.bottom {
+   margin-top: 240px;
+
+}
+.trump {
+   margin-left: -10px;
+}
+.buy {
+   margin-top: -140px;
+   margin-bottom: 40px;
+}
+.arrow {
+   margin-top: -330px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.title._animate {
+   transform: translateX(0%);
+}*/
+
+[data-anim-on-scroll] {
+  transition: all 0.4s ease 0s;
+  opacity: 0;
+}
+
+[data-anim-on-scroll]._animate {
+  opacity: 1;
+}
+
+._right_anim_tr {
+  transform: translateX(200%);
+}
+
+._left_anim_tr {
+  transform: translateX(-10%);
+}
+
+._right_anim_tr._animate,
+._left_anim_tr._animate {
+  transform: translateX(0%);
+}
+
+
+._bottom_anim_tr {
+   transform: translateY(70%);
+}
+
+._bottom_anim_tr2 {
+   transform: translateY(70%);
+} 
+._bottom_anim_tr2._animate {
+   transform: translateY(0%);
+} 
+
+._top_anim_tr {
+  transform: translateY(-200%);
+}
+
+._top_anim_tr._animate,
+._bottom_anim_tr._animate {
+   transform: translateY(0);
+}
+
+._scale_anim {
+  transform: scale(0);
+}
+
+._scale_anim._animate {
+  transform: scale(1);
+}
+
+.anim {
+  animation: anim 3s ease-in-out infinite;
+}
+
+@keyframes anim {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+
+
+.loop-images .image {
+  position: absolute;
+  z-index: 1;
+  bottom: -100%;
+  animation: moveUp 6s linear infinite;
+}
+
+.loop-images .right .image {
+  right: 0;
+}
+
+.loop-images .right .image-4 {
+  right: -15%;
+  left: auto;
+}
+
+@keyframes moveUp {
+  0% {
+    bottom: -100%;
+  }
+
+  100% {
+    bottom: 100%;
+  }
+}
+
+.loop-images .image-2 {
+  animation-delay: 2s;
+  animation: moveUp 7s linear infinite;
+}
+
+.loop-images .image-3 {
+  animation-delay: 3s;
+  animation: moveUp 9s linear infinite;
+}
+
+.loop-images .image-4 {
+  animation-delay: 6s;
+  animation: moveUp 12s linear infinite;
+}
+
+.loop-images .right .image-1 {
+  animation-delay: 0s;
+  animation: moveUp 7s linear infinite;
+}
+
+.loop-images .right .image-2 {
+  animation-delay: 4s;
+  animation: moveUp 9s linear infinite;
+}
+
+.loop-images .right .image-3 {
+  animation-delay: 7s;
+  animation: moveUp 12s linear infinite;
+}
+
+.loop-images .right .image-4 {
+  animation-delay: 10s;
+  animation: moveUp 8s linear infinite;
+}
+
+
+.buy._animate:hover {
+   transform: translateY(0);
+   position: relative;
+   z-index: 5;
+}
+
+.buy img:hover {
+transform: scale(1.1);
+transition: all 0.4s ease 0s;
+}

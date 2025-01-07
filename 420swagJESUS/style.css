@@ -1,0 +1,398 @@
+* {
+   font-family: "Bangers", serif !important;
+   color: #FFF;
+}
+
+._scale_hover {
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
+
+._scale_hover:hover {
+  transform: scale(1.1);
+}
+
+.networks {
+  display: flex;
+  align-items: center;
+}
+
+.networks a {
+  display: block;
+}
+
+.networks a:not(:last-child) {
+  margin-right: 24px;
+}
+
+._container {
+  max-width: 1600px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  min-height: 1080px;
+  height: 100vh;
+}
+
+.bg__wrap {
+  position: relative;
+}
+
+.content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-top: 22px;
+   padding-bottom: 34px;
+   min-height: 1080px;
+   height: 100vh;
+   justify-content: space-between;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: brightnessAnimation 4s ease-in-out infinite alternate; /* Добавлена анимация */
+}
+
+[data-copy] {
+  cursor: pointer;
+}
+
+.copied_modal {
+  position: fixed;
+  top: 50%;
+  color: #000;
+  left: 50%;
+  z-index: 100;
+  background: #fff;
+  font-family: "Knewave", system-ui;
+  padding: 10px 30px;
+  white-space: nowrap;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease 0s;
+}
+
+.copied_modal._show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.bottom {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: end;
+}
+
+.ca {
+   color: #FFF;
+font-family: Bangers;
+font-size: 70.305px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+position: relative;
+z-index: 5;
+}
+
+.buy {
+margin-bottom: 12px;
+position: relative;
+z-index: 5;
+}
+
+.dl {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+}
+
+.dr {
+   position: absolute;
+   right: 0;
+   bottom: 0;
+}
+
+.tl {
+   position: absolute;
+   left: 4%;
+   top: 13%;
+}
+
+.tr {
+   position: absolute;
+   right: 6%;
+   top: 12%;
+}
+
+.main {
+   margin-bottom: 13px;
+   position: relative;
+   z-index: 5;
+}
+
+
+
+@keyframes brightnessAnimation {
+   0% {
+     filter: brightness(0.8); /* Нормальная яркость */
+   }
+   100% {
+     filter: brightness(1.2); /* Более яркая */
+   }
+ }
+
+
+ @media (max-width:980px) {
+   .main {
+      width: 85vw;
+   }
+ }
+
+ .show-500 {
+   display: none;
+ }
+
+ @media (max-width:500px) {
+   .show-500 {
+      display: flex;
+    }
+    .hide-500 {
+      display: none;
+    }
+   .networks img {
+      width: 58px;
+   }
+   .tl, .tr {
+      width: 127px;
+      top: 45%;
+   }
+   .dl, .dr {
+      width: 270px;
+   }
+   .buy img {
+      width: 133px;
+   }
+   .ca {
+      font-size: 33.886px;
+   }
+   .main {
+      margin-top: 10px;
+   }
+   .wrapper {
+      min-height: 640px;
+   }
+   .content {
+      min-height: 640px;
+   }
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[data-anim-on-scroll] {
+  transition: all 0.4s ease 0s;
+  opacity: 0;
+}
+
+[data-anim-on-scroll]._animate {
+  opacity: 1;
+}
+
+._right_anim_tr {
+  transform: translateX(200%);
+}
+
+._left_anim_tr {
+  transform: translateX(-200%);
+}
+
+._right_anim_tr._animate,
+._left_anim_tr._animate {
+  transform: translateX(0%);
+}
+
+
+._bottom_anim_tr {
+  transform: translateY(200%);
+}
+
+._top_anim_tr {
+  transform: translateY(-200%);
+}
+
+._top_anim_tr._animate,
+._bottom_anim_tr._animate {
+  transform: translateY(0%);
+}
+
+._scale_anim {
+  transform: scale(0);
+}
+
+._scale_anim._animate {
+  transform: scale(1);
+}
+
+/* Новая анимация для покачивания */
+@keyframes swing-left {
+   0% {
+     transform: translateX(0);
+   }
+   50% {
+     transform: translateX(-10px); /* Влево */
+   }
+   100% {
+     transform: translateX(0);
+   }
+ }
+ 
+ /* Применение анимации к элементам */
+ .swing-left {
+   animation: swing-left 1s ease-in-out infinite; /* Добавлена анимация покачивания */
+ }
+
+
+ @keyframes swing-left2 {
+   0% {
+     transform: translateX(0);
+   }
+   50% {
+     transform: translateX(-20px) rotate(10deg); /* Влево */
+   }
+   100% {
+     transform: translateX(0);
+   }
+ }
+ 
+ /* Применение анимации к элементам */
+ .swing-left2 {
+   animation: swing-left2 0.8s ease-in-out infinite; /* Добавлена анимация покачивания */
+ }
+
+
+ @keyframes swing-right {
+   0% {
+     transform: translateX(0);
+   }
+   50% {
+     transform: translateX(10px);
+   }
+   100% {
+     transform: translateX(0);
+   }
+ }
+ 
+ /* Применение анимации к элементам */
+ .swing-right {
+   animation: swing-right 1s ease-in-out infinite; /* Добавлена анимация покачивания */
+ }
+
+ @keyframes swing-right2 {
+   0% {
+     transform: translateX(0);
+   }
+   50% {
+     transform: translateX(15px) rotate(-8deg);
+   }
+   100% {
+     transform: translateX(0);
+   }
+ }
+ 
+ /* Применение анимации к элементам */
+ .swing-right2 {
+   animation: swing-right2 1.5s ease-in-out infinite; /* Добавлена анимация покачивания */
+ }
+
+
+.loop-images .image {
+  position: absolute;
+  z-index: 1;
+  bottom: -100%;
+  animation: moveUp 6s linear infinite;
+}
+
+.loop-images .right .image {
+  right: 0;
+}
+
+.loop-images .right .image-4 {
+  right: -15%;
+  left: auto;
+}
+
+@keyframes moveUp {
+  0% {
+    bottom: -100%;
+  }
+
+  100% {
+    bottom: 100%;
+  }
+}
+
+.loop-images .image-2 {
+  animation-delay: 2s;
+  animation: moveUp 7s linear infinite;
+}
+
+.loop-images .image-3 {
+  animation-delay: 3s;
+  animation: moveUp 9s linear infinite;
+}
+
+.loop-images .image-4 {
+  animation-delay: 6s;
+  animation: moveUp 12s linear infinite;
+}
+
+.loop-images .right .image-1 {
+  animation-delay: 0s;
+  animation: moveUp 7s linear infinite;
+}
+
+.loop-images .right .image-2 {
+  animation-delay: 4s;
+  animation: moveUp 9s linear infinite;
+}
+
+.loop-images .right .image-3 {
+  animation-delay: 7s;
+  animation: moveUp 12s linear infinite;
+}
+
+.loop-images .right .image-4 {
+  animation-delay: 10s;
+  animation: moveUp 8s linear infinite;
+}

@@ -1,0 +1,458 @@
+* {
+   font-family: "Poppins", serif !important;
+   color: #FFF;
+}
+
+._scale_hover {
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
+
+._scale_hover:hover {
+  transform: scale(1.1);
+}
+
+.networks {
+  display: flex;
+  align-items: center;
+}
+
+.networks a {
+  display: block;
+}
+
+.networks a:not(:last-child) {
+  margin-right: 24px;
+}
+
+._container {
+  max-width: 1600px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  min-height: 3758px;
+}
+
+.bg__wrap {
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+[data-copy] {
+  cursor: pointer;
+}
+
+.copied_modal {
+  position: fixed;
+  top: 50%;
+  color: #000;
+  left: 50%;
+  z-index: 100;
+  background: #fff;
+  font-family: "Knewave", system-ui;
+  padding: 10px 30px;
+  white-space: nowrap;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease 0s;
+}
+
+.copied_modal._show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.header {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   justify-content: space-between;
+}
+
+.head {
+   width: 700px;
+}
+
+.content {
+   padding-top: 50px;
+}
+
+.title {
+   margin-right: 84.5px;
+}
+
+.first {
+   display: flex;
+}
+
+.left {
+   display: flex;
+   flex-direction: column;
+   align-items: end;
+   flex: 0 1 50%;
+}
+
+.mission {
+   max-width: 928px;
+   border-radius: 40px;
+background: #15191E;
+padding: 32px 37px 42px 42px;
+margin-top: 100px;
+}
+
+.mission__title {
+   color: #0094FF;
+text-align: center;
+font-family: "Red Hat Display", serif !important;
+font-size: 66.087px;
+font-style: normal;
+font-weight: 600;
+line-height: 115.414%; /* 76.274px */
+text-transform: uppercase;
+}
+
+.mission__text {
+   color: #FFF;
+text-align: right;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+max-width: 555px;
+}
+
+.mission-wrap {
+   display: flex;
+}
+
+.icon {
+   margin-top: -60px;
+}
+.icon-wrap {
+   display: inline-block;
+}
+
+.scroll {
+   display: inline-block;
+}
+
+.blue-icon {
+   display: inline-block;
+}
+
+.docs {
+   display: inline-block;
+   margin-right: 15px;
+}
+
+.docs__wrap {
+margin-right: 100px;
+}
+
+.read {
+   display: inline-block;
+}
+
+.second__right_title {
+   color: #FFF;
+text-align: right;
+font-family: "Red Hat Display", serif !important;
+font-size: 244.534px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.second__right_text {
+   color: #FFF;
+font-family: Poppins;
+font-size: 23.674px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+max-width: 520px;
+margin-bottom: 25px;
+}
+
+.second__right_wrap {
+   display: flex;
+}
+
+.second {
+   display: flex;
+}
+
+.second__right {
+   flex: 0 1 50%;
+}
+
+.footer__right a {
+   display: inline-block;
+}
+
+.footer {
+   border-radius: 40px;
+background: #15191E;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 40px;
+}
+
+.footer__left {
+   display: flex;
+   align-items: center;
+}
+
+.copiright {
+   color: #FFF;
+font-family: Poppins;
+font-size: 21.844px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: uppercase;
+margin-left: 30px;
+}
+
+.footer__right a:not(:last-child) {
+   margin-right: 34px;
+}
+
+.third__left_title {
+   color: #FFF;
+text-align: center;
+font-family: "Red Hat Display", serif !important;
+font-size: 253.982px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.third__left_title span {
+   color: #0094FF;
+text-align: center;
+font-family: "Red Hat Display";
+font-size: 174.025px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+
+/* Tabs */
+
+.tabs-block__block {
+   display: none;
+ }
+ 
+ .tabs-block__block._active {
+   display: block;
+ }
+ 
+ /* WRAPPER TABS ITEMS */
+ .tabs-block__nav {
+   display: flex;
+ }
+ 
+ /* TAB ITEM */
+ .tabs-block__item {
+   cursor: pointer;
+   flex: 33.33% 1 1;
+   position: relative;
+   color: #fff;
+   text-align: center;
+   padding: 10px 0;
+ }
+ 
+ .tabs-block__item:not(:last-child) {
+   margin-right: 20px;
+ }
+ 
+ .tabs-block__item:before {
+   content: '';
+   background: #000;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: -1;
+ }
+ 
+ .tabs-block__item._active {
+   color: #000;
+ }
+ 
+ .tabs-block__item._active:before {
+   content: '';
+   background: #fff;
+ }
+ 
+ /* TAB BODY */
+ .tabs-block__body {
+   padding: 20px 0 0 0;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[data-anim-on-scroll] {
+  transition: all 0.4s ease 0s;
+  opacity: 0;
+}
+
+[data-anim-on-scroll]._animate {
+  opacity: 1;
+}
+
+._right_anim_tr {
+  transform: translateX(200%);
+}
+
+._left_anim_tr {
+  transform: translateX(-200%);
+}
+
+._right_anim_tr._animate,
+._left_anim_tr._animate {
+  transform: translateX(0%);
+}
+
+
+._bottom_anim_tr {
+  transform: translateY(200%);
+}
+
+._top_anim_tr {
+  transform: translateY(-200%);
+}
+
+._top_anim_tr._animate,
+._bottom_anim_tr._animate {
+  transform: translateY(0%);
+}
+
+._scale_anim {
+  transform: scale(0);
+}
+
+._scale_anim._animate {
+  transform: scale(1);
+}
+
+.anim {
+  animation: anim 3s ease-in-out infinite;
+}
+
+@keyframes anim {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+
+
+.loop-images .image {
+  position: absolute;
+  z-index: 1;
+  bottom: -100%;
+  animation: moveUp 6s linear infinite;
+}
+
+.loop-images .right .image {
+  right: 0;
+}
+
+.loop-images .right .image-4 {
+  right: -15%;
+  left: auto;
+}
+
+@keyframes moveUp {
+  0% {
+    bottom: -100%;
+  }
+
+  100% {
+    bottom: 100%;
+  }
+}
+
+.loop-images .image-2 {
+  animation-delay: 2s;
+  animation: moveUp 7s linear infinite;
+}
+
+.loop-images .image-3 {
+  animation-delay: 3s;
+  animation: moveUp 9s linear infinite;
+}
+
+.loop-images .image-4 {
+  animation-delay: 6s;
+  animation: moveUp 12s linear infinite;
+}
+
+.loop-images .right .image-1 {
+  animation-delay: 0s;
+  animation: moveUp 7s linear infinite;
+}
+
+.loop-images .right .image-2 {
+  animation-delay: 4s;
+  animation: moveUp 9s linear infinite;
+}
+
+.loop-images .right .image-3 {
+  animation-delay: 7s;
+  animation: moveUp 12s linear infinite;
+}
+
+.loop-images .right .image-4 {
+  animation-delay: 10s;
+  animation: moveUp 8s linear infinite;
+}
