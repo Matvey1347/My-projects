@@ -323,6 +323,7 @@ background-clip: text;
 .card__icon {
    max-width: 184px;
    max-height: 184px;
+   border-radius: 40px;
 }
 
 .card__text {
