@@ -18,19 +18,21 @@
 
    <body>
       <div class="wrapper bg__wrap">
-         <img src="./image/bg.png" alt="" class="bg" />
+         <img src="./image/bg.png" alt="" class="bg hide-700" />
+         <img src="./image/bgmb.png" alt="" class="bg show-700" />
          <div class="content _container">
+            <img src="./image/title.svg" alt="" class="title show-1070" />
             <div class="header">
-               <div class="networks">
+               <div class="networks hide-1070">
                   <a href="#" class="_scale_hover">
-                     <img src="./image/chart.svg" alt="" />
+                     <img src="./image/chart.svg" alt=""  />
                   </a>
                   <a href="#" class="_scale_hover">
-                     <img src="./image/analyse.svg" alt="" />
+                     <img src="./image/analyse.svg" alt=""/>
                   </a>
                </div>
-               <img src="./image/title.svg" alt="" class="title" />
-               <div class="networks">
+               <img src="./image/title.svg" alt="" class="title hide-1070" />
+               <div class="networks hide-1070">
                   <a href="#" class="_scale_hover">
                      <img src="./image/tg.svg" alt="" />
                   </a>
@@ -39,13 +41,33 @@
                   </a>
                </div>
             </div>
-            <section class="first">
+            <div class="networks show-1070">
+               <a href="#" class="_scale_hover">
+                  <img src="./image/chart.svg" alt="" class="big"/>
+               </a>
+               <a href="#" class="_scale_hover">
+                  <img src="./image/analyse.svg" alt="" class="big" />
+               </a>
+               <a href="#" class="_scale_hover">
+                  <img src="./image/tg.svg" alt="" class="small"
+                  />
+               </a>
+               <a href="#" class="_scale_hover">
+                  <img src="./image/x.svg" alt="" class="small"/>
+               </a>
+            </div>
+         </div>
+            <section class="first _container">
                <div class="left">
                   <img src="./image/text.png" alt="" class="text" />
                   <img src="./image/ai.png" alt="" class="ai" />
                   <div class="mission">
                      <div class="mission-wrap">
-                        <h3 class="mission__title">MISSION</h3>
+                        <div class="wrapp show-1070">                        <h3 class="mission__title show-1070">MISSION</h3>
+                           <a class="icon-wrap show-1070 _scale_hover" href="#"
+                           ><img src="./image/mission-icon.svg" alt="" class="icon"
+                        /></a></div>
+                        <h3 class="mission__title hide-1070">MISSION</h3>
                         <p class="mission__text">
                            The potential of behavioral analysis based on Twitter feeds has become a fascinating area of
                            research, blending psychology, data science, and artificial intelligence. It provides a
@@ -54,30 +76,73 @@
                            XAgent
                         </p>
                      </div>
-                     <a class="icon-wrap _scale_hover" href="#"
+                     <a class="icon-wrap hide-1070 _scale_hover" href="#"
                         ><img src="./image/mission-icon.svg" alt="" class="icon"
                      /></a>
                   </div>
                </div>
                <div class="right">
-                  <img src="./image/head.png" alt="" class="head" />
+                  <!--<img src="./image/head.png" alt="" class="head" />-->
                </div>
             </section>
             <img src="./image/line.svg" alt="" class="line" />
-            <img src="" alt="./image/slash.svg" class="slash" />
-            <a href="#" class="scroll _scale_hover"><img src="./image/scroll-icon.svg" alt="" /></a>
-            <section class="second">
+            <a href="#third" class="scroll _scale_hover"><img src="./image/scroll-icon.svg" alt="" /></a>
+            <section class="second _container">
                <div class="second__left">
-                  <form action="" class="form">
-                     <input type="file" />
+                  <form action="index.html" class="form">
+                     <div class="upload-container">
+                        <input type="file" id="fileInput" accept="image/*" style="display: none" />
+                        <button type="button" id="uploadBtn" class="upload" type="button">
+                           <img src="./image/upload.png" alt="" />
+                        </button>
+                        <div class="preview">
+                           <img id="previewImg" class="preview-image" src="./image/form-image.png" alt="Preview" />
+                           <button type="button" id="removeBtn" class="cross" style="display: none">
+                              <img src="./image/cross.svg" alt="" />
+                           </button>
+                        </div>
+                     </div>
+
+                     <script>
+                        const uploadBtn = document.getElementById("uploadBtn");
+                        const fileInput = document.getElementById("fileInput");
+                        const previewImg = document.getElementById("previewImg");
+                        const removeBtn = document.getElementById("removeBtn");
+
+                        uploadBtn.addEventListener("click", () => {
+                           fileInput.click();
+                        });
+
+                        fileInput.addEventListener("change", (event) => {
+                           const file = event.target.files[0];
+                           if (file) {
+                              const reader = new FileReader();
+                              reader.onload = function (e) {
+                                 previewImg.src = e.target.result; // Обновление изображения
+                                 removeBtn.style.display = "block"; // Показать кнопку удаления
+                              };
+                              reader.readAsDataURL(file);
+                           } else {
+                              console.error("Файл не выбран или не поддерживается.");
+                           }
+                        });
+
+                        removeBtn.addEventListener("click", () => {
+                           fileInput.value = ""; // Сбросить значение input
+                           previewImg.src = "./image/form-image.png"; // Вернуть изображение по умолчанию
+                           removeBtn.style.display = "none"; // Скрыть кнопку удаления
+                        });
+                     </script>
+
                      <div class="profile">
                         <p class="profile__text">Profile Info *</p>
-                        <input type="text" class="profile__input" placeholder="Text" />
+                        <input required type="text" class="profile__input" placeholder="Text" />
                      </div>
                      <div class="tweet">
-                        <p class="tweet__text">tweet Info *</p>
-                        <input type="text" class="tweet__input" placeholder="Text" />
+                        <p class="tweet__text">Twitter Page *</p>
+                        <input required type="text" class="tweet__input" placeholder="https://x.com//handle" />
                      </div>
+                     <button type="submit"><img src="./image/form btn.png" alt="" class="submit"/></button>
                   </form>
                </div>
                <div class="second__right">
@@ -98,90 +163,259 @@
                            </a>
                         </div>
                      </div>
-                     <a href="#" class="blue-icon _scale_hover"
+                     <a href="#" class="blue-icon hide-1070 _scale_hover"
                         ><img src="./image/blue icon.svg" alt="" class="blue-icon"
                      /></a>
                   </div>
                </div>
             </section>
-            <section class="third">
+            <section id="third" class="third _container">
                <div class="third__left">
                   <h2 class="third__left_title">SEE <span>RESULTS</span></h2>
                </div>
                <div class="third__right">
-                  <div data-tabs class="tabs-block item">
-                     <div class="tabs-block__nav">
-                        <div data-tab-item class="tabs-block__item _active">Health</div>
-                        <div data-tab-item class="tabs-block__item">BiggestGoal</div>
-                        <div data-tab-item class="tabs-block__item">ColleaguePerspective</div>
-                        <div data-tab-item class="tabs-block__item">PickupLines</div>
-                        <div data-tab-item class="tabs-block__item">FamousPersonComparison</div>
-                        <div data-tab-item class="tabs-block__item">PreviousLife</div>
-                        <div data-tab-item class="tabs-block__item">Animal</div>
-                        <div data-tab-item class="tabs-block__item">FiftyDollarThing</div>
-                        <div data-tab-item class="tabs-block__item">Career</div>
-                        <div data-tab-item class="tabs-block__item">LifeSuggestion</div>
+                  <div data-spollers data-one-spoller class="spollers flex flex-col justify-between items-center">
+                     <!-- NOACTIVE ARROW RIGHT -->
+                     <!-- ACTIVE CROSS -->
+                     <div class="spoller__wrap w-100">
+                        <div data-spoller class="spoller__wrap_item flex justify-between items-center w-100">
+                           <h4 class="spoller__wrap_title title-spoller">Health</h4>
+                           <!-- Show img when spoller open -->
+                           <div class="spoller__wrap_img-active">
+                              <img src="./image/open.svg" alt="close" />
+                           </div>
+
+                           <!-- Show img when spoller close -->
+                           <div class="spoller__wrap_img-noactive">
+                              <img src="./image/close.svg" alt="open" />
+                           </div>
+                        </div>
+                        <div class="spoller__wrap_body text-spoller">
+                           <ul class="custome-li">
+                              <li>
+                                 Your spiritual devotion will be a wellspring of vitality and inner peace. As you align
+                                 with divine energy, expect improved mental clarity and emotional balance. Remember to
+                                 nurture your physical temple as diligently as your soul - a balanced approach will
+                                 ensure longevity in your sacred work.
+                              </li>
+                           </ul>
+                        </div>
                      </div>
-                     <div class="tabs-block__body">
-                        <div data-tab-body class="tabs-block__block _active">
-                           Your spiritual devotion will be a wellspring of vitality and inner peace. As you align with
-                           divine energy, expect improved mental clarity and emotional balance. Remember to nurture your
-                           physical temple as diligently as your soul - a balanced approach will ensure longevity in
-                           your sacred work.
+                     <div class="spoller__wrap w-100">
+                        <div data-spoller class="spoller__wrap_item flex justify-between items-center w-100">
+                           <h4 class="spoller__wrap_title title-spoller">BiggestGoal</h4>
+                           <!-- Show img when spoller open -->
+                           <div class="spoller__wrap_img-active">
+                              <img src="./image/open.svg" alt="close" />
+                           </div>
+
+                           <!-- Show img when spoller close -->
+                           <div class="spoller__wrap_img-noactive">
+                              <img src="./image/close.svg" alt="open" />
+                           </div>
                         </div>
-                        <div data-tab-body class="tabs-block__block">
-                           Your spiritual devotion will be a wellspring of vitality and inner peace. As you align with
-                           divine energy, expect improved mental clarity and emotional balance. Remember to nurture your
-                           physical temple as diligently as your soul - a balanced approach will ensure longevity in
-                           your sacred work.
+                        <div class="spoller__wrap_body text-spoller">
+                           <ul class="custome-li">
+                              <li>
+                                 Your spiritual devotion will be a wellspring of vitality and inner peace. As you align
+                                 with divine energy, expect improved mental clarity and emotional balance. Remember to
+                                 nurture your physical temple as diligently as your soul - a balanced approach will
+                                 ensure longevity in your sacred work.
+                              </li>
+                           </ul>
                         </div>
-                        <div data-tab-body class="tabs-block__block">
-                           Your spiritual devotion will be a wellspring of vitality and inner peace. As you align with
-                           divine energy, expect improved mental clarity and emotional balance. Remember to nurture your
-                           physical temple as diligently as your soul - a balanced approach will ensure longevity in
-                           your sacred work.
+                     </div>
+                     <div class="spoller__wrap w-100">
+                        <div data-spoller class="spoller__wrap_item flex justify-between items-center w-100">
+                           <h4 class="spoller__wrap_title title-spoller">ColleaguePerspective</h4>
+                           <!-- Show img when spoller open -->
+                           <div class="spoller__wrap_img-active">
+                              <img src="./image/open.svg" alt="close" />
+                           </div>
+
+                           <!-- Show img when spoller close -->
+                           <div class="spoller__wrap_img-noactive">
+                              <img src="./image/close.svg" alt="open" />
+                           </div>
                         </div>
-                        <div data-tab-body class="tabs-block__block">
-                           Your spiritual devotion will be a wellspring of vitality and inner peace. As you align with
-                           divine energy, expect improved mental clarity and emotional balance. Remember to nurture your
-                           physical temple as diligently as your soul - a balanced approach will ensure longevity in
-                           your sacred work.
+                        <div class="spoller__wrap_body text-spoller">
+                           <ul class="custome-li">
+                              <li>
+                                 Your spiritual devotion will be a wellspring of vitality and inner peace. As you align
+                                 with divine energy, expect improved mental clarity and emotional balance. Remember to
+                                 nurture your physical temple as diligently as your soul - a balanced approach will
+                                 ensure longevity in your sacred work.
+                              </li>
+                           </ul>
                         </div>
-                        <div data-tab-body class="tabs-block__block">
-                           Your spiritual devotion will be a wellspring of vitality and inner peace. As you align with
-                           divine energy, expect improved mental clarity and emotional balance. Remember to nurture your
-                           physical temple as diligently as your soul - a balanced approach will ensure longevity in
-                           your sacred work.
+                     </div>
+                     <div class="spoller__wrap w-100">
+                        <div data-spoller class="spoller__wrap_item flex justify-between items-center w-100">
+                           <h4 class="spoller__wrap_title title-spoller">PickupLines</h4>
+                           <!-- Show img when spoller open -->
+                           <div class="spoller__wrap_img-active">
+                              <img src="./image/open.svg" alt="close" />
+                           </div>
+
+                           <!-- Show img when spoller close -->
+                           <div class="spoller__wrap_img-noactive">
+                              <img src="./image/close.svg" alt="open" />
+                           </div>
                         </div>
-                        <div data-tab-body class="tabs-block__block">
-                           Your spiritual devotion will be a wellspring of vitality and inner peace. As you align with
-                           divine energy, expect improved mental clarity and emotional balance. Remember to nurture your
-                           physical temple as diligently as your soul - a balanced approach will ensure longevity in
-                           your sacred work.
+                        <div class="spoller__wrap_body text-spoller">
+                           <ul class="custome-li">
+                              <li>
+                                 Your spiritual devotion will be a wellspring of vitality and inner peace. As you align
+                                 with divine energy, expect improved mental clarity and emotional balance. Remember to
+                                 nurture your physical temple as diligently as your soul - a balanced approach will
+                                 ensure longevity in your sacred work.
+                              </li>
+                           </ul>
                         </div>
-                        <div data-tab-body class="tabs-block__block">
-                           Your spiritual devotion will be a wellspring of vitality and inner peace. As you align with
-                           divine energy, expect improved mental clarity and emotional balance. Remember to nurture your
-                           physical temple as diligently as your soul - a balanced approach will ensure longevity in
-                           your sacred work.
+                     </div>
+                     <div class="spoller__wrap w-100">
+                        <div data-spoller class="spoller__wrap_item flex justify-between items-center w-100">
+                           <h4 class="spoller__wrap_title title-spoller hide-480">FamousPersonComparison</h4>
+                           <h4 class="spoller__wrap_title title-spoller show-480">FamousPerson<br>Comparison</h4>
+                           <!-- Show img when spoller open -->
+                           <div class="spoller__wrap_img-active">
+                              <img src="./image/open.svg" alt="close" />
+                           </div>
+
+                           <!-- Show img when spoller close -->
+                           <div class="spoller__wrap_img-noactive">
+                              <img src="./image/close.svg" alt="open" />
+                           </div>
                         </div>
-                        <div data-tab-body class="tabs-block__block">
-                           Your spiritual devotion will be a wellspring of vitality and inner peace. As you align with
-                           divine energy, expect improved mental clarity and emotional balance. Remember to nurture your
-                           physical temple as diligently as your soul - a balanced approach will ensure longevity in
-                           your sacred work.
+                        <div class="spoller__wrap_body text-spoller">
+                           <ul class="custome-li">
+                              <li>
+                                 Your spiritual devotion will be a wellspring of vitality and inner peace. As you align
+                                 with divine energy, expect improved mental clarity and emotional balance. Remember to
+                                 nurture your physical temple as diligently as your soul - a balanced approach will
+                                 ensure longevity in your sacred work.
+                              </li>
+                           </ul>
                         </div>
-                        <div data-tab-body class="tabs-block__block">
-                           Your spiritual devotion will be a wellspring of vitality and inner peace. As you align with
-                           divine energy, expect improved mental clarity and emotional balance. Remember to nurture your
-                           physical temple as diligently as your soul - a balanced approach will ensure longevity in
-                           your sacred work.
+                     </div>
+                     <div class="spoller__wrap w-100">
+                        <div data-spoller class="spoller__wrap_item flex justify-between items-center w-100">
+                           <h4 class="spoller__wrap_title title-spoller">PreviousLife</h4>
+                           <!-- Show img when spoller open -->
+                           <div class="spoller__wrap_img-active">
+                              <img src="./image/open.svg" alt="close" />
+                           </div>
+
+                           <!-- Show img when spoller close -->
+                           <div class="spoller__wrap_img-noactive">
+                              <img src="./image/close.svg" alt="open" />
+                           </div>
                         </div>
-                        <div data-tab-body class="tabs-block__block">
-                           Your spiritual devotion will be a wellspring of vitality and inner peace. As you align with
-                           divine energy, expect improved mental clarity and emotional balance. Remember to nurture your
-                           physical temple as diligently as your soul - a balanced approach will ensure longevity in
-                           your sacred work.
+                        <div class="spoller__wrap_body text-spoller">
+                           <ul class="custome-li">
+                              <li>
+                                 Your spiritual devotion will be a wellspring of vitality and inner peace. As you align
+                                 with divine energy, expect improved mental clarity and emotional balance. Remember to
+                                 nurture your physical temple as diligently as your soul - a balanced approach will
+                                 ensure longevity in your sacred work.
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="spoller__wrap w-100">
+                        <div data-spoller class="spoller__wrap_item flex justify-between items-center w-100">
+                           <h4 class="spoller__wrap_title title-spoller">Animal</h4>
+                           <!-- Show img when spoller open -->
+                           <div class="spoller__wrap_img-active">
+                              <img src="./image/open.svg" alt="close" />
+                           </div>
+
+                           <!-- Show img when spoller close -->
+                           <div class="spoller__wrap_img-noactive">
+                              <img src="./image/close.svg" alt="open" />
+                           </div>
+                        </div>
+                        <div class="spoller__wrap_body text-spoller">
+                           <ul class="custome-li">
+                              <li>
+                                 Your spiritual devotion will be a wellspring of vitality and inner peace. As you align
+                                 with divine energy, expect improved mental clarity and emotional balance. Remember to
+                                 nurture your physical temple as diligently as your soul - a balanced approach will
+                                 ensure longevity in your sacred work.
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="spoller__wrap w-100">
+                        <div data-spoller class="spoller__wrap_item flex justify-between items-center w-100">
+                           <h4 class="spoller__wrap_title title-spoller">FiftyDollarThing</h4>
+                           <!-- Show img when spoller open -->
+                           <div class="spoller__wrap_img-active">
+                              <img src="./image/open.svg" alt="close" />
+                           </div>
+
+                           <!-- Show img when spoller close -->
+                           <div class="spoller__wrap_img-noactive">
+                              <img src="./image/close.svg" alt="open" />
+                           </div>
+                        </div>
+                        <div class="spoller__wrap_body text-spoller">
+                           <ul class="custome-li">
+                              <li>
+                                 Your spiritual devotion will be a wellspring of vitality and inner peace. As you align
+                                 with divine energy, expect improved mental clarity and emotional balance. Remember to
+                                 nurture your physical temple as diligently as your soul - a balanced approach will
+                                 ensure longevity in your sacred work.
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="spoller__wrap w-100">
+                        <div data-spoller class="spoller__wrap_item flex justify-between items-center w-100">
+                           <h4 class="spoller__wrap_title title-spoller">Career</h4>
+                           <!-- Show img when spoller open -->
+                           <div class="spoller__wrap_img-active">
+                              <img src="./image/open.svg" alt="close" />
+                           </div>
+
+                           <!-- Show img when spoller close -->
+                           <div class="spoller__wrap_img-noactive">
+                              <img src="./image/close.svg" alt="open" />
+                           </div>
+                        </div>
+                        <div class="spoller__wrap_body text-spoller">
+                           <ul class="custome-li">
+                              <li>
+                                 Your spiritual devotion will be a wellspring of vitality and inner peace. As you align
+                                 with divine energy, expect improved mental clarity and emotional balance. Remember to
+                                 nurture your physical temple as diligently as your soul - a balanced approach will
+                                 ensure longevity in your sacred work.
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="spoller__wrap w-100">
+                        <div data-spoller class="spoller__wrap_item flex justify-between items-center w-100">
+                           <h4 class="spoller__wrap_title title-spoller">LifeSuggestion</h4>
+                           <!-- Show img when spoller open -->
+                           <div class="spoller__wrap_img-active">
+                              <img src="./image/open.svg" alt="close" />
+                           </div>
+
+                           <!-- Show img when spoller close -->
+                           <div class="spoller__wrap_img-noactive">
+                              <img src="./image/close.svg" alt="open" />
+                           </div>
+                        </div>
+                        <div class="spoller__wrap_body text-spoller">
+                           <ul class="custome-li">
+                              <li>
+                                 Your spiritual devotion will be a wellspring of vitality and inner peace. As you align
+                                 with divine energy, expect improved mental clarity and emotional balance. Remember to
+                                 nurture your physical temple as diligently as your soul - a balanced approach will
+                                 ensure longevity in your sacred work.
+                              </li>
+                           </ul>
                         </div>
                      </div>
                   </div>
@@ -194,16 +428,16 @@
                </div>
                <div class="footer__right">
                   <a href="#" class="_scale_hover">
-                     <img src="./image/x.svg" alt="" />
+                     <img src="./image/x.svg" alt="" class="small" />
                   </a>
                   <a href="#" class="_scale_hover">
-                     <img src="./image/tg.svg" alt="" />
+                     <img src="./image/tg.svg" alt="" class="small"/>
                   </a>
                   <a href="#" class="_scale_hover">
-                     <img src="./image/chart.svg" alt="" />
+                     <img src="./image/chart.svg" alt=""  class="big"/>
                   </a>
                   <a href="#" class="_scale_hover">
-                     <img src="./image/analyse.svg" alt="" />
+                     <img src="./image/analyse.svg" alt=""  class="big"/>
                   </a>
                </div>
             </footer>
@@ -226,31 +460,148 @@
     </div>
   </div> -->
 
+      <script src="./animation.js"></script>
       <script>
-         function init_tabs() {
-            let tabs = document.querySelectorAll("[data-tabs]");
+         /*
+  используеться new slide(target, duration) (для плавного появления элемента под элементом с атрибутом data-spoller)
+*/
 
-            for (let index = 0; index < tabs.length; index++) {
-               let tab = tabs[index];
-               let tabs_items = tab.querySelectorAll("[data-tab-item]");
-               let tabs_blocks = tab.querySelectorAll("[data-tab-body]");
-               for (let index = 0; index < tabs_items.length; index++) {
-                  let tabs_item = tabs_items[index];
-                  tabs_item.addEventListener("click", function (e) {
-                     for (let index = 0; index < tabs_items.length; index++) {
-                        let tabs_item = tabs_items[index];
-                        tabs_item.classList.remove("_active");
-                        tabs_blocks[index].classList.remove("_active");
-                     }
-                     tabs_item.classList.add("_active");
-                     tabs_blocks[index].classList.add("_active");
-                     e.preventDefault();
+         /*
+  Для родителя слойлеров пишем атрибут data-spollers
+  Для заголовков слойлеров пишем атрибут data-spoller
+  Если нужно включать\выключать работу спойлеров на разных размерах экранов
+  пишем параметры ширины и типа брейкпоинта.
+  Например: 
+  data-spollers="992,max" - спойлеры будут работать только на экранах меньше или равно 992px
+  data-spollers="768,min" - спойлеры будут работать только на экранах больше или равно 768px
+
+  Если нужно что бы в блоке открывался только один слойлер добавляем атрибут data-one-spoller элементу с атрибутом data-spollers
+
+
+  Как работает: при клике на data-spoller добавиться класс _active и елементу под ним добавляеться анимация из new slide(target, duration)...
+*/
+
+         // SPOLLERS
+         function init_spollers() {
+            const spollersArray = document.querySelectorAll("[data-spollers]");
+            if (spollersArray.length > 0) {
+               // Получение обычных слойлеров
+               const spollersRegular = Array.from(spollersArray).filter((item) => {
+                  return !item.dataset.spollers.split(",")[0];
+               });
+               // Инициализация обычных слойлеров
+               if (spollersRegular.length > 0) {
+                  initSpollers(spollersRegular);
+               }
+
+               // Получение слойлеров с медиа запросами
+               const spollersMedia = Array.from(spollersArray).filter((item) => {
+                  return item.dataset.spollers.split(",")[0];
+               });
+
+               // Инициализация слойлеров с медиа запросами
+               if (spollersMedia.length > 0) {
+                  const breakpointsArray = [];
+                  spollersMedia.forEach((item) => {
+                     const params = item.dataset.spollers;
+                     const breakpoint = {};
+                     const paramsArray = params.split(",");
+                     breakpoint.value = paramsArray[0];
+                     breakpoint.type = paramsArray[1] ? paramsArray[1].trim() : "max";
+                     breakpoint.item = item;
+                     breakpointsArray.push(breakpoint);
                   });
+
+                  // Получаем уникальные брейкпоинты
+                  let mediaQueries = breakpointsArray.map(function (item) {
+                     return "(" + item.type + "-width: " + item.value + "px)," + item.value + "," + item.type;
+                  });
+                  mediaQueries = mediaQueries.filter(function (item, index, self) {
+                     return self.indexOf(item) === index;
+                  });
+
+                  // Работаем с каждым брейкпоинтом
+                  mediaQueries.forEach((breakpoint) => {
+                     const paramsArray = breakpoint.split(",");
+                     const mediaBreakpoint = paramsArray[1];
+                     const mediaType = paramsArray[2];
+                     const matchMedia = window.matchMedia(paramsArray[0]);
+
+                     // Объекты с нужными условиями
+                     const spollersArray = breakpointsArray.filter(function (item) {
+                        if (item.value === mediaBreakpoint && item.type === mediaType) {
+                           return true;
+                        }
+                     });
+                     // Событие
+                     matchMedia.addListener(function () {
+                        initSpollers(spollersArray, matchMedia);
+                     });
+                     initSpollers(spollersArray, matchMedia);
+                  });
+               }
+               // Инициализация
+               function initSpollers(spollersArray, matchMedia = false) {
+                  spollersArray.forEach((spollersBlock) => {
+                     spollersBlock = matchMedia ? spollersBlock.item : spollersBlock;
+                     if (matchMedia.matches || !matchMedia) {
+                        spollersBlock.classList.add("_init");
+                        initSpollerBody(spollersBlock);
+                        spollersBlock.addEventListener("click", setSpollerAction);
+                     } else {
+                        spollersBlock.classList.remove("_init");
+                        initSpollerBody(spollersBlock, false);
+                        spollersBlock.removeEventListener("click", setSpollerAction);
+                     }
+                  });
+               }
+               // Работа с контентом
+               function initSpollerBody(spollersBlock, hideSpollerBody = true) {
+                  const spollerTitles = spollersBlock.querySelectorAll("[data-spoller]");
+                  if (spollerTitles.length > 0) {
+                     spollerTitles.forEach((spollerTitle) => {
+                        if (hideSpollerBody) {
+                           spollerTitle.removeAttribute("tabindex");
+                           if (!spollerTitle.classList.contains("_active")) {
+                              spollerTitle.nextElementSibling.hidden = true;
+                           }
+                        } else {
+                           spollerTitle.setAttribute("tabindex", "-1");
+                           spollerTitle.nextElementSibling.hidden = false;
+                        }
+                     });
+                  }
+               }
+               function setSpollerAction(e) {
+                  const el = e.target;
+                  if (el.hasAttribute("data-spoller") || el.closest("[data-spoller]")) {
+                     const spollerTitle = el.hasAttribute("data-spoller") ? el : el.closest("[data-spoller]");
+                     const spollersBlock = spollerTitle.closest("[data-spollers]");
+                     const oneSpoller = spollersBlock.hasAttribute("data-one-spoller") ? true : false;
+                     if (!spollersBlock.querySelectorAll("._slide").length) {
+                        if (oneSpoller && !spollerTitle.classList.contains("_active")) {
+                           hideSpollersBody(spollersBlock);
+                        }
+                        spollerTitle.classList.toggle("_active");
+                        spollerTitle.parentElement.classList.toggle("_active");
+                        // spollerTitle.nextElementSibling.classList.toggle('_active');
+                        new slide(spollerTitle.nextElementSibling)._slideToggle();
+                     }
+                     e.preventDefault();
+                  }
+               }
+               function hideSpollersBody(spollersBlock) {
+                  const spollerActiveTitle = spollersBlock.querySelector("[data-spoller]._active");
+                  if (spollerActiveTitle) {
+                     spollerActiveTitle.classList.remove("_active");
+                     spollerActiveTitle.parentElement.classList.remove("_active");
+                     new slide(spollerActiveTitle.nextElementSibling)._slideUp();
+                  }
                }
             }
          }
 
-         init_tabs();
+         init_spollers();
       </script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
       <script src="./copy.js"></script>
