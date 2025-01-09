@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with AI</title>
+    <style>
+        body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        #chat-history {
+            height: 400px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .message {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .user-message {
+            background-color: #e3f2fd;
+            margin-left: 20%;
+        }
+        .ai-message {
+            background-color: #f5f5f5;
+            margin-right: 20%;
+        }
+        .input-container {
+            display: flex;
+            gap: 10px;
+        }
+        #message-input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #2196f3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1976d2;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-history"></div>
+    <div class="input-container">
+        <input type="text" id="message-input" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        // Получаем chat_id из localStorage или устанавливаем как null для нового чата
+        let chatId = localStorage.getItem('chatId');
+        
+        // Получаем историю сообщений из localStorage или создаем пустой массив
+        let messages = JSON.parse(localStorage.getItem('messages') || '[]');
+        
+        // Отображаем сохраненную историю при загрузке
+        displayMessages();
+
+        function displayMessages() {
+            const chatHistory = document.getElementById('chat-history');
+            chatHistory.innerHTML = messages.map(msg => `
+                <div class="message ${msg.isUser ? 'user-message' : 'ai-message'}">
+                    <strong>${msg.isUser ? 'You' : msg.author_name}:</strong> ${msg.text}
+                </div>
+            `).join('');
+            // Прокручиваем к последнему сообщению
+            chatHistory.scrollTop = chatHistory.scrollHeight;
+        }
+
+        async function sendMessage() {
+            const input = document.getElementById('message-input');
+            const message = input.value.trim();
+            
+            if (!message) return;
+
+            // Добавляем сообщение пользователя в историю
+            messages.push({
+                text: message,
+                isUser: true
+            });
+            
+            // Очищаем input
+            input.value = '';
+            
+            // Обновляем отображение
+            displayMessages();
+
+            try {
+                const response = await fetch('/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: message,
+                        chat_id: chatId
+                    })
+                });
+
+                const data = await response.json();
+                
+                if (!chatId) {
+                    // Сохраняем chat_id для нового чата
+                    chatId = data.chat_id;
+                    localStorage.setItem('chatId', chatId);
+                }
+
+                // Добавляем ответ AI в историю
+                messages.push({
+                    text: data.message,
+                    isUser: false,
+                    author_name: data.author_name
+                });
+
+                // Сохраняем обновленную историю в localStorage
+                localStorage.setItem('messages', JSON.stringify(messages));
+                
+                // Обновляем отображение
+                displayMessages();
+
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error sending message');
+            }
+        }
+
+        // Отправка сообщения по нажатию Enter
+        document.getElementById('message-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
+</body>
+</html> 
