@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>SONG AI</title>
+      <meta name="description" content="SONG AI" />
+
+      <link rel="stylesheet" href="./css/buttons.css" />
+      <link rel="stylesheet" href="./css/style.css" />
+
+      <link rel="icon" type="image/png" href="./img/favicon-96x96.png" sizes="96x96" />
+      <link rel="icon" type="image/svg+xml" href="./img/favicon.svg" />
+      <link rel="shortcut icon" href="./img/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png" />
+      <link rel="manifest" href="./img/site.webmanifest" />
+   </head>
+
+   <body class="body">
+      <div class="wrapper">
+         <header class="header _container">
+            <div class="header__left">
+               <a href="#" class="logo-box logo-header">
+                  <!-- <img src="./img/logo.svg" alt="logo">
+         -->
+                  SONG AI
+               </a>
+
+               <div class="header-nav">
+                  <ul>
+                     <li><a href="#aimenu">AI Menu</a></li>
+                     <li><a href="#about">About</a></li>
+                     <li><a href="#features">Features</a></li>
+                  </ul>
+               </div>
+            </div>
+
+            <div class="header__right">
+               <a href="#" class="main-btn btn">Docs</a>
+
+               <!-- <a href="#" class="main-btn dapp-main-btn btn">DAPP</a> -->
+
+               <button class="header__burger" type="button" aria-label="Мобильное меню">
+                  <span></span>
+               </button>
+            </div>
+         </header>
+
+         <main class="main">
+            <section class="first-section _container">
+               <div class="fs__left">
+                  <!-- <p class="vb-text">All-In-One AI platform for DeFi analizing</p> -->
+
+                  <h1 class="h1-header">SONG AI</h1>
+
+                  <div class="fr-text">All-in-one AI music platform</div>
+
+                  <div class="xc-text">
+                     Analyzes unique prompt <br />
+                     and generates realistic music based on it
+                  </div>
+
+                  <!-- <a href="#" class="main-btn main-btn--black btn">Buy</a> -->
+
+                  <div class="fgp-text">
+                     Our team makes a solution <br />
+                     that will make everyone's life easier!
+                  </div>
+               </div>
+
+               <div class="fs__right">
+                  <img src="./img/rr.png" alt="i" />
+               </div>
+            </section>
+
+            <section class="second-section _container">
+               <div id="about" class="anchor"></div>
+
+               <!-- <div class="ss-top-text">Не хочешь пропускать такие проекты?</div> -->
+
+               <h2 class="h2-header">Upcoming partnerships</h2>
+
+               <div class="mnp-box">
+                  <div class="vp-item mnp-item--one">
+                     <img class="vp-item__icon" src="./img/spot.jpg" alt="i" />
+                     <div class="vp-item__title">Spotify</div>
+                  </div>
+
+                  <div class="vp-item mnp-item--two">
+                     <img class="vp-item__icon" src="./img/apm.jpg" alt="i" />
+                     <div class="vp-item__title">Apple Music</div>
+                  </div>
+
+                  <div class="vp-item mnp-item--three">
+                     <img class="vp-item__icon" src="./img/cloud.jpg" alt="i" />
+                     <div class="vp-item__title">SoundCloud</div>
+                  </div>
+
+                  <div class="vp-item mnp-item--four">
+                     <img class="vp-item__icon" src="./img/uu.jpg" alt="i" />
+                     <div class="vp-item__title">YouTube Music</div>
+                  </div>
+
+                  <div class="vp-item mnp-item--five">
+                     <img class="vp-item__icon" src="./img/dez.jpg" alt="i" />
+                     <div class="vp-item__title">Deezer</div>
+                  </div>
+               </div>
+            </section>
+
+            <section class="third-section _container">
+               <div class="fgv-box">
+                  <h2 class="fg-heder">2025 The year of AI</h2>
+
+                  <div class="rt-text">
+                     We'll likely mark 2025 as the year when AI became truly accessible to the general public.
+                     Achievements in transformer architectures such as DALL-E, Stable Diffusion, and ChatGPT will
+                     revolutionize many industries in the years to come.
+                  </div>
+
+                  <h2 class="fg-heder fg-heder--bottom">SONG AI</h2>
+               </div>
+            </section>
+
+            <section id="aimenu" class="fourth-section">
+               <div class="_container">
+                  <h2 class="h2-header">Platform's features</h2>
+
+                  <div class="bn-box">
+                     <div class="bn-item bn-item--b">
+                        <img src="./img/aa.svg" alt="i" />
+                        <p>Preview</p>
+                     </div>
+
+                     <div class="bn-item">
+                        <img src="./img/json.svg" alt="i" />
+                        <p>JSON</p>
+                     </div>
+                  </div>
+
+                  <div class="player-container">
+                     <div id="waveform"></div>
+                     <div class="audio-controls">
+                        <button id="playPause" class="play-pause">
+                           <img src="./img/play.svg" alt="" />
+                        </button>
+                        <div class="volume-control">
+                           <!-- Иконка громкости -->
+                           <img src="./img/sound.png" alt="" class="volume-icon" />
+                           <!-- Ползунок громкости -->
+                           <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="0.5" />
+                        </div>
+
+                        <span class="time">0:00 / 0:00</span>
+                        <input type="range" class="progress-bar" min="0" max="100" value="0" step="0.1" />
+                        <button class="fullscreen">
+                           <img src="./img/full.svg" alt="" />
+                        </button>
+                     </div>
+                     <div div class="player__buttons">
+                        <div class="action-buttons">
+                           <button class="action-button tweak">
+                              <img src="./img/tweak.svg" alt="" class="tweak" />
+                              Tweak It
+                           </button>
+                           <button class="action-button download">
+                              <img src="./img/download.svg" alt="" class="download" />
+                              Download
+                           </button>
+                           <button class="action-button report">
+                              <img src="./img/report.svg" alt="" class="report" />
+                              Report
+                           </button>
+                        </div>
+                        <p class="play__time">Generated in <span>00.0 seconds</span></p>
+                     </div>
+
+                     <p class="logs">> Show logs</p>
+                  </div>
+                  <div id="waveform"></div>
+
+                  <script type="module">
+                     import WaveSurfer from "https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js";
+
+                     const wavesurfer = WaveSurfer.create({
+                        container: "#waveform",
+                        waveColor: "#97BAFF",
+                        progressColor: "#383351",
+                        url: "./audio.mp3",
+                     });
+
+                     // После загрузки волны применяем градиент
+                     wavesurfer.on("ready", () => {
+                        const canvas = wavesurfer.drawer.canvases[0].wave;
+                        const ctx = canvas.getContext("2d");
+                        const width = canvas.width;
+                        const gradient = ctx.createLinearGradient(0, 0, width, 0);
+                        gradient.addColorStop(0, "#23BEB3");
+                        gradient.addColorStop(0.5, "#97BAFF");
+                        gradient.addColorStop(1, "#8C84D8");
+
+                        const originalDrawWave = wavesurfer.drawer.drawWave.bind(wavesurfer.drawer);
+                        wavesurfer.drawer.drawWave = (peaks, channelIndex, start, end) => {
+                           ctx.fillStyle = gradient;
+                           originalDrawWave(peaks, channelIndex, start, end);
+                        };
+
+                        wavesurfer.drawer.updateSize();
+                     });
+
+                     wavesurfer.on("interaction", () => {
+                        wavesurfer.play();
+                     });
+
+                     document.querySelector(".play-pause").addEventListener("click", () => {
+                        wavesurfer.playPause();
+                     });
+
+                     // Регулировка громкости через ползунок
+                     const volumeSlider = document.querySelector(".volume-slider");
+                     volumeSlider.addEventListener("input", (event) => {
+                        const volume = parseFloat(event.target.value);
+                        wavesurfer.setVolume(volume);
+                     });
+
+                     // Перемотка через элемент с классом "progress-bar"
+                     const progressBar = document.querySelector(".progress-bar");
+                     progressBar.addEventListener("input", (event) => {
+                        const progress = parseFloat(event.target.value);
+                        const duration = wavesurfer.getDuration();
+                        wavesurfer.seekTo(progress / 100);
+                     });
+
+                     // Обновление прогресс-бара и времени во время воспроизведения
+                     wavesurfer.on("audioprocess", () => {
+                        const currentTime = wavesurfer.getCurrentTime();
+                        const duration = wavesurfer.getDuration();
+                        const progress = (currentTime / duration) * 100;
+                        progressBar.value = progress;
+
+                        const timeElement = document.querySelector(".time");
+                        timeElement.textContent = formatTime(currentTime) + " / " + formatTime(duration);
+                     });
+
+                     // Функция для форматирования времени (в секундах) в формат MM:SS
+                     function formatTime(seconds) {
+                        const minutes = Math.floor(seconds / 60);
+                        const secs = Math.floor(seconds % 60);
+                        return `${minutes}:${secs < 10 ? "0" + secs : secs}`;
+                     }
+                  </script>
+
+                  <!-- <div class="bnm-text">Платформа использует интеграции с основными сканами, AI подбирает тренды по активности запросов, с помощью чего вы можете видеть реальный интерес</div>
+
+            <a href="#" class="main-btn dapp-main-btn btn">DAPP</a> -->
+                  <form id="audioForm" novalidate>
+                     <label for="prompt">Prompt:</label>
+                     <input type="text" id="prompt" name="prompt" placeholder="Enter a music prompt" required />
+
+                     <label for="outputFormat">File format:</label>
+                     <select id="outputFormat" name="outputFormat" required>
+                        <option value="mp3">MP3</option>
+                        <option value="wav">WAV</option>
+                     </select>
+
+                     <button type="button" id="submitButton" class="dark-button">Generate audio</button>
+                  </form>
+
+                  <p id="status"></p>
+
+                  <div id="downloadSection" style="display: none">
+                     <button id="playButton" class="dark-button">Play audio</button>
+                     <audio id="audioPlayer" controls></audio>
+                  </div>
+
+                  <button id="showLastFileButton" class="dark-button">Show result!</button>
+
+                  <script src="js/api.js"></script>
+               </div>
+            </section>
+
+            <section class="five-section _container">
+               <div id="features" class="anchor"></div>
+
+               <h2 class="h2-header">AI music platform</h2>
+
+               <div class="fgp-text">
+                  The standard price of such a service is $99 per month, but we provide it all absolutely free!
+               </div>
+
+               <div class="hk-box">
+                  <div class="hk-item hk-item--1">
+                     <img src="./img/i0.svg" alt="i" />
+                     <p>Swap</p>
+                  </div>
+
+                  <div class="hk-item hk-item--2">
+                     <img src="./img/i6.svg" alt="i" />
+                     <p>Equalizer</p>
+                  </div>
+
+                  <div class="hk-item hk-item--3">
+                     <img src="./img/i3.svg" alt="i" />
+                     <p>BPM</p>
+                  </div>
+
+                  <div class="hk-item hk-item--4">
+                     <img src="./img/i4.svg" alt="i" />
+                     <p>Rhythm</p>
+                  </div>
+
+                  <div class="hk-item hk-item--5">
+                     <img src="./img/i2.svg" alt="i" />
+                     <p>Media</p>
+                  </div>
+
+                  <div class="hk-item hk-item--6">
+                     <img src="./img/head.svg" alt="i" />
+                     <p>NCS</p>
+                  </div>
+
+                  <div class="hk-item hk-item--7">
+                     <img src="./img/star.svg" alt="i" />
+                     <p>AI</p>
+                  </div>
+
+                  <img class="bbn-img" src="./img/bbr.png" alt="i" loading="lazy" />
+               </div>
+            </section>
+         </main>
+
+         <footer class="footer">
+            <div class="footer-box _container">
+               <div class="cvb-box"></div>
+
+               <div class="f-left">Copyright © 2025, All Rights Reserved</div>
+
+               <div class="f-right">
+                  Social networks
+
+                  <div class="soc-btns">
+                     <a href="ссылку телеграм сюда" target="_blank" rel="noopener nofollow">
+                        <img src="./img/tel.svg" alt="i" />
+                     </a>
+                     <a href="ссылку х сюда" target="_blank" rel="noopener nofollow">
+                        <img src="./img/x.svg" alt="i" />
+                     </a>
+                     <a href="ссылку orel сюда" target="_blank" rel="noopener nofollow">
+                        <img src="./img/orel.svg" alt="i" />
+                     </a>
+                     <a href="ссылку dex сюда" target="_blank" rel="noopener nofollow">
+                        <img src="./img/dex.svg" alt="i" />
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </footer>
+      </div>
+
+      <script src="https://unpkg.com/wavesurfer.js"></script>
+      <script src="./js/main.js"></script>
+
+      <div class="tooltip">Copied to clipboard</div>
+   </body>
+</html>

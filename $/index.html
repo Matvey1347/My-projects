@@ -1,56 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
+      <meta name="format-detection" content="telephone=no" />
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Interactive Background</title>
+      <title>Core AI</title>
       <style>
          body {
             margin: 0;
-            overflow: hidden;
+            /*overflow: hidden;*/
             background: #ffffff;
          }
          canvas {
             display: block;
          }
       </style>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="./null.css" />
+      <link rel="stylesheet" href="./style.css" />
+      <link rel="shortcut icon" href="./image/favicon.png" type="image/x-icon" />
    </head>
    <body>
-      <canvas id="background"></canvas>
+      <div class="wrapper bg__wrap">
+         <canvas id="background"></canvas>
+         <div class="content _container">
+            <div class="header">
+               <div class="header__top">
+                  <img src="./image/logo.svg" alt="" class="logo" />
+               </div>
+               <div class="header__left">
+                  <div class="networks">
+                     <a href="#" class="_scale_hover">
+                        <img src="./image/tg.svg" alt="" />
+                     </a>
+                     <a href="#" class="_scale_hover">
+                        <img src="./image/x.svg" alt="" />
+                     </a>
+                     <a href="#" class="_scale_hover">
+                        <img src="./image/screen.svg" alt="" />
+                     </a>
+                     <a href="#" class="_scale_hover">
+                        <img src="./image/tools.svg" alt="" />
+                     </a>
+                     <a href="#" class="_scale_hover">
+                        <img src="./image/docs.svg" alt="" />
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <section class="info">
+               <a href="https://x.com/home" class="_scale_hover"><img src="./image/btn.png" alt="" class="btn" /></a>
+               <h1 class="info__title">
+                  AI agent on Solana offering real-time project analytics and trading capabilities via Jupiter
+               </h1>
+               <p class="info__text">Elevate your Solana experience with AI-powered insights and delegated actions</p>
+               <div data-copy class="ca">ca:000000000000000000000000000000</div>
+            </section>
+            <section class="chat">
+               <img src="./image/chat-head.png" alt="" class="chat-head" />
+               <div class="chat__wrapeer">
+                  <div class="left__column">
+                     <div class="left__column_icons">
+                        <img src="./image/black-logo.svg" alt="" class="black-logo" />
+                     </div>
+                     <div class="left__column_buttons">
+                        <p class="left__column_buttons_text">Explore</p>
+                        <div class="chat__links">
+                           <a href="#" class="left__column_button">
+                              <img src="./image/home.png" alt="" />
+                              Home
+                           </a>
+                        </div>
+                     </div>
+                     <div class="account">
+                        <img src="./image/acc-icon.png" alt="" class="account__icon" />
+                        <div class="account__info">
+                           <h4 class="account__title">@CORE_AI</h4>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="right__column">
+                     <h3 class="right__column_title">How can I assist you?</h3>
+                     <div class="chat__field">
+                        <textarea placeholder="Start a new conversation.." name="chat" id=""></textarea>
+                        <div class="chat__bottom">
+                           <div class="chat__counter">0/2000</div>
+                           <img src="./image/send.svg" alt="" class="send" />
+                        </div>
+                     </div>
+                     <div class="suggestions">
+                        <h4 class="suggestions__title">Suggestions</h4>
+                        <div class="suggestions__cards">
+                           <div class="suggestions__wrap">
+                              <div class="suggestions__card">
+                                 <h5 class="suggestions__card_title">Any updates from @phantom recently?</h5>
+                                 <p class="suggestions__card_text">summarize the latest tweets from @phantom</p>
+                              </div>
+                              <div class="suggestions__card">
+                                 <h5 class="suggestions__card_title">Launch a new token</h5>
+                                 <p class="suggestions__card_text">deploy a new token on pump.fun</p>
+                              </div>
+                           </div>
+                           <div class="suggestions__wrap">
+                              <div class="suggestions__card">
+                                 <h5 class="suggestions__card_title">What has toly been doing recenty?</h5>
+                                 <p class="suggestions__card_text">summarize his recent tweets</p>
+                              </div>
+                              <div class="suggestions__card">
+                                 <h5 class="suggestions__card_title">Swap 1 SOL for USDC</h5>
+                                 <p class="suggestions__card_text">using Jupiter to swap on Solana</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="intehtations">
+                        <h5 class="intehtations__title">Integrations coming soon</h5>
+                        <div class="intehtations__cards">
+                           <div class="intehtations__card">
+                              <img src="./image/chat01.png" alt="" class="intehtations__card_icon" />
+                              <div>
+                                 <h5 class="intehtations__card_title">pump.fun</h5>
+                                 <p class="intehtations__card_text">Discover new tokens, launch tokens</p>
+                              </div>
+                           </div>
+                           <div class="intehtations__card">
+                              <img src="./image/chat02.png" alt="" class="intehtations__card_icon" />
+                              <div>
+                                 <h5 class="intehtations__card_title">Jupiter</h5>
+                                 <p class="intehtations__card_text">Swap tokens & DCA, Limit orders</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="blocks">
+               <h2 class="blocks__title">Tailored for Solana</h2>
+               <p class="blocks__text">Seamless integration with the world’s leading AI-models</p>
+               <div class="cards">
+                  <div class="cards__first">
+                     <div class="card big">
+                        <img src="./image/01.png" alt="" class="card__icon" />
+                        <h3 class="card__title">Cutting-Edge AI Intelligence</h3>
+                        <p class="card__text">
+                           Harness the power of the world's most advanced AI models, including Claude 3.5-Sonnet and
+                           GPT-4o, to intelligently analyze your Solana transactions in real-time, providing data-driven
+                           insights and seamless automated actions.
+                        </p>
+                     </div>
+                     <div class="card small">
+                        <img src="./image/02.png" alt="" class="card__icon" />
+                        <h3 class="card__title">Seamless Execution</h3>
+                        <p class="card__text">
+                           Experience ultra-efficient, frictionless transactions powered by our deep Solana integration.
+                           Enjoy smooth, rapid execution without the need for compromise.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="card one">
+                     <div class="one__content">
+                        <img src="./image/03.png" alt="" class="card__icon" />
+                        <h3 class="card__title">Comprehensive Ecosystem Integration</h3>
+                        <p class="card__text">
+                           Effortlessly connect with the full spectrum of Solana's protocols and services. Our platform
+                           is designed for seamless AI-powered collaboration, ensuring full synergy with the ecosystem.
+                        </p>
+                     </div>
+                     <img src="./image/card-content.png" alt="" class="icon" />
+                  </div>
+                  <div class="cards__second">
+                     <div class="card small">
+                        <img src="./image/04.png" alt="" class="card__icon" />
+                        <h3 class="card__title">Open Source & Community Driven</h3>
+                        <p class="card__text">
+                           Built with transparency and collaboration in mind. Our full-stack application is completely
+                           open source, community-driven, and welcomes contributions from developers worldwide to shape
+                           the future of Solana AI tools.
+                        </p>
+                     </div>
+                     <div class="card big">
+                        <img src="./image/05.png" alt="" class="card__icon" />
+                        <h3 class="card__title">AI-Driven Automations & Agents</h3>
+                        <p class="card__text">
+                           Revolutionize your workflows with powerful AI agents and custom automations designed to
+                           handle complex tasks. *Coming soon* to streamline your operations even further.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </div>
+      </div>
+
+      <div class="copied_modal">copied to clipboard</div>
+
       <script>
          const canvas = document.getElementById("background");
          const ctx = canvas.getContext("2d");
          canvas.width = window.innerWidth;
          canvas.height = window.innerHeight;
 
-         const particles = [];
-         const particleCount = 150; // Увеличено количество частиц
-         const maxDistance = 200; // Максимальная длина линии
-         const mouseRadius = 150; // Радиус реакции на курсор
+         let particles = [];
+         let particleCount;
+         let maxDistance;
+         let mouseRadius;
+         let lineWidth;
+
+         // Функция для настройки параметров в зависимости от ширины экрана
+         function setResponsiveParams() {
+            const screenWidth = window.innerWidth;
+
+            if (screenWidth < 600) {
+               // Телефоны
+               particleCount = 30;
+               maxDistance = 150;
+               mouseRadius = 100;
+               lineWidth = 1;
+            } else if (screenWidth >= 600 && screenWidth < 768) {
+               // sm
+               particleCount = 40;
+               maxDistance = 120;
+               mouseRadius = 100;
+               lineWidth = 0.8;
+            } else if (screenWidth >= 768 && screenWidth < 992) {
+               // md
+               particleCount = 60;
+               maxDistance = 150;
+               mouseRadius = 120;
+               lineWidth = 0.7;
+            } else if (screenWidth >= 992 && screenWidth < 1400) {
+               // lg
+               particleCount = 60; // Значительно уменьшено количество частиц
+               maxDistance = 200;
+               mouseRadius = 150;
+               lineWidth = 0.5;
+            } else {
+               // xl (1400px и больше)
+               particleCount = 100; // Немного меньше частиц
+               maxDistance = 250;
+               mouseRadius = 180;
+               lineWidth = 0.5;
+            }
+
+            // Пересоздаем частицы
+            createParticles();
+         }
 
          // Создание частиц
-         for (let i = 0; i < particleCount; i++) {
-            particles.push({
-               x: Math.random() * canvas.width,
-               y: Math.random() * canvas.height,
-               radius: Math.random() * 1 + 0.5, // Очень маленькие точки
-               speedX: Math.random() * 0.3 - 0.15, // Медленное движение
-               speedY: Math.random() * 0.3 - 0.15,
-            });
+         function createParticles() {
+            particles = [];
+            for (let i = 0; i < particleCount; i++) {
+               particles.push({
+                  x: Math.random() * canvas.width,
+                  y: Math.random() * canvas.height,
+                  radius: Math.random() * 1 + 0.5, // Размер частиц
+                  speedX: Math.random() * 0.3 - 0.15,
+                  speedY: Math.random() * 0.3 - 0.15,
+               });
+            }
          }
 
          // Позиция мыши
-         const mouse = { x: canvas.width / 2, y: canvas.height / 2 }; // Начальная позиция в центре
-         const movementOffset = { x: 0, y: 0 }; // Смещение фона
+         const mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+         const movementOffset = { x: 0, y: 0 };
 
          window.addEventListener("mousemove", (event) => {
-            // Рассчитываем смещение в зависимости от положения мыши
             const centerX = canvas.width / 2;
             const centerY = canvas.height / 2;
-            movementOffset.x = (event.x - centerX) * 0.02; // Маленькое смещение по X
-            movementOffset.y = (event.y - centerY) * 0.02; // Маленькое смещение по Y
+            movementOffset.x = (event.x - centerX) * 0.02;
+            movementOffset.y = (event.y - centerY) * 0.02;
 
-            // Обновляем позицию мыши
             mouse.x = event.x;
             mouse.y = event.y;
          });
@@ -63,7 +288,6 @@
                const dy = particle.y - mouse.y;
                const distance = Math.sqrt(dx * dx + dy * dy);
 
-               // Затемнение частиц рядом с курсором
                const darkness = distance < mouseRadius ? 1 - distance / mouseRadius : 0.2;
                const color = `rgba(0, 0, 0, ${darkness})`;
 
@@ -90,14 +314,13 @@
                      const mouseDy = midY - mouse.y;
                      const mouseDistance = Math.sqrt(mouseDx * mouseDx + mouseDy * mouseDy);
 
-                     // Затемнение линий рядом с курсором
                      const lineDarkness = mouseDistance < mouseRadius ? 1 - mouseDistance / mouseRadius : 0.1;
 
                      ctx.beginPath();
                      ctx.moveTo(particles[i].x + movementOffset.x, particles[i].y + movementOffset.y);
                      ctx.lineTo(particles[j].x + movementOffset.x, particles[j].y + movementOffset.y);
-                     ctx.strokeStyle = `rgba(0, 0, 0, ${lineDarkness})`;
-                     ctx.lineWidth = 0.5; // Очень тонкие линии
+                     ctx.strokeStyle = `rgba(255, 255, 255, ${lineDarkness})`;
+                     ctx.lineWidth = lineWidth;
                      ctx.stroke();
                      ctx.closePath();
                   }
@@ -111,7 +334,6 @@
                particle.x += particle.speedX;
                particle.y += particle.speedY;
 
-               // Отражение частиц от краев экрана
                if (particle.x <= 0 || particle.x >= canvas.width) {
                   particle.speedX *= -1;
                }
@@ -129,55 +351,18 @@
             requestAnimationFrame(animate);
          }
 
-         animate();
-
-         // Изменение размера холста при изменении размера окна
+         // Изменение размера холста и параметров при изменении размера окна
          window.addEventListener("resize", () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
+            setResponsiveParams();
          });
+
+         // Инициализация
+         setResponsiveParams();
+         animate();
       </script>
-      <!-- Code injected by live-server -->
-      <script>
-         // <![CDATA[  <-- For SVG support
-         if ("WebSocket" in window) {
-            (function () {
-               function refreshCSS() {
-                  var sheets = [].slice.call(document.getElementsByTagName("link"));
-                  var head = document.getElementsByTagName("head")[0];
-                  for (var i = 0; i < sheets.length; ++i) {
-                     var elem = sheets[i];
-                     var parent = elem.parentElement || head;
-                     parent.removeChild(elem);
-                     var rel = elem.rel;
-                     if (
-                        (elem.href && typeof rel != "string") ||
-                        rel.length == 0 ||
-                        rel.toLowerCase() == "stylesheet"
-                     ) {
-                        var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, "");
-                        elem.href =
-                           url + (url.indexOf("?") >= 0 ? "&" : "?") + "_cacheOverride=" + new Date().valueOf();
-                     }
-                     parent.appendChild(elem);
-                  }
-               }
-               var protocol = window.location.protocol === "http:" ? "ws://" : "wss://";
-               var address = protocol + window.location.host + window.location.pathname + "/ws";
-               var socket = new WebSocket(address);
-               socket.onmessage = function (msg) {
-                  if (msg.data == "reload") window.location.reload();
-                  else if (msg.data == "refreshcss") refreshCSS();
-               };
-               if (sessionStorage && !sessionStorage.getItem("IsThisFirstTime_Log_From_LiveServer")) {
-                  console.log("Live reload enabled.");
-                  sessionStorage.setItem("IsThisFirstTime_Log_From_LiveServer", true);
-               }
-            })();
-         } else {
-            console.error("Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.");
-         }
-         // ]]>
-      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+      <script src="./copy.js"></script>
    </body>
 </html>
