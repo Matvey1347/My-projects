@@ -2261,6 +2261,42 @@ background: #859EFC;
    min-width: 20px;
  }
 
+@media (max-width: 1000px) {
+   .play-pause {
+      margin-right: 0px;
+   }
+   .time {
+      white-space: nowrap
+   }
+}
+
+@media (max-width:700px) {
+   .player__buttons {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 10px;
+   }
+}
+
+@media (max-width:500px) {
+   .play-pause img {
+      min-width: 15px;
+   }
+   .volume-icon {
+      min-width: 40px;
+   }
+   .time {
+      font-size: 14px;
+   }
+}
+
+@media (max-width:400px) {
+   .action-buttons {
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+}
+
  /* Ползунок громкости */
  .volume-slider {
    position: absolute;
