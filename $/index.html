@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>3D Model Showcase</title>
+      <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+         }
+
+         .model-container {
+            width: 80%;
+            max-width: 800px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 40px auto; /* Adds top and bottom spacing */
+         }
+
+         .model-header {
+            padding: 16px;
+            background-color: #0078d7;
+            color: #fff;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+         }
+
+         .model-frame {
+            width: 100%;
+            height: 500px;
+            border: none;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="model-container">
+         <div class="model-header">3D Model Viewer</div>
+         <iframe
+            class="model-frame"
+            id="view360Iframe"
+            src="https://sketchfab.com/models/8d913bda48f84217902e6829982c494f/embed?ui_infos=0&ui_watermark=0&ui_help=0&ui_settings=0&ui_inspector=0&ui_annotations=0&ui_stop=0&ui_vr=0&preload=1&autostart=1&ui_hint=2&autospin=0.2"
+            allow="autoplay; fullscreen; xr-spatial-tracking"
+         ></iframe>
+      </div>
+   </body>
+</html>
