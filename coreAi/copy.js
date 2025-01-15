@@ -37,13 +37,3 @@ copies.forEach((copy) => {
    });
    // });
 });
-
-const button = document.querySelector(".button");
-
-let value = localStorage.getItem("test1");
-
-button.addEventListener("click", () => {
-   localStorage.setItem("test1", value + " как дела?");
-   value = localStorage.getItem("test1");
-   console.log(value);
-});

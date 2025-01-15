@@ -1,3 +1,13 @@
+/*@font-face {
+   font-family: 'arco_cyrillicregular';
+   src: url('./fonts/rco-cyrillic-webfont.woff2') format('woff2'),
+        url('./fonts/arco-cyrillic-webfont.woff') format('woff'),
+        url('./fonts/arco-cyrillic.otf') format('opentype'), 
+        url('./fonts/arco-cyrillic.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+}*/
+
 * {
    font-family: '' !important;
    color: #FFF;

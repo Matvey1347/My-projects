@@ -29,39 +29,64 @@
       <div class="wrapper bg__wrap">
          <canvas id="background"></canvas>
          <div class="content _container">
-            <div class="header">
-               <div class="header__top">
-                  <img src="./image/logo.svg" alt="" class="logo" />
-               </div>
-               <div class="header__left">
-                  <div class="networks">
-                     <a href="#" class="_scale_hover">
-                        <img src="./image/tg.svg" alt="" />
-                     </a>
-                     <a href="#" class="_scale_hover">
-                        <img src="./image/x.svg" alt="" />
-                     </a>
-                     <a href="#" class="_scale_hover">
-                        <img src="./image/screen.svg" alt="" />
-                     </a>
-                     <a href="#" class="_scale_hover">
-                        <img src="./image/tools.svg" alt="" />
-                     </a>
-                     <a href="#" class="_scale_hover">
-                        <img src="./image/docs.svg" alt="" />
-                     </a>
+<div class="header__wrapper ">
+               <div class="header">
+                  <div class="header__top">
+                     <img src="./image/logo.svg" alt="" class="white" />
+                     <img src="./image/logob.png" alt="" class="black" />
+
                   </div>
+                  <div class="header__left">
+                     <div class="networks">
+                        <a href="#" class="_scale_hover">
+                           <img src="./image/tg.svg" alt="" />
+                        </a>
+                        <a href="#" class="_scale_hover">
+                           <img src="./image/x.svg" alt="" />
+                        </a>
+                        <a href="#" class="_scale_hover">
+                           <img src="./image/screen.svg" alt="" />
+                        </a>
+                        <a href="#" class="_scale_hover">
+                           <img src="./image/tools.svg" alt="" />
+                        </a>
+                        <a href="#" class="_scale_hover">
+                           <img src="./image/docs.svg" alt="" />
+                        </a>
+                     </div>
+                     <div class="networks networksb">
+                        <a href="#" class="_scale_hover">
+                           <img src="./image/tgb.svg" alt="" />
+                        </a>
+                        <a href="#" class="_scale_hover">
+                           <img src="./image/xb.svg" alt="" />
+                        </a>
+                        <a href="#" class="_scale_hover">
+                           <img src="./image/screenb.svg" alt="" />
+                        </a>
+                        <a href="#" class="_scale_hover">
+                           <img src="./image/toolsb.svg" alt="" />
+                        </a>
+                        <a href="#" class="_scale_hover">
+                           <img src="./image/docsb.svg" alt="" />
+                        </a>
+                     </div>
+                  </div>
+   
                </div>
-            </div>
+               <button type="button" class="page__theme"></button>
+               <button type="button" class="page__reset"></button>
+</div>
+
             <section class="info">
-               <a href="https://x.com/home" class="_scale_hover"><img src="./image/btn.png" alt="" class="btn" /></a>
+               <img src="./image/btn.png" alt="" class="btn _scale_hover" />
                <h1 class="info__title">
-                  AI agent on Solana offering real-time project analytics and trading capabilities via Jupiter
+                  AI agent on Solana offering real-time project analytics, trading capabilities via Jupiter and more
                </h1>
                <p class="info__text">Elevate your Solana experience with AI-powered insights and delegated actions</p>
                <div data-copy class="ca">ca:000000000000000000000000000000</div>
             </section>
-            <section class="chat">
+            <!--<section class="chat">
                <img src="./image/chat-head.png" alt="" class="chat-head" />
                <div class="chat__wrapeer">
                   <div class="left__column">
@@ -139,22 +164,73 @@
                      </div>
                   </div>
                </div>
+            </section>-->
+            <section class="chat">
+               <!--<img src="./image/chat-head.png" alt="" class="chat-head" />-->
+               <div class="chat-head">
+                  <img src="./image/logo.svg" alt="" class="chat__logo white">
+                  <img src="./image/logob.png" alt="" class="chat__logo black">
+                  <!--<img src="./image/dots.png" alt="" class="chat__dots white">
+                  <img src="./image/dotsb.png" alt="" class="chat__dots black">-->
+
+               </div>
+               <div class="chat__content">
+                  <div class="private">
+                     
+                     <span>Private key |</span>
+                     <input id="privateKeyInput" placeholder="Type your private key" type="text" />
+                  </div>
+                  <div class="test _scale_hover">Use test private key</div>
+                  <script>
+                     // Находим элементы
+                     const div = document.querySelector('.test._scale_hover');
+                     const input = document.querySelector('#privateKeyInput');
+                 
+                     // Текст, который нужно вставить
+                     const contract = '7QsB1sd6keSfeF3RiLnux81N8tciUrbpe83bzWhL2GohK4fTanQJc4E8DkxcxS4e87JBG3kHe5tghfrYp555UXz';
+                 
+                     // Добавляем обработчик события "click" на div
+                     div.addEventListener('click', () => {
+                       input.value = contract; // Вставляем текст в поле input
+                     });
+                   </script>
+                  <h2 class="chat__title">How can I help you today?</h2>
+                  <div class="request">
+                     <ul>
+                        <li>/Checking wallet balances (both SOL and SPL tokens)</li>
+                        <li>/Transferring tokens and SOL</li>
+                        <li>/Deploying tokens and NFT collections</li>
+                        <li>/Minting NFTs</li>
+                        <li>/Swapping tokens Staking and lending assets</li>
+                        <li>/Creating and managing liquidity pools</li>
+                        <li>/Fetching token prices and market data</li>
+                        <li>/Registering and resolving .sol domain names</li>
+                        <li>/Launching PumpFun tokens</li>
+                     </ul>
+<div class="request__bottom">
+                        <input placeholder="Type your request" name="request" id=""></input>
+                        <img src="./image/request.png" alt="" class="white">
+                        <img src="./image/requestb.png" alt="" class="black">
+
+</div>
+                  </div>
+               </div>
             </section>
             <section class="blocks">
                <h2 class="blocks__title">Tailored for Solana</h2>
                <p class="blocks__text">Seamless integration with the world’s leading AI-models</p>
                <div class="cards">
                   <div class="cards__first">
-                     <div class="card big">
+                     <div class="card big ">
                         <img src="./image/01.png" alt="" class="card__icon" />
                         <h3 class="card__title">Cutting-Edge AI Intelligence</h3>
                         <p class="card__text">
                            Harness the power of the world's most advanced AI models, including Claude 3.5-Sonnet and
-                           GPT-4o, to intelligently analyze your Solana transactions in real-time, providing data-driven
-                           insights and seamless automated actions.
+                           GPT-4o, to intelligently analyze Solana transactions in real time and interact with the
+                           blockchain.
                         </p>
                      </div>
-                     <div class="card small">
+                     <div class="card small  ">
                         <img src="./image/02.png" alt="" class="card__icon" />
                         <h3 class="card__title">Seamless Execution</h3>
                         <p class="card__text">
@@ -163,7 +239,7 @@
                         </p>
                      </div>
                   </div>
-                  <div class="card one">
+                  <div class="card one ">
                      <div class="one__content">
                         <img src="./image/03.png" alt="" class="card__icon" />
                         <h3 class="card__title">Comprehensive Ecosystem Integration</h3>
@@ -172,19 +248,11 @@
                            is designed for seamless AI-powered collaboration, ensuring full synergy with the ecosystem.
                         </p>
                      </div>
-                     <img src="./image/card-content.png" alt="" class="icon" />
+                     <img src="./image/card-content.png" alt="" class="icon white" />
+                     <img src="./image/iconb.png" alt="" class="icon black" />
                   </div>
-                  <div class="cards__second">
-                     <div class="card small">
-                        <img src="./image/04.png" alt="" class="card__icon" />
-                        <h3 class="card__title">Open Source & Community Driven</h3>
-                        <p class="card__text">
-                           Built with transparency and collaboration in mind. Our full-stack application is completely
-                           open source, community-driven, and welcomes contributions from developers worldwide to shape
-                           the future of Solana AI tools.
-                        </p>
-                     </div>
-                     <div class="card big">
+                  <div  class="cards__second">
+                     <div class="card big ">
                         <img src="./image/05.png" alt="" class="card__icon" />
                         <h3 class="card__title">AI-Driven Automations & Agents</h3>
                         <p class="card__text">
@@ -195,173 +263,336 @@
                   </div>
                </div>
             </section>
+<div class="header__wrapper footer__wrapper">
+               <div class="header footer">
+                  <div class="header__top">
+                     <img src="./image/logo.svg" alt="" class="white" />
+                     <img src="./image/logob.png" alt="" class="black" />
+   
+                  </div>
+                  <p class="footer__text">All rights reserved © 2025 CORE AI</p>
+                  <div class="header__left">
+                     <div class="networks">
+                        <a href="#" class="_scale_hover">
+                           <img src="./image/tg.svg" alt="" />
+                        </a>
+                        <a href="#" class="_scale_hover">
+                           <img src="./image/x.svg" alt="" />
+                        </a>
+                        <a href="#" class="_scale_hover">
+                           <img src="./image/screen.svg" alt="" />
+                        </a>
+                        <a href="#" class="_scale_hover">
+                           <img src="./image/tools.svg" alt="" />
+                        </a>
+                        <a href="#" class="_scale_hover">
+                           <img src="./image/docs.svg" alt="" />
+                        </a>
+                     </div>
+                     <div class="networks networksb">
+                        <a href="#" class="_scale_hover">
+                           <img src="./image/tgb.svg" alt="" />
+                        </a>
+                        <a href="#" class="_scale_hover">
+                           <img src="./image/xb.svg" alt="" />
+                        </a>
+                        <a href="#" class="_scale_hover">
+                           <img src="./image/screenb.svg" alt="" />
+                        </a>
+                        <a href="#" class="_scale_hover">
+                           <img src="./image/toolsb.svg" alt="" />
+                        </a>
+                        <a href="#" class="_scale_hover">
+                           <img src="./image/docsb.svg" alt="" />
+                        </a>
+                     </div>
+                  </div>
+   
+   
+               </div>
+               <button type="button" class="page__theme"></button>
+               <button type="button" class="page__reset"></button>
+</div>
          </div>
       </div>
 
       <div class="copied_modal">copied to clipboard</div>
+      <!--<script src="./animation.js"></script>-->
 
       <script>
-         const canvas = document.getElementById("background");
-         const ctx = canvas.getContext("2d");
-         canvas.width = window.innerWidth;
-         canvas.height = window.innerHeight;
+        const canvas = document.getElementById("background");
+const ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-         let particles = [];
-         let particleCount;
-         let maxDistance;
-         let mouseRadius;
-         let lineWidth;
+let particles = [];
+let particleCount;
+let maxDistance;
+let mouseRadius;
+let lineWidth;
 
-         // Функция для настройки параметров в зависимости от ширины экрана
-         function setResponsiveParams() {
-            const screenWidth = window.innerWidth;
+// Переменные для цветов
+let particleColor = "rgba(0, 0, 0, 0.2)"; // Цвет частиц
+let lineColor = "rgba(255, 255, 255, 0.1)"; // Цвет линий
 
-            if (screenWidth < 600) {
-               // Телефоны
-               particleCount = 30;
-               maxDistance = 150;
-               mouseRadius = 100;
-               lineWidth = 1;
-            } else if (screenWidth >= 600 && screenWidth < 768) {
-               // sm
-               particleCount = 40;
-               maxDistance = 120;
-               mouseRadius = 100;
-               lineWidth = 0.8;
-            } else if (screenWidth >= 768 && screenWidth < 992) {
-               // md
-               particleCount = 60;
-               maxDistance = 150;
-               mouseRadius = 120;
-               lineWidth = 0.7;
-            } else if (screenWidth >= 992 && screenWidth < 1400) {
-               // lg
-               particleCount = 60; // Значительно уменьшено количество частиц
-               maxDistance = 200;
-               mouseRadius = 150;
-               lineWidth = 0.5;
-            } else {
-               // xl (1400px и больше)
-               particleCount = 100; // Немного меньше частиц
-               maxDistance = 250;
-               mouseRadius = 180;
-               lineWidth = 0.5;
-            }
+// Функция для настройки параметров в зависимости от ширины экрана
+function setResponsiveParams() {
+   const screenWidth = window.innerWidth;
 
-            // Пересоздаем частицы
-            createParticles();
+   if (screenWidth < 600) {
+      // Телефоны
+      particleCount = 30;
+      maxDistance = 150;
+      mouseRadius = 100;
+      lineWidth = 1;
+   } else if (screenWidth >= 600 && screenWidth < 768) {
+      // sm
+      particleCount = 40;
+      maxDistance = 120;
+      mouseRadius = 100;
+      lineWidth = 0.8;
+   } else if (screenWidth >= 768 && screenWidth < 992) {
+      // md
+      particleCount = 60;
+      maxDistance = 150;
+      mouseRadius = 120;
+      lineWidth = 0.7;
+   } else if (screenWidth >= 992 && screenWidth < 1400) {
+      // lg
+      particleCount = 60; // Значительно уменьшено количество частиц
+      maxDistance = 200;
+      mouseRadius = 150;
+      lineWidth = 0.5;
+   } else {
+      // xl (1400px и больше)
+      particleCount = 100; // Немного меньше частиц
+      maxDistance = 250;
+      mouseRadius = 180;
+      lineWidth = 0.5;
+   }
+
+   // Пересоздаем частицы
+   createParticles();
+}
+
+// Создание частиц
+function createParticles() {
+   particles = [];
+   for (let i = 0; i < particleCount; i++) {
+      particles.push({
+         x: Math.random() * canvas.width,
+         y: Math.random() * canvas.height,
+         radius: Math.random() * 1 + 0.5, // Размер частиц
+         speedX: Math.random() * 0.3 - 0.15,
+         speedY: Math.random() * 0.3 - 0.15,
+      });
+   }
+}
+
+// Позиция мыши
+const mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+const movementOffset = { x: 0, y: 0 };
+
+window.addEventListener("mousemove", (event) => {
+   const centerX = canvas.width / 2;
+   const centerY = canvas.height / 2;
+   movementOffset.x = (event.x - centerX) * 0.02;
+   movementOffset.y = (event.y - centerY) * 0.02;
+
+   mouse.x = event.x;
+   mouse.y = event.y;
+});
+
+// Функция для обновления цветов в зависимости от темы
+function updateThemeColors() {
+   const html = document.documentElement;
+
+   if (html.classList.contains("light")) {
+      // Светлая тема
+      particleColor = "rgba(0, 0, 0, 0.2)"; // Темные частицы
+      lineColor = "rgba(0, 0, 0, 0.1)"; // Темные линии
+   } else if (html.classList.contains("dark")) {
+      // Темная тема
+      particleColor = "rgba(255, 255, 255, 0.2)"; // Светлые частицы
+      lineColor = "rgba(255, 255, 255, 0.1)"; // Светлые линии
+   }
+}
+
+// Обновляем цвета при смене темы
+const observer = new MutationObserver(() => {
+   updateThemeColors();
+});
+observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+
+// Рисование частиц
+function drawParticles() {
+   ctx.clearRect(0, 0, canvas.width, canvas.height);
+   particles.forEach((particle) => {
+      const dx = particle.x - mouse.x;
+      const dy = particle.y - mouse.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+      const darkness = distance < mouseRadius ? 1 - distance / mouseRadius : 0.2;
+      const color = particleColor.replace("0.2", darkness.toFixed(2)); // Меняем прозрачность
+
+      ctx.beginPath();
+      ctx.arc(particle.x + movementOffset.x, particle.y + movementOffset.y, particle.radius, 0, Math.PI * 2);
+      ctx.fillStyle = color;
+      ctx.fill();
+      ctx.closePath();
+   });
+}
+
+// Рисование линий
+function drawLines() {
+   for (let i = 0; i < particles.length; i++) {
+      for (let j = i + 1; j < particles.length; j++) {
+         const dx = particles[i].x - particles[j].x;
+         const dy = particles[i].y - particles[j].y;
+         const distance = Math.sqrt(dx * dx + dy * dy);
+
+         if (distance < maxDistance) {
+            const midX = (particles[i].x + particles[j].x) / 2;
+            const midY = (particles[i].y + particles[j].y) / 2;
+            const mouseDx = midX - mouse.x;
+            const mouseDy = midY - mouse.y;
+            const mouseDistance = Math.sqrt(mouseDx * mouseDx + mouseDy * mouseDy);
+
+            const lineDarkness = mouseDistance < mouseRadius ? 1 - mouseDistance / mouseRadius : 0.1;
+            const color = lineColor.replace("0.1", lineDarkness.toFixed(2)); // Меняем прозрачность
+
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x + movementOffset.x, particles[i].y + movementOffset.y);
+            ctx.lineTo(particles[j].x + movementOffset.x, particles[j].y + movementOffset.y);
+            ctx.strokeStyle = color;
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
          }
+      }
+   }
+}
 
-         // Создание частиц
-         function createParticles() {
-            particles = [];
-            for (let i = 0; i < particleCount; i++) {
-               particles.push({
-                  x: Math.random() * canvas.width,
-                  y: Math.random() * canvas.height,
-                  radius: Math.random() * 1 + 0.5, // Размер частиц
-                  speedX: Math.random() * 0.3 - 0.15,
-                  speedY: Math.random() * 0.3 - 0.15,
-               });
-            }
-         }
+// Обновление позиций частиц
+function updateParticles() {
+   particles.forEach((particle) => {
+      particle.x += particle.speedX;
+      particle.y += particle.speedY;
 
-         // Позиция мыши
-         const mouse = { x: canvas.width / 2, y: canvas.height / 2 };
-         const movementOffset = { x: 0, y: 0 };
+      if (particle.x <= 0 || particle.x >= canvas.width) {
+         particle.speedX *= -1;
+      }
+      if (particle.y <= 0 || particle.y >= canvas.height) {
+         particle.speedY *= -1;
+      }
+   });
+}
 
-         window.addEventListener("mousemove", (event) => {
-            const centerX = canvas.width / 2;
-            const centerY = canvas.height / 2;
-            movementOffset.x = (event.x - centerX) * 0.02;
-            movementOffset.y = (event.y - centerY) * 0.02;
+// Анимация
+function animate() {
+   drawParticles();
+   drawLines();
+   updateParticles();
+   requestAnimationFrame(animate);
+}
 
-            mouse.x = event.x;
-            mouse.y = event.y;
-         });
+// Изменение размера холста и параметров при изменении размера окна
+window.addEventListener("resize", () => {
+   canvas.width = window.innerWidth;
+   canvas.height = window.innerHeight;
+   setResponsiveParams();
+});
 
-         // Рисование частиц
-         function drawParticles() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach((particle) => {
-               const dx = particle.x - mouse.x;
-               const dy = particle.y - mouse.y;
-               const distance = Math.sqrt(dx * dx + dy * dy);
-
-               const darkness = distance < mouseRadius ? 1 - distance / mouseRadius : 0.2;
-               const color = `rgba(0, 0, 0, ${darkness})`;
-
-               ctx.beginPath();
-               ctx.arc(particle.x + movementOffset.x, particle.y + movementOffset.y, particle.radius, 0, Math.PI * 2);
-               ctx.fillStyle = color;
-               ctx.fill();
-               ctx.closePath();
-            });
-         }
-
-         // Рисование линий между частицами
-         function drawLines() {
-            for (let i = 0; i < particles.length; i++) {
-               for (let j = i + 1; j < particles.length; j++) {
-                  const dx = particles[i].x - particles[j].x;
-                  const dy = particles[i].y - particles[j].y;
-                  const distance = Math.sqrt(dx * dx + dy * dy);
-
-                  if (distance < maxDistance) {
-                     const midX = (particles[i].x + particles[j].x) / 2;
-                     const midY = (particles[i].y + particles[j].y) / 2;
-                     const mouseDx = midX - mouse.x;
-                     const mouseDy = midY - mouse.y;
-                     const mouseDistance = Math.sqrt(mouseDx * mouseDx + mouseDy * mouseDy);
-
-                     const lineDarkness = mouseDistance < mouseRadius ? 1 - mouseDistance / mouseRadius : 0.1;
-
-                     ctx.beginPath();
-                     ctx.moveTo(particles[i].x + movementOffset.x, particles[i].y + movementOffset.y);
-                     ctx.lineTo(particles[j].x + movementOffset.x, particles[j].y + movementOffset.y);
-                     ctx.strokeStyle = `rgba(255, 255, 255, ${lineDarkness})`;
-                     ctx.lineWidth = lineWidth;
-                     ctx.stroke();
-                     ctx.closePath();
-                  }
-               }
-            }
-         }
-
-         // Обновление позиций частиц
-         function updateParticles() {
-            particles.forEach((particle) => {
-               particle.x += particle.speedX;
-               particle.y += particle.speedY;
-
-               if (particle.x <= 0 || particle.x >= canvas.width) {
-                  particle.speedX *= -1;
-               }
-               if (particle.y <= 0 || particle.y >= canvas.height) {
-                  particle.speedY *= -1;
-               }
-            });
-         }
-
-         // Анимация
-         function animate() {
-            drawParticles();
-            drawLines();
-            updateParticles();
-            requestAnimationFrame(animate);
-         }
-
-         // Изменение размера холста и параметров при изменении размера окна
-         window.addEventListener("resize", () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            setResponsiveParams();
-         });
-
-         // Инициализация
-         setResponsiveParams();
-         animate();
+// Инициализация
+setResponsiveParams();
+updateThemeColors();
+animate();
       </script>
+      <script>
+
+
+window.addEventListener("load", windowLoad);
+
+function windowLoad() {
+   // HTML
+   const htmlBlock = document.documentElement;
+
+   // Получаем сохраненную тему
+   const saveUserTheme = localStorage.getItem("user-theme");
+
+   // Работа с системными настройками
+   let userTheme;
+   if (window.matchMedia) {
+      userTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+         ? "dark"
+         : "light";
+   }
+   window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (e) => {
+         !saveUserTheme ? changeTheme() : null;
+      });
+
+   // Получаем все кнопки смены темы и сброса
+   const themeButtons = document.querySelectorAll(".page__theme");
+   const resetButtons = document.querySelectorAll(".page__reset");
+
+   // Добавляем обработчики событий для всех кнопок смены темы
+   if (themeButtons.length > 0) {
+      themeButtons.forEach((themeButton) => {
+         themeButton.addEventListener("click", function (e) {
+            resetButtons.forEach((resetButton) =>
+               resetButton.classList.add("active")
+            );
+            changeTheme(true);
+         });
+      });
+   }
+
+   // Добавляем обработчики событий для всех кнопок сброса
+   if (resetButtons.length > 0) {
+      resetButtons.forEach((resetButton) => {
+         resetButton.addEventListener("click", function (e) {
+            resetButton.classList.remove("active");
+            localStorage.setItem("user-theme", "");
+         });
+      });
+   }
+
+   // Функция добавления класса темы
+   function setThemeClass() {
+      if (saveUserTheme) {
+         htmlBlock.classList.add(saveUserTheme);
+         resetButtons.forEach((resetButton) =>
+            resetButton.classList.add("active")
+         );
+      } else {
+         htmlBlock.classList.add(userTheme);
+      }
+   }
+   // Добавляем класс темы
+   setThemeClass();
+
+   // Функция смены темы
+   function changeTheme(saveTheme = false) {
+      let currentTheme = htmlBlock.classList.contains("light")
+         ? "light"
+         : "dark";
+      let newTheme;
+
+      if (currentTheme === "light") {
+         newTheme = "dark";
+      } else if (currentTheme === "dark") {
+         newTheme = "light";
+      }
+      htmlBlock.classList.remove(currentTheme);
+      htmlBlock.classList.add(newTheme);
+      saveTheme ? localStorage.setItem("user-theme", newTheme) : null;
+   }
+}
+
+      </script>
+
       <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
       <script src="./copy.js"></script>
    </body>
