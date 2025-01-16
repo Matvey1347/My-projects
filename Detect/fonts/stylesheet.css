@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'HeliosExtC';
+    src: url('HeliosExtC.woff2') format('woff2'),
+        url('HeliosExtC.woff') format('woff'),
+        url('HeliosExtC.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

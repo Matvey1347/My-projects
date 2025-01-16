@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>$MORPH</title>
+      <link rel="stylesheet" href="./null.css" />
+      <link rel="stylesheet" href="./style.css" />
+      <link rel="shortcut icon" href="./image/favicon.png" type="image/x-icon" />
+   </head>
+
+   <body>
+      <div class="wrapper bg__wrap">
+         <img src="./image/bg.png" alt="" class="bg hide-600" />
+         <img src="./image/bgmb.png" alt="" class="bg show-600" />
+         <div class="content _container">
+            <div class="header">
+               <div class="header__content">
+                  <img src="./image/logo.png" alt="" class="logo" />
+                  <div class="networks">
+                     <a href="#" class="_scale_hover">
+                        <img src="./image/tg.svg" alt="" />
+                     </a>
+                     <a href="#" class="_scale_hover">
+                        <img src="./image/x.svg" alt="" />
+                     </a>
+                     <a href="#" class="_scale_hover">
+                        <img src="./image/screen.svg" alt="" />
+                     </a>
+                     <a href="#" class="_scale_hover">
+                        <img src="./image/tools.svg" alt="" />
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <section class="info">
+               <img data-anim-on-scroll src="./image/head.png" alt="" class="_scale_anim info__image anim hide-600" />
+               <img data-anim-on-scroll src="./image/headmb.png" alt="" class="_scale_anim info__image anim show-600" />
+
+               <img data-anim-on-scroll src="./image/title.png" alt="" class="title _scale_anim" />
+               <div class="info__content">
+                  <div data-anim-on-scroll data-copy class="ca _left_anim_tr">00000000000000</div>
+                  <div data-anim-on-scroll class="info__text hide-850 _right_anim_tr">
+                     Explore the world, one face at a time!
+                  </div>
+               </div>
+            </section>
+            <section data-anim-on-scroll class="chat _scale_anim">
+               <div class="info__text show-850">Explore the world, one face at a time!</div>
+
+               <h2 class="chat__title">/ CHAT</h2>
+               <div class="chat__content">
+                  <div class="chat__form">
+                     <div class="form__file">
+                        <label for="file">
+                           <img src="./image/upload.svg" alt="" class="upload" />
+
+                           UPLOAD YOUR IMAGE OR VIDEO
+                        </label>
+                        <input id="file" type="file" />
+                     </div>
+                     <div class="form__time">
+                        <div class="custom-select" onclick="toggleDropdown()">
+                           <img src="./image/time.svg" alt="" class="time" />
+                           <span class="text">10S</span>
+                           <span class="arrow">▼</span>
+                           <div class="dropdown">
+                              <div onclick="selectOption('5S')">5S</div>
+                              <div onclick="selectOption('10S')">10S</div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="form__input">
+                        <input type="text" placeholder="Type your message" />
+                        <img src="./image/send.svg" alt="" class="send" />
+                     </div>
+                  </div>
+               </div>
+               <div class="linew-wrap"><img src="./image/lines.png" alt="" class="lines" /></div>
+               <div class="how-to-use">
+                  <a href="#" class="_scale_hover how"><img src="./image/how.png" alt="" class="how-image" /></a>
+                  <p class="howto">/ HOW TO</p>
+               </div>
+            </section>
+            <section class="blocks">
+               <img data-anim-on-scroll src="./image/subtitle.png" alt="" class="subtitle _scale_anim" />
+               <div class="cards">
+                  <div data-anim-on-scroll class="card _left_anim_tr">
+                     <img src="./image/01.png" alt="" class="card__icon" />
+                     <h3 class="card__title">Upload Your Video</h3>
+                     <p class="card__text">
+                        Select a video between 5 to 10 seconds to upload. Make sure it clearly shows your face for the
+                        best results.
+                     </p>
+                  </div>
+                  <div data-anim-on-scroll class="card uniq _scale_anim">
+                     <img src="./image/02.png" alt="" class="card__icon" />
+                     <h3 class="card__title">Enter a Prompt</h3>
+                     <p class="card__text mb12">
+                        Type a description or choose an ethnicity transformation you'd like to explore. For example:
+                     </p>
+                     <div class="mb12 error">"Transform me into an African tribal chief."</div>
+                     <div class="error">"Make me look like an Indian Bollywood star."</div>
+                  </div>
+                  <div data-anim-on-scroll class="card _right_anim_tr">
+                     <img src="./image/03.png" alt="" class="card__icon" />
+                     <h3 class="card__title">Enjoy the Magic!</h3>
+                     <p class="card__text">
+                        Watch as MORPH AI works its magic, delivering your transformed video in just moments.
+                     </p>
+                  </div>
+               </div>
+               <div class="blocks__bottom">
+                  <div class="wrap">
+                     <img src="./image/lines.png" alt="" class="lines2 hide-850" />
+                     <a href="#" class="ai _scale_hover"><img src="./image/ai.png" alt="" /></a>
+                  </div>
+                  <p class="bottom__about">/ ABOUT</p>
+               </div>
+            </section>
+            <section class="about">
+               <h2 data-anim-on-scroll class="about__title _left_anim_tr">About</h2>
+               <p data-anim-on-scroll class="about__text _right_anim_tr">
+                  At MORPH AI, we believe in the power of transformation. Our platform combines cutting-edge artificial
+                  intelligence with the speed and security of the Solana blockchain to offer a revolutionary experience
+                  in personal image transformation.
+               </p>
+               <div data-anim-on-scroll data-copy class="ca _scale_anim">00000000000000</div>
+            </section>
+         </div>
+      </div>
+      <div class="copied_modal">copied to clipboard</div>
+
+      <script>
+         function toggleDropdown() {
+            const select = document.querySelector(".custom-select");
+            const dropdown = document.querySelector(".dropdown");
+            select.classList.toggle("active");
+            dropdown.classList.toggle("active");
+         }
+
+         function selectOption(value) {
+            const text = document.querySelector(".custom-select .text");
+            text.textContent = value;
+            toggleDropdown();
+         }
+
+         // Close dropdown if clicked outside
+         document.addEventListener("click", (e) => {
+            const select = document.querySelector(".custom-select");
+            const dropdown = document.querySelector(".dropdown");
+            if (!select.contains(e.target)) {
+               select.classList.remove("active");
+               dropdown.classList.remove("active");
+            }
+         });
+      </script>
+      <!-- <div class="loop-images">
+    <div class="left">
+      <img src="./image/image-1.png" class="image image-1">
+      <img src="./image/image-2.png" class="image image-2">
+      <img src="./image/image-3.png" class="image image-3">
+      <img src="./image/image-4.png" class="image image-4">
+    </div>
+    <div class="right">
+      <img src="./image/image-1.png" class="image image-1">
+      <img src="./image/image-2.png" class="image image-2">
+      <img src="./image/image-3.png" class="image image-3">
+      <img src="./image/image-4.png" class="image image-4">
+    </div>
+  </div> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+      <script src="./copy.js"></script>
+      <script src="./animation.js"></script>
+   </body>
+</html>

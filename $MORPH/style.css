@@ -1,0 +1,863 @@
+
+
+@font-face {
+   font-family: 'RF Dewi';
+   src: url('./fonts/RFDewi-Regular.eot');
+   src: local('./fonts/RF Dewi Regular'), local('RFDewi-Regular'),
+       url('./fonts/RFDewi-Regular.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/RFDewi-Regular.woff2') format('woff2'),
+       url('./fonts/RFDewi-Regular.woff') format('woff'),
+       url('./fonts/RFDewi-Regular.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'RF Dewi Expanded';
+   src: url('./fonts/RFDewiExpanded-Regular.eot');
+   src: local('./fonts/RF Dewi Expanded Regular'), local('RFDewiExpanded-Regular'),
+       url('./fonts/RFDewiExpanded-Regular.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/RFDewiExpanded-Regular.woff2') format('woff2'),
+       url('./fonts/RFDewiExpanded-Regular.woff') format('woff'),
+       url('./fonts/RFDewiExpanded-Regular.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+}
+
+
+
+* {
+   font-family: 'RF Dewi Expanded' !important;
+   color: #FFF;
+}
+
+._scale_hover {
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
+
+._scale_hover:hover {
+  transform: scale(1.1);
+}
+
+.networks {
+  display: flex;
+  align-items: center;
+}
+
+.networks a {
+  display: block;
+}
+
+.networks a:not(:last-child) {
+  margin-right: 60px;
+}
+
+._container {
+  max-width: 1600px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.bg__wrap {
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+[data-copy] {
+  cursor: pointer;
+}
+
+.copied_modal {
+  position: fixed;
+  top: 50%;
+  color: #000;
+  left: 50%;
+  z-index: 100;
+  background: #fff;
+  font-family: "Knewave", system-ui;
+  padding: 10px 30px;
+  white-space: nowrap;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease 0s;
+}
+
+.copied_modal._show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.content {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   padding-top: 50px;
+   padding-bottom: 50px;
+}
+
+.header {
+   display: flex;
+   margin-bottom: 25px;
+}
+
+.info__image {
+   position: absolute;
+   top: 0;
+   left: 50%;
+   z-index: -1;
+   transform: translateX(-50%);
+}
+
+.header__content {
+   max-width: 818px;
+   display: flex;
+   align-items: center;
+   gap: 60px;
+   justify-content: space-between;
+   padding: 20px 98px;
+   border-radius: 47.5px;
+background: rgba(233, 233, 233, 0.20);
+backdrop-filter: blur(51.75px);
+}
+
+.ca {
+   display: inline-block;
+   color: #FFF;
+text-align: center;
+font-family: "RF Dewi Extended";
+font-size: 21.895px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+border-radius: 15.036px;
+border: 1px solid #FFF;
+background: rgba(0, 0, 0, 0.10);
+backdrop-filter: blur(14.350000381469727px);
+padding: 11px 30px;
+}
+
+.info__text {
+   color: #FFF;
+text-align: right;
+font-family: "RF Dewi Extended";
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+max-width: 360px;
+}
+
+.info__content {
+   margin-top: 15px;
+   align-items: center;
+   display: flex;
+   justify-content: space-between;
+}
+
+.chat__title {
+   color: #FFF;
+text-align: center;
+font-family: "RF Dewi Expanded";
+font-size: 30.938px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+text-align: right;
+margin-bottom: 30px;
+}
+
+.howto {
+   color: #FFF;
+text-align: center;
+font-family: "RF Dewi Expanded";
+font-size: 30.938px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+
+.how-to-use {
+   margin-top: 71px;
+   display: flex;
+   justify-content: end;
+   align-items: center; 
+   width: 100%;
+ }
+
+ .how {
+   display: inline-block;
+ }
+
+ .howto {
+   margin-left: 392px;
+ }
+
+.linew-wrap {
+display: flex;
+justify-content: end;
+margin-top: 23px;
+}
+
+
+.blocks {
+   padding-top: 30px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.cards {
+   display: flex;
+   gap: 66px;
+   margin-top: 62px;
+}
+
+.card {
+   padding: 40px;
+   border-radius: 39px;
+border-bottom: 14px solid #F82D4E;
+background: rgba(253, 253, 253, 0.20);
+backdrop-filter: blur(51.75px);
+}
+
+ .card__title {
+   color: #F82D4E;
+leading-trim: both;
+text-edge: cap;
+font-family: "RF Dewi Extended";
+font-size: 42px;
+font-style: normal;
+font-weight: 600;
+line-height: 42px; /* 100% */
+letter-spacing: -0.84px;
+text-transform: uppercase;
+max-width: 358px;
+margin-top: 42px;
+margin-bottom: 24px;
+ }
+
+ .card__text {
+   max-width: 358px;
+
+   color: #C0C7DC;
+font-family: "RF Dewi";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 22.4px */
+text-transform: uppercase;
+ }
+
+.error {
+   color: #F82D4E;
+text-align: center;
+font-family: "RF Dewi";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 22.4px */
+border-radius: 7px;
+border: 1px solid #F82D4E;
+background: rgba(248, 45, 78, 0.20);
+padding: 15.348px 5px;
+}
+
+.mb12 {
+   margin-bottom: 12px;
+}
+
+
+.about {
+   align-self: flex-start;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 19px;
+   margin-top: 30px;
+}
+
+.about__title {
+   color: #FFF;
+text-align: center;
+font-family: "RF Dewi Expanded";
+font-size: 108.664px;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+text-transform: uppercase;
+}
+
+.about__text {
+   color: #FFF;
+font-family: "RF Dewi Extended";
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+max-width: 770px;
+}
+
+.chat {
+   width: 100%;
+   padding-top: 433px;
+}
+
+.chat__content {
+   border-radius: 28px;
+background: rgba(233, 233, 233, 0.20);
+backdrop-filter: blur(51.75px);
+width: 100%;
+padding: 32px;
+}
+
+
+.chat__form {
+   border-radius: 25px;
+   align-items: center;
+   background: #101010;
+   display: flex;
+   width: 100%;
+   padding: 32px;
+   gap: 24px;
+   margin-top: 690px;
+}
+
+
+input[type="file"] {
+   display: none;
+}
+
+ .form__file {
+
+border-radius: 19.074px;
+background: #F82D4E;
+display: inline-block;
+padding: 14px 39px;
+ }
+
+ .form__file label {
+   white-space: nowrap;
+   display: flex;
+   gap: 12px;
+   align-items: center;
+   color: #101010;
+text-align: center;
+font-family: "RF Dewi Extended";
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: uppercase;
+cursor: pointer;
+ }
+
+.form__input {
+   width: 100%;
+   display: flex;
+   padding: 14px 39px;
+   justify-content: space-between;
+   border-radius: 19.074px;
+border: 1px solid #FFF;
+background: rgba(255, 255, 255, 0.10);
+backdrop-filter: blur(10px);
+}
+
+.form__input input {
+   color: #FFF;
+font-family: "RF Dewi Extended";
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: uppercase;
+background: transparent; 
+opacity: 0.2;
+}
+
+.form__input input::placeholder {
+   color: #FFF;
+   font-family: "RF Dewi Extended";
+   font-size: 18px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   text-transform: uppercase;
+   opacity: 0.2;
+}
+
+.blocks__bottom {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 19px;
+}
+
+.bottom__about {
+   color: #FFF;
+text-align: center;
+font-family: "RF Dewi Expanded";
+font-size: 30.938px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.lines2 {
+   max-height: 40px;
+   max-width: 167px;
+}
+
+.wrap {
+   gap: 31px;
+   display: flex;
+   flex-direction: column;
+}
+
+.ai {
+   margin-left: 63px;
+   display: inline-block;
+}
+
+
+
+.custom-select {
+   display: flex;
+   align-items: center;
+   background-color: #1e1e1e;
+   color: white;
+   border-radius: 25px;
+   padding: 10px 20px;
+   width: 180px;
+   height: 50px;
+   justify-content: space-between;
+   cursor: pointer;
+   position: relative;
+   border: 1px solid #333;
+   transition: border-color 0.3s;
+ }
+
+ .custom-select:hover {
+   border-color: #555;
+
+ }
+
+ .custom-select .icon {
+   font-size: 24px;
+   margin-right: 10px;
+ }
+
+ .custom-select .text {
+   flex-grow: 1;
+   font-size: 16px;
+   text-align: center;
+ }
+
+ .custom-select .arrow {
+   font-size: 16px;
+   transition: transform 0.3s ease;
+ }
+
+ .custom-select.active .arrow {
+   transform: rotate(180deg);
+ }
+
+ .dropdown {
+   display: none;
+   position: absolute;
+   top: 60px;
+   left: 0;
+   width: 100%;
+   background-color: #1e1e1e;
+   border-radius: 10px;
+   overflow: hidden;
+   border: 1px solid #333;
+ }
+
+ .dropdown.active {
+   display: block;
+ }
+
+ .dropdown div {
+   padding: 10px 20px;
+   cursor: pointer;
+   color: white;
+ }
+
+ .dropdown div:hover {
+   background-color: #333;
+ }
+
+ .send {
+   cursor: pointer;
+ }
+
+@media (max-width:1450px) {
+   .title {
+      width: 85vw;
+   }
+   .cards {
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+   .howto {
+      white-space: nowrap;
+   }
+   .card {
+      width: 100%;
+      max-width: 90vw;
+   }
+}
+
+@media (max-width:1250px) {
+   .chat__form {
+      flex-direction: column;
+   }
+   .form__input {
+      order: 2;
+   }
+   .form__time {
+      order: 3;
+   }
+   .how-to-use {
+      flex-direction: column-reverse;
+      gap: 32px;
+   }
+}
+
+.show-850 {
+   display: none;
+}
+
+
+
+@media (max-width:850px) {
+   .show-850 {
+      display: inline-block;
+   }
+   .hide-850 {
+      display: none;
+   }
+   .subtitle {
+      width: 85vw;
+   }
+   .header__content {
+      flex-direction: column;
+      gap: 24px;
+   }
+   .networks a:not(:last-child) {
+      margin-right: 32px;
+    }
+    .chat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .info__text {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .chat__title {
+      align-self: flex-end;
+    }
+    .info__content {
+      justify-content: center;
+    }
+    .ai{
+      margin: 0;
+    }
+    .blocks__bottom {
+      flex-direction: column-reverse;
+      gap: 42px;
+    }
+    .about {
+      margin-top: 0;
+    }
+    .bottom__about {
+      margin-top: 32px;
+    }
+
+}
+
+.show-600 {
+   display: none;
+}
+
+@media (max-width:600px) {
+   .show-600 {
+      display: inline-block;
+   }
+   .hide-600 {
+      display: none;
+   }
+   .wrapper {
+      min-height: 4435px;
+   }
+   .info__image {
+      top: 300px;
+   }
+   .form__file label {
+      white-space: wrap;
+   }
+   .about__text {
+      text-align: center;
+      font-size: 18px;
+   }
+   .how-to-use {
+      align-items: center;
+   }
+   .howto {
+      margin-left: 0;
+      font-size: 21.719px;
+   }
+   .about {
+      align-items: center;
+   }
+   .about__title {
+      font-size: 60.369px;
+   }
+   .lines {
+      max-width: 117px;
+   }
+}
+
+@media (max-width:500px) {
+   .header__content {
+      padding: 24px 46px;
+   }
+   .info__image {
+      width: 250px;
+   }
+   .how-image {
+      max-width: 219px;
+   }
+   .ai img {
+      max-width: 214px;
+   }
+   .about .ca {
+      margin-top: 350px;
+   }
+   .card__title {
+      font-size: 32px;
+   }
+   .card {
+      padding: 20px;
+   }
+   .card__text {
+      font-size: 16px;
+   }
+   .form__file label {
+      font-size: 16px;
+   }
+   .chat__form {
+      margin-top: 450px;
+   }
+   .form__input {
+      padding: 5px 15px 5px 20px;
+
+   }
+   .form__input input {
+      font-size: 16px;
+      max-width: 170px;
+      height: 38px;
+   }
+   .form__input input::placeholder {
+      font-size: 16px;
+      white-space: wrap ;
+   }
+   .chat__content {
+      padding: 32px 5px;
+   }
+   .chat__form {
+      padding: 20px;
+   }
+}
+
+
+[data-anim-on-scroll] {
+  transition: all 0.4s ease 0s;
+  opacity: 0;
+}
+
+[data-anim-on-scroll]._animate {
+  opacity: 1;
+}
+
+._right_anim_tr {
+  transform: translateX(200%);
+}
+
+._left_anim_tr {
+  transform: translateX(-200%);
+}
+
+._right_anim_tr._animate,
+._left_anim_tr._animate {
+  transform: translateX(0%);
+}
+
+
+._bottom_anim_tr {
+  transform: translateY(200%);
+}
+
+._top_anim_tr {
+  transform: translateY(-200%);
+}
+
+._top_anim_tr._animate,
+._bottom_anim_tr._animate {
+  transform: translateY(0%);
+}
+
+._scale_anim {
+  transform: scale(0);
+}
+
+._scale_anim._animate {
+  transform: scale(1);
+}
+
+.anim {
+  animation: anim 3s ease-in-out infinite;
+}
+
+@keyframes anim {
+   0%,
+   100% {
+     transform: translateX(-50%) scale(1); /* Объединяем translateX и scale */
+   }
+ 
+   50% {
+     transform: translateX(-50%) scale(1.05); /* Объединяем translateX и scale */
+   }
+ }
+
+
+
+.loop-images .image {
+  position: absolute;
+  z-index: 1;
+  bottom: -100%;
+  animation: moveUp 6s linear infinite;
+}
+
+.loop-images .right .image {
+  right: 0;
+}
+
+.loop-images .right .image-4 {
+  right: -15%;
+  left: auto;
+}
+
+@keyframes moveUp {
+  0% {
+    bottom: -100%;
+  }
+
+  100% {
+    bottom: 100%;
+  }
+}
+
+.loop-images .image-2 {
+  animation-delay: 2s;
+  animation: moveUp 7s linear infinite;
+}
+
+.loop-images .image-3 {
+  animation-delay: 3s;
+  animation: moveUp 9s linear infinite;
+}
+
+.loop-images .image-4 {
+  animation-delay: 6s;
+  animation: moveUp 12s linear infinite;
+}
+
+.loop-images .right .image-1 {
+  animation-delay: 0s;
+  animation: moveUp 7s linear infinite;
+}
+
+.loop-images .right .image-2 {
+  animation-delay: 4s;
+  animation: moveUp 9s linear infinite;
+}
+
+.loop-images .right .image-3 {
+  animation-delay: 7s;
+  animation: moveUp 12s linear infinite;
+}
+
+.loop-images .right .image-4 {
+  animation-delay: 10s;
+  animation: moveUp 8s linear infinite;
+}
+
+.card {
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-left {
+   transform: translateX(-200%); /* Начальное состояние для анимации появления */
+}
+
+.card:hover {
+   animation: none;
+   transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.card-right {
+   transform: translateX(200%); /* Начальное состояние для анимации появления */
+}
+
+.card._animate, .roadmap__card._animate {
+   transform: translateX(0%); /* Анимация появления */
+}
+
+.card:hover, .roadmap__card:hover, .uniq:hover {
+   transform: translateX(0%) scale(1.05); /* Объединяем translateX и scale */
+   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.uniq {
+   transform: scale(0);
+   opacity: 0; /* Скрываем элемент */
+   visibility: hidden; /* Убираем его из видимости */
+   transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.uniq._animate {
+   transform: scale(1);
+   opacity: 1; /* Делаем элемент видимым */
+   visibility: visible; /* Возвращаем его в видимость */
+}
+
+.uniq:hover {
+   transform: scale(1.05); /* Увеличиваем элемент при наведении */
+   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
