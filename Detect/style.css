@@ -36,6 +36,11 @@
   display: flex;
   align-items: center;
   justify-self: center;
+  margin-bottom: 20px;
+}
+
+.logo2 {
+   margin-bottom: 20px;
 }
 
 .networks a {
@@ -100,6 +105,98 @@
   visibility: visible;
 }
 
+.detect_modal {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color: #fff;
+   color: #000;
+   padding: 20px;
+   border-radius: 8px;
+   display: none;
+   z-index: 1000;
+}
+
+.detect_modal._show {
+   display: block;
+}
+
+.ca {
+   color: #02FFCF;
+leading-trim: both;
+text-edge: cap;
+font-family: Cousine;
+font-size: 22.539px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: uppercase;
+border-radius: 21.976px;
+border: 1.409px solid #005666;
+display: inline-block;
+padding: 17px 49px;
+margin-bottom: 24px;
+white-space: wrap ;
+}
+
+@media (max-width:500px) {
+   .ca {
+      padding: 13px 20px;
+font-size: 15px;
+margin-bottom: 0;
+   }
+}
+
+.upload_label {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+   border-radius: 11px;
+border: 2px solid #02FFCF;
+background: rgba(0, 0, 0, 0.40);
+padding: 30px;
+width: 100%;
+}
+
+.upload_label.active {
+   background: #02FFCF;
+}
+
+.upload_label.active span {
+   color: #000;
+
+}
+
+/* Скрываем вторую картинку по умолчанию */
+.upload-image-active {
+   display: none;
+}
+
+/* Когда добавляется класс active, скрываем первую картинку и показываем вторую */
+.upload_label.active .upload-image-default {
+   display: none;
+}
+
+.upload_label.active .upload-image-active {
+   display: inline-block;
+}
+
+
+.upload_label span {
+   color: #02FFCF;
+   font-family: "Jura", serif !important;
+font-size: 25px;
+font-style: normal;
+font-weight: 700;
+line-height: 28.75px; /* 115% */
+}
+
+.upload {
+   width: 100%;
+}
+
 #background {
    position: fixed; /* Фиксируем canvas на заднем плане */
    top: 0;
@@ -115,23 +212,13 @@
 
 .header {
    display: flex;
-   align-items: center; /* Выравнивание по вертикали */
-   justify-content: space-between; /* Пространство между элементами */
+align-items: center;   justify-content: space-between; /* Пространство между элементами */
    position: relative; /* Для абсолютного позиционирования */
    padding: 0 20px; /* Отступы внутри контейнера */
 }
 
-.logo2 {
-   margin-right: auto; /* Прижать логотип к левому краю */
-}
 
-.header .networks {
-   position: absolute; /* Абсолютное позиционирование */
-   left: 50%; /* Сдвиг в центр */
-   transform: translateX(-50%); /* Центрирование по горизонтали */
-   display: flex;
-   gap: 10px; /* Расстояние между иконками */
-}
+
 
 .info {
    padding-top: 133px;
@@ -739,9 +826,7 @@ padding-bottom: 2.5rem;
 }
 
 
-.footer {
-   margin-top: 250px;
-}
+
 
 .footer__content {
    margin-top: 59px;
@@ -831,9 +916,6 @@ letter-spacing: 3.2px;
    margin-top: 62px;
 }
 
-.upload_label {
-   display: inline-block;
-}
 
 @media (max-height: 900px) {
    .chat {
@@ -1180,6 +1262,9 @@ backdrop-filter: blur(3px);
 }
 
 @media (max-width:900px) {
+   .header {
+      flex-direction: column;
+   }
    .footer__content {
       flex-direction: column;
       gap: 15px;

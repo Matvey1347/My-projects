@@ -40,6 +40,7 @@
                      <img src="./image/tools.svg" alt="" />
                   </a>
                </div>
+               <div data-copy class="ca">0x000000000000000000<br /></div>
             </header>
             <section data-anim-on-scroll class="info _scale_anim">
                <h1 class="info__title">
@@ -452,10 +453,13 @@
 
                   <div class="chat__buttons">
                      <div class="upload">
-                        <input id="#file" type="file" />
-                        <label class="_scale_hover upload_label" for="#file"
-                           ><img src="./image/upload.png" alt="" class="upload__image"
-                        /></label>
+                        <input id="file" type="file" />
+                        <label class="_scale_hover upload_label" for="file">
+                           <img src="./image/upload.svg" alt="" class="upload-image upload-image-default" />
+                           <img src="./image/upladb.svg" class="upload-image upload-image-active" alt="" />
+                           <span>Upload</span>
+                           <!--<img src="./image/upload.png" alt="" class="upload__image"/>-->
+                        </label>
                      </div>
                      <button class="detect_btn _scale_hover">
                         <img src="./image/detect.png" alt="" class="detect" />
@@ -474,6 +478,33 @@
             </div>
          </div>
       </div>
+      <div class="detect_modal"></div>
+      <script>
+         document.addEventListener("DOMContentLoaded", () => {
+            // Находим input для загрузки файла
+            const fileInput = document.querySelector("#file");
+
+            // Находим label, связанный с input
+            const uploadLabel = document.querySelector(".upload_label");
+
+            // Проверяем, что элементы существуют
+            if (fileInput && uploadLabel) {
+               // Добавляем обработчик события на изменение (загрузку файла)
+               fileInput.addEventListener("change", () => {
+                  // Проверяем, был ли выбран файл
+                  if (fileInput.files.length > 0) {
+                     // Если файл выбран, добавляем класс active
+                     uploadLabel.classList.add("active");
+                  } else {
+                     // Если файл не выбран, удаляем класс active
+                     uploadLabel.classList.remove("active");
+                  }
+               });
+            } else {
+               console.error("Элементы #file или .upload_label не найдены в DOM.");
+            }
+         });
+      </script>
       <script>
          // Получаем элементы
          const tryButton = document.querySelector(".launch");

@@ -37,3 +37,27 @@ copies.forEach((copy) => {
    });
    // });
 });
+
+// Находим модальное окно
+const detectModal = document.querySelector(".detect_modal");
+
+// Находим все элементы с классом detect_btn
+const detectButtons = document.querySelectorAll(".detect_btn");
+
+// Добавляем обработчик событий для каждого элемента detect_btn
+detectButtons.forEach((button) => {
+   button.addEventListener("click", () => {
+      // Устанавливаем текст в модальное окно
+      detectModal.textContent = "Detect AI has started object recognition...";
+
+      // Добавляем класс _show к модальному окну
+      detectModal.classList.add("_show");
+
+      // Убираем класс _show через 2 секунды
+      setTimeout(() => {
+         detectModal.classList.remove("_show");
+      }, 2000);
+   });
+});
+
+// Находим input для загрузки файла
